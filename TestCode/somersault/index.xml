@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CATALOG xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" F-DTD-VERSION="ODX-2.2.0" xsi:noNamespaceSchemaLocation="odx-cc.xsd">
+  <SHORT-NAME></SHORT-NAME>
+  <ABLOCKS>
+    <ABLOCK UPD="UNCHANGED">
+      <SHORT-NAME>diagnostic_data</SHORT-NAME>
+      <FILES>
+        <FILE CREATION-DATE="2022-03-23T14:02:03" MIME-TYPE="application/x-asam.odx.odx-cs">ISO_11898_2_DWCAN.odx-cs</FILE>
+      </FILES>
+    </ABLOCK>
+    <ABLOCK UPD="UNCHANGED">
+      <SHORT-NAME>diagnostic_data</SHORT-NAME>
+      <FILES>
+        <FILE CREATION-DATE="2022-03-23T14:02:03" MIME-TYPE="application/x-asam.odx.odx-cs">ISO_11898_3_DWFTCAN.odx-cs</FILE>
+      </FILES>
+    </ABLOCK>
+    <ABLOCK UPD="UNCHANGED">
+      <SHORT-NAME>diagnostic_data</SHORT-NAME>
+      <FILES>
+        <FILE CREATION-DATE="2022-03-23T14:02:03" MIME-TYPE="application/x-asam.odx.odx-cs">ISO_15765_2.odx-cs</FILE>
+      </FILES>
+    </ABLOCK>
+    <ABLOCK UPD="UNCHANGED">
+      <SHORT-NAME>diagnostic_data</SHORT-NAME>
+      <FILES>
+        <FILE CREATION-DATE="2022-03-23T14:02:03" MIME-TYPE="application/x-asam.odx.odx-cs">ISO_15765_3_CPSS.odx-cs</FILE>
+      </FILES>
+    </ABLOCK>
+    <ABLOCK UPD="UNCHANGED">
+      <SHORT-NAME>diagnostic_data</SHORT-NAME>
+      <FILES>
+        <FILE CREATION-DATE="2022-03-23T14:02:03" MIME-TYPE="text/plain">UDSOnCAN_CPS.odx-c</FILE>
+      </FILES>
+    </ABLOCK>
+    <ABLOCK UPD="UNCHANGED">
+      <SHORT-NAME>diagnostic_data</SHORT-NAME>
+      <FILES>
+        <FILE CREATION-DATE="2022-04-18T22:12:09" MIME-TYPE="application/x-asam.odx.odx-d">somersault.odx-d</FILE>
+      </FILES>
+    </ABLOCK>
+  </ABLOCKS>
+</CATALOG>

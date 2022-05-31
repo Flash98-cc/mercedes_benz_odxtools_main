@@ -1,0 +1,1107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<ODX MODEL-VERSION="2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="odx.xsd">
+ <!-- Written by the odxtools python module, version 1.1.0 -->
+ <DIAG-LAYER-CONTAINER ID="DLC.somersault">
+  <SHORT-NAME>somersault</SHORT-NAME>
+  <LONG-NAME>Collect all saults in the summer</LONG-NAME>
+  <DESC>
+<p>This contains ECUs which do somersaults &amp; cetera</p>
+  </DESC>
+  <ADMIN-DATA>
+   <LANGUAGE>en-US</LANGUAGE>
+   <COMPANY-DOC-INFOS>
+    <COMPANY-DOC-INFO>
+      <COMPANY-DATA-REF ID-REF="CD.Suncus" />
+      <TEAM-MEMBER-REF ID-REF="TM.Doggy" />
+      <DOC-LABEL>A really meaningful label</DOC-LABEL>
+    </COMPANY-DOC-INFO>
+   </COMPANY-DOC-INFOS>
+   <DOC-REVISIONS>
+    <DOC-REVISION>
+     <TEAM-MEMBER-REF ID-REF="TM.Doggy" />
+     <REVISION-LABEL>1.0</REVISION-LABEL>
+     <STATE>draft</STATE>
+     <DATE>1926-07-18T11:11:11+01:00</DATE>
+     <TOOL>odxtools 0.0.1</TOOL>
+     <MODIFICATIONS>
+      <MODIFICATION>
+       <CHANGE>add somersault ECU</CHANGE>
+       <REASON>we needed a new artist</REASON>
+      </MODIFICATION>
+      <MODIFICATION>
+       <CHANGE>increase robustness to dizzyness</CHANGE>
+       <REASON>No alcohol anymore</REASON>
+      </MODIFICATION>
+     </MODIFICATIONS>
+    </DOC-REVISION>
+    <DOC-REVISION>
+     <TEAM-MEMBER-REF ID-REF="TM.Horsey" />
+     <REVISION-LABEL>1.1</REVISION-LABEL>
+     <STATE>released</STATE>
+     <DATE>2020-08-19T12:12:12+08:00</DATE>
+     <TOOL>odxtools 0.1</TOOL>
+     <MODIFICATIONS>
+      <MODIFICATION>
+       <CHANGE>rename somersault ECU to somersault_assiduous to enable slothy to add somersault_lazy</CHANGE>
+      </MODIFICATION>
+     </MODIFICATIONS>
+    </DOC-REVISION>
+    <DOC-REVISION>
+     <TEAM-MEMBER-REF ID-REF="TM.Slothy" />
+     <REVISION-LABEL>1.0.3.2.1.5.6</REVISION-LABEL>
+     <DATE>1900-01-01T00:00:00+00:00</DATE>
+    </DOC-REVISION>
+   </DOC-REVISIONS>
+  </ADMIN-DATA>
+  <COMPANY-DATAS>
+   <COMPANY-DATA ID="CD.Suncus">
+    <SHORT-NAME>Suncus</SHORT-NAME>
+    <LONG-NAME>Circus of the sun</LONG-NAME>
+    <DESC>
+   <p>Prestigious group of performers</p>
+    </DESC>
+    <ROLES>
+     <ROLE>circus</ROLE>
+     <ROLE>gym</ROLE>
+    </ROLES>
+    <TEAM-MEMBERS>
+     <TEAM-MEMBER ID="TM.Doggy">
+      <SHORT-NAME>Doggy</SHORT-NAME>
+      <LONG-NAME>Doggy the dog</LONG-NAME>
+      <DESC>
+   <p>Dog is man's best friend</p>
+      </DESC>
+      <ROLES>
+       <ROLE>gymnast</ROLE>
+       <ROLE>tracker</ROLE>
+      </ROLES>
+      <DEPARTMENT>sniffers</DEPARTMENT>
+      <ADDRESS>Some road</ADDRESS>
+      <ZIP>12345</ZIP>
+      <CITY>New Dogsville</CITY>
+      <PHONE>+0 1234/5678-9</PHONE>
+      <FAX>+0 1234/5678-0</FAX>
+      <EMAIL>info@suncus.com</EMAIL>
+     </TEAM-MEMBER>
+     <TEAM-MEMBER ID="TM.Horsey">
+      <SHORT-NAME>Horsey</SHORT-NAME>
+      <LONG-NAME>Horsey the horse</LONG-NAME>
+      <DESC>
+   <p>Trustworthy worker</p>
+      </DESC>
+      <ROLES>
+       <ROLE>gymnast</ROLE>
+      </ROLES>
+      <DEPARTMENT>haulers</DEPARTMENT>
+      <ADDRESS>Some road</ADDRESS>
+      <ZIP>12345</ZIP>
+      <CITY>New Dogsville</CITY>
+      <PHONE>+0 1234/5678-91</PHONE>
+      <FAX>+0 1234/5678-0</FAX>
+      <EMAIL>info@suncus.com</EMAIL>
+     </TEAM-MEMBER>
+    </TEAM-MEMBERS>
+    <COMPANY-SPECIFIC-INFO>
+     <RELATED-DOCS>
+      <RELATED-DOC>
+       <XDOC>
+        <SHORT-NAME>best</SHORT-NAME>
+        <LONG-NAME>suncus is the best</LONG-NAME>
+        <DESC>
+   <p>great propaganda...</p>
+        </DESC>
+        <NUMBER>1</NUMBER>
+        <STATE>published</STATE>
+        <DATE>2015-01-15T20:15:20+05:00</DATE>
+        <PUBLISHER>Suncus Publishing</PUBLISHER>
+        <URL>https://suncus-is-the-best.com</URL>
+        <POSITION>first!</POSITION>
+       </XDOC>
+       <DESC>
+   <p>We are the best!</p>
+       </DESC>
+      </RELATED-DOC>
+     </RELATED-DOCS>
+    </COMPANY-SPECIFIC-INFO>
+   </COMPANY-DATA>
+   <COMPANY-DATA ID="CD.ACME">
+    <SHORT-NAME>ACME_Corporation</SHORT-NAME>
+    <TEAM-MEMBERS>
+     <TEAM-MEMBER ID="TM.Slothy">
+      <SHORT-NAME>Slothy</SHORT-NAME>
+     </TEAM-MEMBER>
+    </TEAM-MEMBERS>
+   </COMPANY-DATA>
+  </COMPANY-DATAS>
+  <BASE-VARIANTS>
+  <BASE-VARIANT ID="somersault">
+    <SHORT-NAME>somersault</SHORT-NAME>
+    <LONG-NAME>Somersault base variant</LONG-NAME>
+    <DESC>
+   <p>Base variant of the somersault ECU &amp; cetera</p>
+    </DESC>
+    <FUNCT-CLASSS>
+      <FUNCT-CLASS ID="somersault.FNC.flip">
+       <SHORT-NAME>flip</SHORT-NAME>
+       <LONG-NAME>Flip</LONG-NAME>
+      </FUNCT-CLASS>
+      <FUNCT-CLASS ID="somersault.FNC.session">
+       <SHORT-NAME>session</SHORT-NAME>
+       <LONG-NAME>Session</LONG-NAME>
+      </FUNCT-CLASS>
+    </FUNCT-CLASSS>
+    <DIAG-DATA-DICTIONARY-SPEC>
+     <DATA-OBJECT-PROPS>
+      <DATA-OBJECT-PROP ID="somersault.DOP.num_flips">
+       <SHORT-NAME>num_flips</SHORT-NAME>
+       <LONG-NAME>None</LONG-NAME>
+       <COMPU-METHOD>
+        <CATEGORY>IDENTICAL</CATEGORY>
+       </COMPU-METHOD>
+       <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+        <BIT-LENGTH>8</BIT-LENGTH>
+       </DIAG-CODED-TYPE>
+       <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32" />
+      </DATA-OBJECT-PROP>
+      <DATA-OBJECT-PROP ID="somersault.DOP.soberness_check">
+       <SHORT-NAME>soberness_check</SHORT-NAME>
+       <LONG-NAME>None</LONG-NAME>
+       <COMPU-METHOD>
+        <CATEGORY>IDENTICAL</CATEGORY>
+       </COMPU-METHOD>
+       <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+        <BIT-LENGTH>8</BIT-LENGTH>
+       </DIAG-CODED-TYPE>
+       <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32" />
+      </DATA-OBJECT-PROP>
+      <DATA-OBJECT-PROP ID="somersault.DOP.dizzyness_level">
+       <SHORT-NAME>dizzyness_level</SHORT-NAME>
+       <LONG-NAME>None</LONG-NAME>
+       <COMPU-METHOD>
+        <CATEGORY>IDENTICAL</CATEGORY>
+       </COMPU-METHOD>
+       <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+        <BIT-LENGTH>8</BIT-LENGTH>
+       </DIAG-CODED-TYPE>
+       <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32" />
+      </DATA-OBJECT-PROP>
+      <DATA-OBJECT-PROP ID="somersault.DOP.happiness_level">
+       <SHORT-NAME>happiness_level</SHORT-NAME>
+       <LONG-NAME>None</LONG-NAME>
+       <COMPU-METHOD>
+        <CATEGORY>IDENTICAL</CATEGORY>
+       </COMPU-METHOD>
+       <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+        <BIT-LENGTH>8</BIT-LENGTH>
+       </DIAG-CODED-TYPE>
+       <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32" />
+      </DATA-OBJECT-PROP>
+      <DATA-OBJECT-PROP ID="somersault.DOP.duration">
+       <SHORT-NAME>duration</SHORT-NAME>
+       <LONG-NAME>None</LONG-NAME>
+       <COMPU-METHOD>
+        <CATEGORY>IDENTICAL</CATEGORY>
+       </COMPU-METHOD>
+       <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+        <BIT-LENGTH>8</BIT-LENGTH>
+       </DIAG-CODED-TYPE>
+       <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32" />
+       <UNIT-REF ID-REF="somersault.unit.second" />
+      </DATA-OBJECT-PROP>
+      <DATA-OBJECT-PROP ID="somersault.DOP.error_code">
+       <SHORT-NAME>error_code</SHORT-NAME>
+       <LONG-NAME>None</LONG-NAME>
+       <COMPU-METHOD>
+        <CATEGORY>IDENTICAL</CATEGORY>
+       </COMPU-METHOD>
+       <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+        <BIT-LENGTH>8</BIT-LENGTH>
+       </DIAG-CODED-TYPE>
+       <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32" />
+      </DATA-OBJECT-PROP>
+      <DATA-OBJECT-PROP ID="somersault.DOP.boolean">
+       <SHORT-NAME>boolean</SHORT-NAME>
+       <LONG-NAME>None</LONG-NAME>
+       <COMPU-METHOD>
+        <CATEGORY>TEXTTABLE</CATEGORY>
+        <COMPU-INTERNAL-TO-PHYS>
+         <COMPU-SCALES>
+          <COMPU-SCALE>
+           <LOWER-LIMIT>0</LOWER-LIMIT>
+           <UPPER-LIMIT>0</UPPER-LIMIT>
+           <COMPU-CONST>
+            <VT>false</VT>
+           </COMPU-CONST>
+          </COMPU-SCALE>
+          <COMPU-SCALE>
+           <LOWER-LIMIT>1</LOWER-LIMIT>
+           <UPPER-LIMIT>1</UPPER-LIMIT>
+           <COMPU-CONST>
+            <VT>true</VT>
+           </COMPU-CONST>
+          </COMPU-SCALE>
+         </COMPU-SCALES>
+        </COMPU-INTERNAL-TO-PHYS>
+       </COMPU-METHOD>
+       <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+        <BIT-LENGTH>8</BIT-LENGTH>
+       </DIAG-CODED-TYPE>
+       <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING" />
+      </DATA-OBJECT-PROP>
+     </DATA-OBJECT-PROPS>
+     <UNIT-SPEC>
+      <UNIT-GROUPS>
+       <UNIT-GROUP>
+        <SHORT-NAME>european_duration</SHORT-NAME>
+       <LONG-NAME>Duration</LONG-NAME>
+       <DESC>
+       <p>Units for measuring a duration</p>
+       </DESC>
+        <CATEGORY>COUNTRY</CATEGORY>
+        <UNIT-REFS>
+         <UNIT-REF ID-REF="somersault.unit.second" />
+         <UNIT-REF ID-REF="somersault.unit.minute" />
+        </UNIT-REFS>
+       </UNIT-GROUP>
+      </UNIT-GROUPS>
+      <UNITS>
+       <UNIT ID="somersault.unit.second">
+        <SHORT-NAME>second</SHORT-NAME>
+       <LONG-NAME>Second</LONG-NAME>
+       <DESC>
+       <p>SI unit for the time</p>
+       </DESC>
+        <DISPLAY-NAME>s</DISPLAY-NAME>
+        <FACTOR-SI-TO-UNIT>1</FACTOR-SI-TO-UNIT>
+        <OFFSET-SI-TO-UNIT>0</OFFSET-SI-TO-UNIT>
+        <PHYSICAL-DIMENSION-REF ID-REF="somersault.PD.second" />
+       </UNIT>
+       <UNIT ID="somersault.unit.minute">
+        <SHORT-NAME>minute</SHORT-NAME>
+       <LONG-NAME>Minute</LONG-NAME>
+        <DISPLAY-NAME>min</DISPLAY-NAME>
+        <FACTOR-SI-TO-UNIT>60</FACTOR-SI-TO-UNIT>
+        <OFFSET-SI-TO-UNIT>0</OFFSET-SI-TO-UNIT>
+        <PHYSICAL-DIMENSION-REF ID-REF="somersault.PD.second" />
+       </UNIT>
+      </UNITS>
+      <PHYSICAL-DIMENSIONS>
+       <PHYSICAL-DIMENSION ID="somersault.PD.second">
+        <SHORT-NAME>second</SHORT-NAME>
+       <LONG-NAME>Second</LONG-NAME>
+        <TIME-EXP>1</TIME-EXP>
+       </PHYSICAL-DIMENSION>
+      </PHYSICAL-DIMENSIONS>
+     </UNIT-SPEC>
+    </DIAG-DATA-DICTIONARY-SPEC>
+    <DIAG-COMMS>
+     <DIAG-SERVICE ID="somersault.service.session_start"  SEMANTIC="SESSION">
+      <SHORT-NAME>session_start</SHORT-NAME>
+      <FUNCT-CLASS-REFS>
+       <FUNCT-CLASS-REF ID-REF="somersault.FNC.session" />
+      </FUNCT-CLASS-REFS>
+      <REQUEST-REF ID-REF="somersault.RQ.start_session"/>
+      <POS-RESPONSE-REFS>
+       <POS-RESPONSE-REF ID-REF="somersault.PR.session_start" />
+      </POS-RESPONSE-REFS>
+      <NEG-RESPONSE-REFS>
+       <NEG-RESPONSE-REF ID-REF="somersault.NR.general_negative_response" />
+      </NEG-RESPONSE-REFS>
+     </DIAG-SERVICE>
+     <DIAG-SERVICE ID="somersault.service.session_stop"  SEMANTIC="SESSION">
+      <SHORT-NAME>session_stop</SHORT-NAME>
+      <FUNCT-CLASS-REFS>
+       <FUNCT-CLASS-REF ID-REF="somersault.FNC.session" />
+      </FUNCT-CLASS-REFS>
+      <REQUEST-REF ID-REF="somersault.RQ.stop_session"/>
+      <POS-RESPONSE-REFS>
+       <POS-RESPONSE-REF ID-REF="somersault.PR.session_start" />
+      </POS-RESPONSE-REFS>
+      <NEG-RESPONSE-REFS>
+       <NEG-RESPONSE-REF ID-REF="somersault.NR.general_negative_response" />
+      </NEG-RESPONSE-REFS>
+     </DIAG-SERVICE>
+     <DIAG-SERVICE ID="somersault.service.tester_present"  SEMANTIC="TESTERPRESENT">
+      <SHORT-NAME>tester_present</SHORT-NAME>
+      <AUDIENCE IS-DEVELOPMENT="false" >
+       <ENABLED-AUDIENCE-REFS>
+        <ENABLED-AUDIENCE-REF ID-REF="somersault.AA.attentive_admirer" />
+        <ENABLED-AUDIENCE-REF ID-REF="somersault.AA.anyone" />
+       </ENABLED-AUDIENCE-REFS>
+      </AUDIENCE>
+      <REQUEST-REF ID-REF="somersault.RQ.tester_present"/>
+      <POS-RESPONSE-REFS>
+       <POS-RESPONSE-REF ID-REF="somersault.PR.tester_present" />
+      </POS-RESPONSE-REFS>
+      <NEG-RESPONSE-REFS>
+       <NEG-RESPONSE-REF ID-REF="somersault.NR.tester_nok" />
+      </NEG-RESPONSE-REFS>
+     </DIAG-SERVICE>
+     <DIAG-SERVICE ID="somersault.service.set_operation_params"  SEMANTIC="FUNCTION">
+      <SHORT-NAME>set_operation_params</SHORT-NAME>
+      <REQUEST-REF ID-REF="somersault.RQ.set_operation_params"/>
+      <POS-RESPONSE-REFS>
+       <POS-RESPONSE-REF ID-REF="somersault.PR.set_operation_params" />
+      </POS-RESPONSE-REFS>
+      <NEG-RESPONSE-REFS>
+       <NEG-RESPONSE-REF ID-REF="somersault.NR.general_negative_response" />
+      </NEG-RESPONSE-REFS>
+     </DIAG-SERVICE>
+     <DIAG-SERVICE ID="somersault.service.do_forward_flips"  SEMANTIC="FUNCTION">
+      <SHORT-NAME>do_forward_flips</SHORT-NAME>
+      <DESC>
+      <p>Do a forward flip.</p>
+      </DESC>
+      <FUNCT-CLASS-REFS>
+       <FUNCT-CLASS-REF ID-REF="somersault.FNC.flip" />
+      </FUNCT-CLASS-REFS>
+      <AUDIENCE IS-DEVELOPMENT="false" >
+       <ENABLED-AUDIENCE-REFS>
+        <ENABLED-AUDIENCE-REF ID-REF="somersault.AA.attentive_admirer" />
+       </ENABLED-AUDIENCE-REFS>
+      </AUDIENCE>
+      <REQUEST-REF ID-REF="somersault.RQ.do_forward_flips"/>
+      <POS-RESPONSE-REFS>
+       <POS-RESPONSE-REF ID-REF="somersault.PR.grudging_forward" />
+      </POS-RESPONSE-REFS>
+      <NEG-RESPONSE-REFS>
+       <NEG-RESPONSE-REF ID-REF="somersault.NR.flips_not_done" />
+      </NEG-RESPONSE-REFS>
+     </DIAG-SERVICE>
+     <DIAG-SERVICE ID="somersault.service.do_backward_flips"  SEMANTIC="FUNCTION">
+      <SHORT-NAME>do_backward_flips</SHORT-NAME>
+      <FUNCT-CLASS-REFS>
+       <FUNCT-CLASS-REF ID-REF="somersault.FNC.flip" />
+      </FUNCT-CLASS-REFS>
+      <AUDIENCE IS-DEVELOPMENT="false" >
+       <ENABLED-AUDIENCE-REFS>
+        <ENABLED-AUDIENCE-REF ID-REF="somersault.AA.attentive_admirer" />
+       </ENABLED-AUDIENCE-REFS>
+      </AUDIENCE>
+      <REQUEST-REF ID-REF="somersault.RQ.do_backward_flips"/>
+      <POS-RESPONSE-REFS>
+       <POS-RESPONSE-REF ID-REF="somersault.PR.grudging_backward" />
+      </POS-RESPONSE-REFS>
+      <NEG-RESPONSE-REFS>
+       <NEG-RESPONSE-REF ID-REF="somersault.NR.flips_not_done" />
+      </NEG-RESPONSE-REFS>
+     </DIAG-SERVICE>
+     <DIAG-SERVICE ID="somersault.service.report_status"  SEMANTIC="CURRENTDATA">
+      <SHORT-NAME>report_status</SHORT-NAME>
+      <AUDIENCE IS-AFTERSALES="false" IS-AFTERMARKET="false" >
+       <DISABLED-AUDIENCE-REFS>
+        <DISABLED-AUDIENCE-REF ID-REF="somersault.AA.attentive_admirer" />
+       </DISABLED-AUDIENCE-REFS>
+      </AUDIENCE>
+      <REQUEST-REF ID-REF="somersault.RQ.report_status"/>
+      <POS-RESPONSE-REFS>
+       <POS-RESPONSE-REF ID-REF="somersault.PR.status_report" />
+      </POS-RESPONSE-REFS>
+      <NEG-RESPONSE-REFS>
+       <NEG-RESPONSE-REF ID-REF="somersault.NR.general_negative_response" />
+      </NEG-RESPONSE-REFS>
+     </DIAG-SERVICE>
+     <SINGLE-ECU-JOB ID="somersault.service.compulsory_program">
+      <SHORT-NAME>compulsory_program</SHORT-NAME>
+       <LONG-NAME>Compulsory Program</LONG-NAME>
+       <DESC>
+       <p>Do several fancy moves.</p>
+       </DESC>
+      <PROG-CODES>
+       <PROG-CODE>
+        <CODE-FILE>jobs.jar</CODE-FILE>
+        <SYNTAX>JAR</SYNTAX>
+        <REVISION>1.23.4</REVISION>
+        <ENTRYPOINT>com.supervisor.jobs.CompulsoryProgram</ENTRYPOINT>
+       </PROG-CODE>
+      </PROG-CODES>
+     </SINGLE-ECU-JOB>
+    </DIAG-COMMS>
+    <REQUESTS>
+     <REQUEST ID="somersault.RQ.start_session">
+      <SHORT-NAME>start_session</SHORT-NAME>
+      <LONG-NAME>Start the diagnostic session &amp; do some mischief</LONG-NAME>
+      <PARAMS>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>sid</SHORT-NAME>
+        <BYTE-POSITION>0</BYTE-POSITION>
+        <CODED-VALUE>16</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>id</SHORT-NAME>
+        <BYTE-POSITION>1</BYTE-POSITION>
+        <CODED-VALUE>0</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+      </PARAMS>
+     </REQUEST>
+     <REQUEST ID="somersault.RQ.stop_session">
+      <SHORT-NAME>stop_session</SHORT-NAME>
+      <LONG-NAME>Terminate the current diagnostic session</LONG-NAME>
+      <PARAMS>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>sid</SHORT-NAME>
+        <BYTE-POSITION>0</BYTE-POSITION>
+        <CODED-VALUE>16</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>id</SHORT-NAME>
+        <BYTE-POSITION>1</BYTE-POSITION>
+        <CODED-VALUE>1</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+      </PARAMS>
+     </REQUEST>
+     <REQUEST ID="somersault.RQ.tester_present">
+      <SHORT-NAME>tester_present</SHORT-NAME>
+      <LONG-NAME>Prevent the current diagnostic session from timing out</LONG-NAME>
+      <PARAMS>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>sid</SHORT-NAME>
+        <BYTE-POSITION>0</BYTE-POSITION>
+        <CODED-VALUE>62</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>id</SHORT-NAME>
+        <BYTE-POSITION>1</BYTE-POSITION>
+        <CODED-VALUE>0</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+      </PARAMS>
+     </REQUEST>
+     <REQUEST ID="somersault.RQ.set_operation_params">
+      <SHORT-NAME>set_operation_params</SHORT-NAME>
+      <LONG-NAME>Specify the mode of operation for the ECU; e.g. if rings of fire ought to be used for maximum effect</LONG-NAME>
+      <PARAMS>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>sid</SHORT-NAME>
+        <BYTE-POSITION>0</BYTE-POSITION>
+        <CODED-VALUE>189</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+       <PARAM  xsi:type="VALUE">
+        <SHORT-NAME>use_fire_ring</SHORT-NAME>
+        <BYTE-POSITION>1</BYTE-POSITION>
+        <DOP-REF ID-REF="somersault.DOP.boolean"/>
+       </PARAM>
+      </PARAMS>
+     </REQUEST>
+     <REQUEST ID="somersault.RQ.do_forward_flips">
+      <SHORT-NAME>do_forward_flips</SHORT-NAME>
+      <LONG-NAME>Do forward somersaults &amp; some other mischief</LONG-NAME>
+      <PARAMS>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>sid</SHORT-NAME>
+        <BYTE-POSITION>0</BYTE-POSITION>
+        <CODED-VALUE>186</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+       <PARAM  xsi:type="VALUE">
+        <SHORT-NAME>forward_soberness_check</SHORT-NAME>
+        <BYTE-POSITION>1</BYTE-POSITION>
+        <DOP-REF ID-REF="somersault.DOP.soberness_check"/>
+       </PARAM>
+       <PARAM  xsi:type="VALUE">
+        <SHORT-NAME>num_flips</SHORT-NAME>
+        <BYTE-POSITION>2</BYTE-POSITION>
+        <DOP-REF ID-REF="somersault.DOP.num_flips"/>
+       </PARAM>
+      </PARAMS>
+     </REQUEST>
+     <REQUEST ID="somersault.RQ.do_backward_flips">
+      <SHORT-NAME>do_backward_flips</SHORT-NAME>
+      <LONG-NAME>Do a backward somersault &amp; some other mischief</LONG-NAME>
+      <PARAMS>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>sid</SHORT-NAME>
+        <BYTE-POSITION>0</BYTE-POSITION>
+        <CODED-VALUE>187</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+       <PARAM  xsi:type="VALUE">
+        <SHORT-NAME>backward_soberness_check</SHORT-NAME>
+        <BYTE-POSITION>1</BYTE-POSITION>
+        <DOP-REF ID-REF="somersault.DOP.soberness_check"/>
+       </PARAM>
+       <PARAM  xsi:type="VALUE">
+        <SHORT-NAME>num_flips</SHORT-NAME>
+        <BYTE-POSITION>2</BYTE-POSITION>
+        <DOP-REF ID-REF="somersault.DOP.num_flips"/>
+       </PARAM>
+      </PARAMS>
+     </REQUEST>
+     <REQUEST ID="somersault.RQ.report_status">
+      <SHORT-NAME>report_status</SHORT-NAME>
+      <LONG-NAME>Report back the current level of dizzy- &amp; happiness.</LONG-NAME>
+      <PARAMS>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>sid</SHORT-NAME>
+        <BYTE-POSITION>0</BYTE-POSITION>
+        <CODED-VALUE>34</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>id</SHORT-NAME>
+        <BYTE-POSITION>1</BYTE-POSITION>
+        <CODED-VALUE>0</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+      </PARAMS>
+     </REQUEST>
+    </REQUESTS>
+    <POS-RESPONSES>
+     <POS-RESPONSE ID="somersault.PR.session_start">
+      <SHORT-NAME>session</SHORT-NAME>
+      <LONG-NAME>None</LONG-NAME>
+      <PARAMS>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>sid</SHORT-NAME>
+        <BYTE-POSITION>0</BYTE-POSITION>
+        <CODED-VALUE>80</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+       <PARAM  xsi:type="VALUE">
+        <SHORT-NAME>can_do_backward_flips</SHORT-NAME>
+        <BYTE-POSITION>1</BYTE-POSITION>
+        <DOP-REF ID-REF="somersault.DOP.boolean"/>
+       </PARAM>
+      </PARAMS>
+     </POS-RESPONSE>
+     <POS-RESPONSE ID="somersault.PR.tester_present">
+      <SHORT-NAME>tester_present</SHORT-NAME>
+      <LONG-NAME>None</LONG-NAME>
+      <PARAMS>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>sid</SHORT-NAME>
+        <BYTE-POSITION>0</BYTE-POSITION>
+        <CODED-VALUE>126</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>16</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>status</SHORT-NAME>
+        <BYTE-POSITION>1</BYTE-POSITION>
+        <CODED-VALUE>0</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+      </PARAMS>
+     </POS-RESPONSE>
+     <POS-RESPONSE ID="somersault.PR.grudging_forward">
+      <SHORT-NAME>grudging_forward</SHORT-NAME>
+      <LONG-NAME>None</LONG-NAME>
+      <PARAMS>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>sid</SHORT-NAME>
+        <BYTE-POSITION>0</BYTE-POSITION>
+        <CODED-VALUE>250</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+       <PARAM  xsi:type="MATCHING-REQUEST-PARAM">
+        <SHORT-NAME>num_flips_done</SHORT-NAME>
+        <BYTE-POSITION>1</BYTE-POSITION>
+        <REQUEST-BYTE-POS>2</REQUEST-BYTE-POS>
+        <BYTE-LENGTH>1</BYTE-LENGTH>
+       </PARAM>
+      </PARAMS>
+     </POS-RESPONSE>
+     <POS-RESPONSE ID="somersault.PR.happy_forward">
+      <SHORT-NAME>happy_forward</SHORT-NAME>
+      <LONG-NAME>None</LONG-NAME>
+      <PARAMS>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>sid</SHORT-NAME>
+        <BYTE-POSITION>0</BYTE-POSITION>
+        <CODED-VALUE>250</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+       <PARAM  xsi:type="MATCHING-REQUEST-PARAM">
+        <SHORT-NAME>num_flips_done</SHORT-NAME>
+        <BYTE-POSITION>1</BYTE-POSITION>
+        <REQUEST-BYTE-POS>3</REQUEST-BYTE-POS>
+        <BYTE-LENGTH>1</BYTE-LENGTH>
+       </PARAM>
+       <PARAM  xsi:type="VALUE">
+        <SHORT-NAME>yeha_level</SHORT-NAME>
+        <BYTE-POSITION>2</BYTE-POSITION>
+        <DOP-REF ID-REF="somersault.DOP.num_flips"/>
+       </PARAM>
+      </PARAMS>
+     </POS-RESPONSE>
+     <POS-RESPONSE ID="somersault.PR.grudging_backward">
+      <SHORT-NAME>grudging_backward</SHORT-NAME>
+      <LONG-NAME>None</LONG-NAME>
+      <PARAMS>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>sid</SHORT-NAME>
+        <BYTE-POSITION>0</BYTE-POSITION>
+        <CODED-VALUE>251</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+       <PARAM  xsi:type="MATCHING-REQUEST-PARAM">
+        <SHORT-NAME>num_flips_done</SHORT-NAME>
+        <BYTE-POSITION>1</BYTE-POSITION>
+        <REQUEST-BYTE-POS>3</REQUEST-BYTE-POS>
+        <BYTE-LENGTH>1</BYTE-LENGTH>
+       </PARAM>
+      </PARAMS>
+     </POS-RESPONSE>
+     <POS-RESPONSE ID="somersault.PR.status_report">
+      <SHORT-NAME>status_report</SHORT-NAME>
+      <LONG-NAME>None</LONG-NAME>
+      <PARAMS>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>sid</SHORT-NAME>
+        <BYTE-POSITION>0</BYTE-POSITION>
+        <CODED-VALUE>98</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+       <PARAM  xsi:type="VALUE">
+        <SHORT-NAME>dizzyness_level</SHORT-NAME>
+        <BYTE-POSITION>1</BYTE-POSITION>
+        <DOP-REF ID-REF="somersault.DOP.dizzyness_level"/>
+       </PARAM>
+       <PARAM  xsi:type="VALUE">
+        <SHORT-NAME>happiness_level</SHORT-NAME>
+        <BYTE-POSITION>2</BYTE-POSITION>
+        <DOP-REF ID-REF="somersault.DOP.happiness_level"/>
+       </PARAM>
+      </PARAMS>
+     </POS-RESPONSE>
+     <POS-RESPONSE ID="somersault.PR.set_operation_params">
+      <SHORT-NAME>set_operation_params</SHORT-NAME>
+      <LONG-NAME>None</LONG-NAME>
+      <PARAMS>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>sid</SHORT-NAME>
+        <BYTE-POSITION>0</BYTE-POSITION>
+        <CODED-VALUE>253</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+      </PARAMS>
+     </POS-RESPONSE>
+    </POS-RESPONSES>
+    <NEG-RESPONSES>
+     <NEG-RESPONSE ID="somersault.NR.general_negative_response">
+      <SHORT-NAME>general_negative_response</SHORT-NAME>
+      <LONG-NAME>None</LONG-NAME>
+      <PARAMS>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>sid</SHORT-NAME>
+        <BYTE-POSITION>0</BYTE-POSITION>
+        <CODED-VALUE>127</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+       <PARAM  xsi:type="MATCHING-REQUEST-PARAM">
+        <SHORT-NAME>rq_sid</SHORT-NAME>
+        <BYTE-POSITION>1</BYTE-POSITION>
+        <REQUEST-BYTE-POS>0</REQUEST-BYTE-POS>
+        <BYTE-LENGTH>1</BYTE-LENGTH>
+       </PARAM>
+       <PARAM  xsi:type="VALUE">
+        <SHORT-NAME>response_code</SHORT-NAME>
+        <BYTE-POSITION>2</BYTE-POSITION>
+        <DOP-REF ID-REF="somersault.DOP.error_code"/>
+       </PARAM>
+      </PARAMS>
+     </NEG-RESPONSE>
+     <NEG-RESPONSE ID="somersault.NR.tester_nok">
+      <SHORT-NAME>tester_nok</SHORT-NAME>
+      <LONG-NAME>None</LONG-NAME>
+      <PARAMS>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>sid</SHORT-NAME>
+        <BYTE-POSITION>0</BYTE-POSITION>
+        <CODED-VALUE>127</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>rq_sid</SHORT-NAME>
+        <BYTE-POSITION>1</BYTE-POSITION>
+        <CODED-VALUE>62</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+      </PARAMS>
+     </NEG-RESPONSE>
+     <NEG-RESPONSE ID="somersault.NR.flips_not_done">
+      <SHORT-NAME>flips_not_done</SHORT-NAME>
+      <LONG-NAME>None</LONG-NAME>
+      <PARAMS>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>sid</SHORT-NAME>
+        <BYTE-POSITION>0</BYTE-POSITION>
+        <CODED-VALUE>127</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+       <PARAM  xsi:type="MATCHING-REQUEST-PARAM">
+        <SHORT-NAME>rq_sid</SHORT-NAME>
+        <BYTE-POSITION>1</BYTE-POSITION>
+        <REQUEST-BYTE-POS>0</REQUEST-BYTE-POS>
+        <BYTE-LENGTH>1</BYTE-LENGTH>
+       </PARAM>
+       <PARAM  xsi:type="NRC-CONST">
+        <SHORT-NAME>reason</SHORT-NAME>
+        <BYTE-POSITION>2</BYTE-POSITION>
+        <CODED-VALUES>
+         <CODED-VALUE>0</CODED-VALUE>
+         <CODED-VALUE>1</CODED-VALUE>
+         <CODED-VALUE>2</CODED-VALUE>
+        </CODED-VALUES>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+       <PARAM  xsi:type="VALUE">
+        <SHORT-NAME>flips_successfully_done</SHORT-NAME>
+        <BYTE-POSITION>3</BYTE-POSITION>
+        <DOP-REF ID-REF="somersault.DOP.num_flips"/>
+       </PARAM>
+      </PARAMS>
+     </NEG-RESPONSE>
+    </NEG-RESPONSES>
+    <ADDITIONAL-AUDIENCES>
+     <ADDITIONAL-AUDIENCE ID="somersault.AA.attentive_admirer">
+      <SHORT-NAME>attentive_admirer</SHORT-NAME>
+      <LONG-NAME>Attentive Admirer</LONG-NAME>
+     </ADDITIONAL-AUDIENCE>
+     <ADDITIONAL-AUDIENCE ID="somersault.AA.anyone">
+      <SHORT-NAME>anyone</SHORT-NAME>
+      <LONG-NAME>Anyone</LONG-NAME>
+     </ADDITIONAL-AUDIENCE>
+    </ADDITIONAL-AUDIENCES>
+    <COMPARAM-REFS>
+     <COMPARAM-REF ID-REF="ISO_11898_2_DWCAN.CP_Baudrate" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>500000</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_2.CP_UniqueRespIdTable" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <COMPLEX-VALUE>
+       <SIMPLE-VALUE>normal segmented 11-bit transmit with FC</SIMPLE-VALUE>
+       <SIMPLE-VALUE>123</SIMPLE-VALUE>
+       <SIMPLE-VALUE>0</SIMPLE-VALUE>
+       <SIMPLE-VALUE>normal segmented 11-bit receive with FC</SIMPLE-VALUE>
+       <SIMPLE-VALUE>456</SIMPLE-VALUE>
+       <SIMPLE-VALUE>0</SIMPLE-VALUE>
+       <SIMPLE-VALUE>normal unsegmented 11-bit receive</SIMPLE-VALUE>
+       <SIMPLE-VALUE>4294967295</SIMPLE-VALUE>
+       <SIMPLE-VALUE>0</SIMPLE-VALUE>
+       <SIMPLE-VALUE>Somersault</SIMPLE-VALUE>
+      </COMPLEX-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.CP_RC21CompletionTimeout" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>1000000</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentMessage" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>3e00</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.ISO_15765_3.CP_TesterPresentReqRsp" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>Response expected</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentExpPosResp" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>7e00</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentExpNegResp" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>7f3e</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentSendType" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>On idle</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentAddrMode" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>Physical</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentReqRsp" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>Response expected</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_2.CP_BlockSize" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>4</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+    </COMPARAM-REFS>
+   </BASE-VARIANT>
+  </BASE-VARIANTS>
+  <ECU-VARIANTS>
+  <ECU-VARIANT ID="somersault_lazy">
+    <SHORT-NAME>somersault_lazy</SHORT-NAME>
+    <LONG-NAME>Somersault lazy ECU</LONG-NAME>
+    <DESC>
+   <p>Sloppy variant of the somersault ECU (lazy &lt; assiduous)</p>
+    </DESC>
+    <COMPARAM-REFS>
+     <COMPARAM-REF ID-REF="ISO_11898_2_DWCAN.CP_Baudrate" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>500000</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_2.CP_UniqueRespIdTable" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <COMPLEX-VALUE>
+       <SIMPLE-VALUE>normal segmented 11-bit transmit with FC</SIMPLE-VALUE>
+       <SIMPLE-VALUE>123</SIMPLE-VALUE>
+       <SIMPLE-VALUE>0</SIMPLE-VALUE>
+       <SIMPLE-VALUE>normal segmented 11-bit receive with FC</SIMPLE-VALUE>
+       <SIMPLE-VALUE>456</SIMPLE-VALUE>
+       <SIMPLE-VALUE>0</SIMPLE-VALUE>
+       <SIMPLE-VALUE>normal unsegmented 11-bit receive</SIMPLE-VALUE>
+       <SIMPLE-VALUE>4294967295</SIMPLE-VALUE>
+       <SIMPLE-VALUE>0</SIMPLE-VALUE>
+       <SIMPLE-VALUE>Somersault</SIMPLE-VALUE>
+      </COMPLEX-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.CP_RC21CompletionTimeout" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>1000000</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentMessage" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>3e00</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.ISO_15765_3.CP_TesterPresentReqRsp" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>Response expected</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentExpPosResp" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>7e00</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentExpNegResp" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>7f3e</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentSendType" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>On idle</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentAddrMode" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>Physical</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentReqRsp" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>Response expected</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_2.CP_BlockSize" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>4</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+    </COMPARAM-REFS>
+    <PARENT-REFS>
+     <PARENT-REF ID-REF="somersault" xsi:type="BASE-VARIANT-REF">
+      <NOT-INHERITED-DIAG-COMMS>
+       <NOT-INHERITED-DIAG-COMM>
+        <DIAG-COMM-SNREF SHORT-NAME="do_backward_flips"/>
+       </NOT-INHERITED-DIAG-COMM>
+       <NOT-INHERITED-DIAG-COMM>
+        <DIAG-COMM-SNREF SHORT-NAME="set_operation_params"/>
+       </NOT-INHERITED-DIAG-COMM>
+      </NOT-INHERITED-DIAG-COMMS>
+     </PARENT-REF>
+    </PARENT-REFS>
+   </ECU-VARIANT>
+  <ECU-VARIANT ID="somersault_assiduous">
+    <SHORT-NAME>somersault_assiduous</SHORT-NAME>
+    <LONG-NAME>Somersault assiduous ECU</LONG-NAME>
+    <DESC>
+   <p>Hard-working variant of the somersault ECU (lazy &lt; assiduous)</p>
+    </DESC>
+    <DIAG-COMMS>
+     <DIAG-SERVICE ID="somersault_assiduous.service.headstand"  SEMANTIC="UNKNOWN">
+      <SHORT-NAME>headstand</SHORT-NAME>
+      <AUDIENCE >
+       <ENABLED-AUDIENCE-REFS>
+        <ENABLED-AUDIENCE-REF ID-REF="somersault.AA.attentive_admirer" />
+       </ENABLED-AUDIENCE-REFS>
+      </AUDIENCE>
+      <REQUEST-REF ID-REF="somersault_assiduous.RQ.do_headstand"/>
+      <POS-RESPONSE-REFS>
+       <POS-RESPONSE-REF ID-REF="somersault_assiduous.PR.headstand_done" />
+      </POS-RESPONSE-REFS>
+      <NEG-RESPONSE-REFS>
+       <NEG-RESPONSE-REF ID-REF="somersault_assiduous.NR.fell_over" />
+      </NEG-RESPONSE-REFS>
+     </DIAG-SERVICE>
+    </DIAG-COMMS>
+    <REQUESTS>
+     <REQUEST ID="somersault_assiduous.RQ.do_headstand">
+      <SHORT-NAME>do_headstand</SHORT-NAME>
+      <LONG-NAME>Do a headstand &amp; whatever else is required to entertain the customer</LONG-NAME>
+      <PARAMS>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>sid</SHORT-NAME>
+        <BYTE-POSITION>0</BYTE-POSITION>
+        <CODED-VALUE>3</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+       <PARAM  xsi:type="VALUE">
+        <SHORT-NAME>duration</SHORT-NAME>
+        <BYTE-POSITION>1</BYTE-POSITION>
+        <DOP-REF ID-REF="somersault.DOP.duration"/>
+       </PARAM>
+      </PARAMS>
+     </REQUEST>
+    </REQUESTS>
+    <POS-RESPONSES>
+     <POS-RESPONSE ID="somersault_assiduous.PR.headstand_done">
+      <SHORT-NAME>headstand_done</SHORT-NAME>
+      <LONG-NAME>None</LONG-NAME>
+      <PARAMS>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>sid</SHORT-NAME>
+        <BYTE-POSITION>0</BYTE-POSITION>
+        <CODED-VALUE>1</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+       <PARAM  xsi:type="MATCHING-REQUEST-PARAM">
+        <SHORT-NAME>duration</SHORT-NAME>
+        <BYTE-POSITION>1</BYTE-POSITION>
+        <REQUEST-BYTE-POS>1</REQUEST-BYTE-POS>
+        <BYTE-LENGTH>1</BYTE-LENGTH>
+       </PARAM>
+      </PARAMS>
+     </POS-RESPONSE>
+    </POS-RESPONSES>
+    <NEG-RESPONSES>
+     <NEG-RESPONSE ID="somersault_assiduous.NR.fell_over">
+      <SHORT-NAME>fell_over</SHORT-NAME>
+      <LONG-NAME>None</LONG-NAME>
+      <PARAMS>
+       <PARAM  xsi:type="CODED-CONST">
+        <SHORT-NAME>sid</SHORT-NAME>
+        <BYTE-POSITION>0</BYTE-POSITION>
+        <CODED-VALUE>32</CODED-VALUE>
+        <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="true" xsi:type="STANDARD-LENGTH-TYPE" >
+          <BIT-LENGTH>8</BIT-LENGTH>
+         </DIAG-CODED-TYPE>
+       </PARAM>
+       <PARAM  xsi:type="MATCHING-REQUEST-PARAM">
+        <SHORT-NAME>duration</SHORT-NAME>
+        <BYTE-POSITION>1</BYTE-POSITION>
+        <REQUEST-BYTE-POS>1</REQUEST-BYTE-POS>
+        <BYTE-LENGTH>1</BYTE-LENGTH>
+       </PARAM>
+      </PARAMS>
+     </NEG-RESPONSE>
+    </NEG-RESPONSES>
+    <COMPARAM-REFS>
+     <COMPARAM-REF ID-REF="ISO_11898_2_DWCAN.CP_Baudrate" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>500000</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_2.CP_UniqueRespIdTable" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <COMPLEX-VALUE>
+       <SIMPLE-VALUE>normal segmented 11-bit transmit with FC</SIMPLE-VALUE>
+       <SIMPLE-VALUE>123</SIMPLE-VALUE>
+       <SIMPLE-VALUE>0</SIMPLE-VALUE>
+       <SIMPLE-VALUE>normal segmented 11-bit receive with FC</SIMPLE-VALUE>
+       <SIMPLE-VALUE>456</SIMPLE-VALUE>
+       <SIMPLE-VALUE>0</SIMPLE-VALUE>
+       <SIMPLE-VALUE>normal unsegmented 11-bit receive</SIMPLE-VALUE>
+       <SIMPLE-VALUE>4294967295</SIMPLE-VALUE>
+       <SIMPLE-VALUE>0</SIMPLE-VALUE>
+       <SIMPLE-VALUE>Somersault</SIMPLE-VALUE>
+      </COMPLEX-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.CP_RC21CompletionTimeout" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>1000000</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentMessage" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>3e00</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.ISO_15765_3.CP_TesterPresentReqRsp" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>Response expected</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentExpPosResp" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>7e00</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentExpNegResp" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>7f3e</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentSendType" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>On idle</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentAddrMode" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>Physical</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentReqRsp" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>Response expected</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+     <COMPARAM-REF ID-REF="ISO_15765_2.CP_BlockSize" DOCREF="doc_ref" DOCTYPE="COMPARAM-SUBSET">
+      <SIMPLE-VALUE>4</SIMPLE-VALUE>
+      <PROTOCOL-SNREF SHORT-NAME="TODO"/>
+     </COMPARAM-REF>
+    </COMPARAM-REFS>
+    <PARENT-REFS>
+     <PARENT-REF ID-REF="somersault" xsi:type="BASE-VARIANT-REF">
+     </PARENT-REF>
+    </PARENT-REFS>
+   </ECU-VARIANT>
+  </ECU-VARIANTS>
+ </DIAG-LAYER-CONTAINER>
+</ODX>
