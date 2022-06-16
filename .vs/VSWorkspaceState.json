@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\odxtools"
+    "\\odxtools",
+    "\\odxtools\\compumethods",
+    "\\odxtools\\odx_cs"
   ],
-  "SelectedNode": "\\odxtools\\database.py",
+  "SelectedNode": "\\odxtools\\dataobjectproperty.py",
   "PreviewInSolutionExplorer": false
 }

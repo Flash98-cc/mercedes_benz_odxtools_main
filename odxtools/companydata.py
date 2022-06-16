@@ -112,12 +112,12 @@ def read_xdoc_from_odx(xdoc):
                 position=position,
                 )
 
+
 def read_company_datas_from_odx(et_element):
     if et_element is None:
         return None
 
     cdl = NamedItemList(lambda x: x.short_name)
-
 
     for cd in et_element.iterfind("COMPANY-DATA"):
         id = cd.attrib["ID"]

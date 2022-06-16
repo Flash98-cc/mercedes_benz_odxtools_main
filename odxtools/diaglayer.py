@@ -1,6 +1,8 @@
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2022 MBition GmbH
 
+from asyncio.windows_events import NULL
+from ctypes.wintypes import INT
 from itertools import chain
 from typing import Optional, Any, Dict, Iterable, List, Union
 
@@ -71,21 +73,38 @@ class DiagLayer:
                 logger.warning(
                     f"Could not resolve parent ref to {self.id_ref}")
 
+#修改:需要先判断self.referenced_diag_layer 是否为空，再操作
+#modified by Barry at 2022.6.1
         def get_inheritance_priority(self):
-            return PRIORITY_OF_DIAG_LAYER_TYPE[self.referenced_diag_layer.variant_type]
+            if self.referenced_diag_layer is not None:
+                return PRIORITY_OF_DIAG_LAYER_TYPE[self.referenced_diag_layer.variant_type]
+            else:
+                return 0
+            
 
         def get_inherited_services_by_name(self):
-            services = {service.short_name: service for service in self.referenced_diag_layer._services
+            if self.referenced_diag_layer is not None:
+                services = {service.short_name: service for service in self.referenced_diag_layer._services
                         if service.short_name not in self.not_inherited_diag_comms}
-            return services
+                return services
+            else:
+                return {}
 
         def get_inherited_data_object_properties_by_name(self):
-            dops = {dop.short_name: dop for dop in self.referenced_diag_layer._data_object_properties
+            if self.referenced_diag_layer is not None:
+                dops = {dop.short_name: dop for dop in self.referenced_diag_layer._data_object_properties
                     if dop.short_name not in self.not_inherited_dops}
-            return dops
-
+                return dops
+            else:
+                return {}
+            
         def get_inherited_communication_parameters_by_name(self):
-            return {cp.id_ref: cp for cp in self.referenced_diag_layer._communication_parameters}
+            if self.referenced_diag_layer is not None:
+                return {cp.id_ref: cp for cp in self.referenced_diag_layer._communication_parameters}
+            else:
+                return {}
+
+#修改
 
     def __init__(self,
                  variant_type,
@@ -317,7 +336,7 @@ class DiagLayer:
         return com_params_by_name
 
     def _get_parent_refs_sorted_by_priority(self, reverse=False):
-        return sorted(self.parent_refs, key=lambda pr:  pr.get_inheritance_priority(), reverse=reverse)
+            return sorted(self.parent_refs, key=lambda pr:  pr.get_inheritance_priority(), reverse=reverse)
 
     def _build_coded_prefix_tree(self):
         """Constructs the coded prefix tree of the services.
@@ -521,7 +540,8 @@ def read_parent_ref_from_odx(et_element):
     id_ref = et_element.get("ID-REF")
 
     not_inherited_diag_comms = [el.get("SHORT-NAME")
-                                for el in et_element.iterfind("NOT-INHERITED-DIAG-COMMS/NOT-INHERITED-DIAG-COMM/DIAG-COMM-SNREF")]
+                                for el in et_element.iterfind("NOT-INHERITED-DIAG-COMMS/NOT-INHERITED-DIAG-COMM/DIAG"
+                                                              "-COMM-SNREF")]
     not_inherited_dops = [el.get("SHORT-NAME")
                           for el in et_element.iterfind("NOT-INHERITED-DOPS/NOT-INHERITED-DOP/DOP-BASE-SNREF")]
     ref_type = et_element.get(f"{xsi}type")
@@ -540,6 +560,7 @@ def read_diag_layer_from_odx(et_element, enable_candela_workarounds=True):
     variant_type = et_element.tag
 
     id = et_element.get("ID")
+    oid = et_element.get("OID")
     short_name = et_element.find("SHORT-NAME").text
 
     long_name = et_element.find(
@@ -591,6 +612,7 @@ def read_diag_layer_from_odx(et_element, enable_candela_workarounds=True):
             et_element.find("DIAG-DATA-DICTIONARY-SPEC"))
     else:
         diag_data_dictionary_spec = None
+    
 
     # TODO: Are UNIT-SPEC and SDGS needed?
 
@@ -654,7 +676,6 @@ class DiagLayerContainer:
         result = {}
         if self.admin_data is not None:
             result.update(self.admin_data._build_id_lookup())
-            #print("self admin data build_id_lookup: ",self.admin_data._build_id_lookup())#self.admin_data._build_id_lookup()返回空{}
            
         if self.company_datas is not None:
             for cd in self.company_datas:

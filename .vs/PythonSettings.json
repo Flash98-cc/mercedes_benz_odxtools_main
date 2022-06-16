@@ -1,3 +1,4 @@
 {
-  "SuppressConfigureTestFrameworkPrompt": "true"
+  "SuppressConfigureTestFrameworkPrompt": "true",
+  "SuppressEnvironmentCreationPrompt": true
 }

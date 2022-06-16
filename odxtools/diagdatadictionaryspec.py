@@ -112,6 +112,7 @@ def read_diag_data_dictionary_spec_from_odx(et_element):
     else:
         unit_spec = None
 
+    # 对这些complex dops 没有处理
     # TODO: Parse different specs.. Which of them are needed?
     for (path, name) in [
         ('ENV-DATA-DESCS/ENV-DATA-DESC', 'ENV-DATA-DESCs'),
@@ -126,7 +127,7 @@ def read_diag_data_dictionary_spec_from_odx(et_element):
         num = len(list(et_element.iterfind(path)))
         if num > 0:
             logger.info(f"Not implemented: Did not parse {num} {name}.")
-
+        
     return DiagDataDictionarySpec(
         data_object_props=data_object_props,
         structures=structures,

@@ -15,6 +15,20 @@ from .encodestate import EncodeState
 from .exceptions import DecodeError, EncodeError
 
 
+class Internal_Constr:
+    def __init__(self,
+                 lower_limit,
+                 upper_limit):
+        self.lower_limit = lower_limit
+        self.upper_limit = upper_limit
+
+
+def read_internal_constr_from_odx(et_element):
+    lower_limit = et_element.find("LOWER-LIMIT").text
+    upper_limit = et_element.find("UPPER-LIMIT").text
+    return Internal_Constr(lower_limit=lower_limit,
+                           upper_limit=upper_limit)
+
 class DopBase(abc.ABC):
     """ Base class for all DOPs.
 
@@ -34,14 +48,18 @@ class DopBase(abc.ABC):
         self.is_visible = is_visible
 
     @abc.abstractclassmethod
+    @abc.abstractmethod
     def convert_physical_to_bytes(self, physical_value, encode_state: EncodeState, bit_position: int) -> bytes:
         """Convert the physical value into bytes."""
         pass
 
     @abc.abstractclassmethod
+    @abc.abstractmethod
     def convert_bytes_to_physical(self, decode_state: DecodeState, bit_position: int = 0):
         """Extract the bytes from the PDU and convert them to the physical value."""
         pass
+
+
 
 
 class DataObjectProperty(DopBase):
@@ -53,6 +71,7 @@ class DataObjectProperty(DopBase):
                  diag_coded_type: DiagCodedType,
                  physical_type: PhysicalType,
                  compu_method: CompuMethod,
+                 internal_constr: Optional[Internal_Constr] = None,
                  unit_ref: Optional[str] = None,
                  long_name: Optional[str] = None,
                  description: Optional[str] = None
@@ -65,6 +84,7 @@ class DataObjectProperty(DopBase):
         self.physical_type = physical_type
         self.compu_method = compu_method
         self.unit_ref = unit_ref
+        self.internal_constr = internal_constr
         self._unit = None
 
     @property
@@ -303,9 +323,10 @@ def read_dtc_from_odx(et_element):
 
 def read_data_object_property_from_odx(et_element):
     """Reads a DATA-OBJECT-PROP or a DTC-DOP."""
+    # DATA-OBJECT-PROP (SIMPLE DATA) DTC-DOP(SIMPLE DATA)
     id = et_element.get("ID")
     short_name = et_element.find("SHORT-NAME").text
-    long_name = et_element.find("LONG-NAME").text
+    long_name = et_element.find("LONG-NAME").text if et_element.find("LONG_NAME") is not None else None
     description = et_element.find("DESCRIPTION").text if et_element.find(
         "DESCRIPTION") is not None else None
     logger.debug('Parsing DOP ' + short_name)
@@ -323,11 +344,17 @@ def read_data_object_property_from_odx(et_element):
             unit_ref = et_element.find("UNIT-REF").get("ID-REF")
         else:
             unit_ref = None
+        # TODO parse INTERNAL-CONSTR
+        if et_element.find("INTERNAL-CONSTR") is not None:
+            internal_constr = read_internal_constr_from_odx(et_element.find("INTERNAL-CONSTR"))
+        else:
+            internal_constr = None
         dop = DataObjectProperty(id,
                                  short_name,
                                  diag_coded_type,
                                  physical_type,
                                  compu_method,
+                                 internal_constr,
                                  unit_ref=unit_ref,
                                  long_name=long_name,
                                  description=description)
@@ -336,6 +363,8 @@ def read_data_object_property_from_odx(et_element):
                 for el in et_element.iterfind("DTCS/DTC")]
         dtcs += [DtcRef(el.get("ID-REF"))
                  for el in et_element.iterfind("DTCS/DTC-REF")]
+
+        # raised by Barry : LINKED-DTC-DOPS û�б�parse
 
         is_visible = et_element.get("IS-VISIBLE") == "true"
         dop = DtcDop(id,
