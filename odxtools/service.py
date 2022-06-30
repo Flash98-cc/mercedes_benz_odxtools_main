@@ -6,12 +6,33 @@ from odxtools.functionalclass import FunctionalClass
 from odxtools.state import State
 from odxtools.utils import read_description_from_odx
 from odxtools.exceptions import DecodeError
+from .odxtypes import DataType
 from typing import List, Optional, Union
+from enum import Enum
+from dataclasses import dataclass
 
 from .state_transition import StateTransition
 from .structures import Request, Response
 from .nameditemlist import NamedItemList
 from .message import Message
+
+
+class Trans_Mode(Enum):
+    SEND_ONLY = "SEND-ONLY"
+    RECEIVE_ONLY = "RECEIVE-ONLY"
+    SEND_AND_RECEIVE = "SEND-AND-RECEIVE"
+    SEND_OR_RECEIVE = "SEND-OR-RECEIVE"
+
+
+# TODO: DIAG-SERVICE/POS-RESPONSE-SUPPRESSABLE: means the application can choose whether it expects a positive response or not
+# ISO-22901-1 p65 figure 53
+# @dataclass()
+# class Pos_Response_Suppressable:
+#     bit_mask: DataType.A_BYTEFIELD
+#     value:
+#     value_snref: str
+
+
 
 
 class DiagService:
@@ -27,7 +48,9 @@ class DiagService:
                  audience: Optional[Audience] = None,
                  functional_class_refs=[],
                  pre_condition_state_refs=[],
-                 state_transition_refs=[]):
+                 state_transition_refs=[],
+                 transmission_mode: Trans_Mode = Trans_Mode.SEND_AND_RECEIVE,
+                 addressing: str=None):
         """Constructs the service.
 
         Parameters:
@@ -46,6 +69,10 @@ class DiagService:
         self.description: Optional[str] = description
         self.semantic: Optional[str] = semantic
         self.audience: Optional[Audience] = audience
+        self.transmission_mode = transmission_mode
+        # used to define the addressing mode used by the diag-service
+        self.addressing = addressing
+
         self.functional_class_refs: List[str] = functional_class_refs
         self._functional_classes: Union[List[FunctionalClass],
                                         NamedItemList[FunctionalClass]] = []
@@ -69,6 +96,9 @@ class DiagService:
         elif isinstance(request, Request):
             self._request = request
             self.request_ref_id = request.id
+        elif request is None:
+            self._request = None
+            self.request_ref_id = None
         else:
             raise ValueError(
                 "request must be a string (the ID of a request) or a Request object")
@@ -224,9 +254,9 @@ def read_diag_service_from_odx(et_element):
     # logger.info(f"Parsing service based on ET DiagService element: {et_element}")
     short_name = et_element.find("SHORT-NAME").text
     id = et_element.get("ID")
-    #("SERVICE ID: ",id)
+    # ("SERVICE ID: ",id)
 
-    request_ref_id = et_element.find("REQUEST-REF").get("ID-REF")
+    request_ref_id = et_element.find("REQUEST-REF").get("ID-REF") if et_element.find("REQUEST-REF") is not None else None
     
     pos_res_ref_ids = [
         el.get("ID-REF") for el in et_element.iterfind("POS-RESPONSE-REFS/POS-RESPONSE-REF")
@@ -252,6 +282,13 @@ def read_diag_service_from_odx(et_element):
     audience = read_audience_from_odx(et_element.find(
         "AUDIENCE")) if et_element.find("AUDIENCE") else None
 
+    addressing = et_element.get("ADDRESSING") if et_element.get("ADDRESSING") is not None else None
+
+    transmission_mode = et_element.get("TRANSMISSION-MODE") if et_element.get("TRANSMISSION-MODE") is not None else None
+    for trans_mode in Trans_Mode:
+        if trans_mode.value == transmission_mode:
+            transmission_mode = trans_mode
+
     diag_service = DiagService(id,
                                short_name,
                                request_ref_id,
@@ -263,5 +300,7 @@ def read_diag_service_from_odx(et_element):
                                audience=audience,
                                functional_class_refs=functional_class_ref_ids,
                                pre_condition_state_refs=pre_condition_state_ref_ids,
-                               state_transition_refs=state_transition_ref_ids)
+                               state_transition_refs=state_transition_ref_ids,
+                               transmission_mode=transmission_mode,
+                               addressing=addressing)
     return diag_service

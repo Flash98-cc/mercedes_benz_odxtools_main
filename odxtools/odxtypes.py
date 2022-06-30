@@ -7,7 +7,10 @@ from typing import Any, Callable, Dict, Literal, Type, Union
 
 def bytefield_to_bytearray(bytefield: str) -> bytearray:
     bytes_string = [bytefield[i:i+2] for i in range(0, len(bytefield), 2)]
-    return bytearray(map(lambda x: int(x, 16), bytes_string))
+    return bytearray(
+        map(lambda x: int(x, 16), bytes_string)  # 每两个元素组成一个byte，用16进制表示
+    )
+
 
 PythonType = Union[str, int, float, bytearray]
 LiteralPythonType = Type[Union[str, int, float, bytearray]]
@@ -29,7 +32,7 @@ _ODX_TYPE_TO_PYTHON_TYPE: Dict[str, LiteralPythonType] = {
     "A_UINT32": int,
     "A_FLOAT32": float,
     "A_FLOAT64": float,
-    "A_UNICODE2STRING": str,
+    "A_UNICODAE2STRING": str,
     "A_BYTEFIELD": bytearray,
     # only in DATA-TYPE not in PHYSICAL-DATA-TYPE
     "A_ASCIISTRING": str,

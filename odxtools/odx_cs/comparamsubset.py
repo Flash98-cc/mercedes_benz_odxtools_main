@@ -1,10 +1,12 @@
 from ctypes.wintypes import BOOLEAN
 from enum import Enum
-from typing import Optional
+from typing import Optional, Dict, Any
+from dataclasses import dataclass
 
 from ..units import UnitSpec, read_unit_spec_from_odx
 from ..utils import read_description_from_odx
 from ..dataobjectproperty import DataObjectProperty, read_data_object_property_from_odx
+from ..parent_dl import Parent_Dl
 
 # TODO admindata and companydata are not parsed
 
@@ -40,6 +42,12 @@ class Comparam:
         self.description = description
         self.physical_default_value = physical_default_value
         self.data_object_prop_ref = data_object_prop_ref
+
+    def _resolve_references(self, id_lookup):
+        if self.data_object_prop_ref is not None:
+            self.data_object_prop = id_lookup[self.data_object_prop_ref]
+        else:
+            self.data_object_prop = None
 
 
 def read_comparam_from_odx(et_element):
@@ -105,6 +113,11 @@ class Complex_Comparam:
                 self.cpusage = cpusage
         self.comparams = comparams
 
+    def resolve_references(self, id_lookup:Dict[str, Any]):
+        if self.comparams is not None:
+            for comparam in self.comparams:
+                comparam._resolve_references(id_lookup)
+
 
 def read_complex_comparam_from_odx(et_element):
     id = et_element.get("ID")
@@ -166,8 +179,18 @@ class ComparamSubset:
         self.data_object_props = data_object_props
         self.unit_spec = unit_spec
 
+    def _build_id_lookup(self, id_lookup: Dict[str, Any]):
+        if self.comparams is not None:
+            for comparam in self.comparams:
+                id_lookup[comparam.id] = comparam
 
-def read_comparam_subset_from_odx(et_element):
+        if self.complex_compramas is not None:
+            for complex_comparam in self.complex_compramas:
+                for simple_comparam in complex_comparam.comparams:
+                    id_lookup[simple_comparam.id] = simple_comparam
+
+
+def read_comparam_subset_from_odx(et_element, enable_candela_workarounds=True):
     id = et_element.get("ID")
     category = et_element.get("CATEGORY") if et_element.get("CATEGORY") is not None else None
     short_name = et_element.find("SHORT-NAME").text if et_element.find("SHORT-NAME") is not None else None
@@ -194,3 +217,16 @@ def read_comparam_subset_from_odx(et_element):
                           complex_comparams=complex_comparams,
                           data_object_props=data_object_props,
                           unit_spec=unit_spec)
+
+
+@dataclass()
+class Comparam_Ref:
+    id_ref: str = None
+    comparam: Comparam = None
+
+
+def read_comparam_ref(et_element):
+    if et_element is None:
+        return None
+    id_ref = et_element.get("ID-REF")
+    return Comparam_Ref(id_ref)

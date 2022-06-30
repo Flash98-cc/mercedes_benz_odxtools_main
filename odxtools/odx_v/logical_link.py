@@ -1,17 +1,18 @@
 # created by Barry at 2022.6.15
 from typing import Optional
+from dataclasses import dataclass
 
 from ..globals import xsi
+from .physical_vehicle_link import Physical_Vehicle_Link
+from ..diaglayer import DiagLayer
 
 
+@dataclass()
 class Physical_Vehicle_Link_Ref:
-    def __init__(self,
-                 id_ref,
-                 docref=None,
-                 doctype=None):
-        self.id_ref = id_ref
-        self.docref = docref
-        self.doctype = doctype
+    id_ref: str = None
+    docref: str = None
+    doctype: str = None
+    physical_vehicle_link: Physical_Vehicle_Link = None
 
 
 def read_physical_vehicle_link_ref(et_element):
@@ -21,14 +22,12 @@ def read_physical_vehicle_link_ref(et_element):
     return Physical_Vehicle_Link_Ref(id_ref, docref, doctype)
 
 
+@dataclass()
 class Functional_Group_Ref:
-    def __init__(self,
-                 id_ref,
-                 docref,
-                 doctype):
-        self.id_ref = id_ref
-        self.docref = docref
-        self.doctype = doctype
+    id_ref: str = None
+    docref: str = None
+    doctype: str = None
+    functional_group: DiagLayer = None
 
 
 def read_functional_group_ref(et_element):
@@ -38,11 +37,12 @@ def read_functional_group_ref(et_element):
     return Functional_Group_Ref(id_ref, docref, doctype)
 
 
+# TODO: Do not know the structure of ECU-PROXY, and there is no ECU-PROXY demo
+@dataclass()
 class ECU_Proxy_Ref:
-    def __init__(self, id_ref, docref, doctype):
-        self.id_ref = id_ref
-        self.docref = docref
-        self.doctype = doctype
+    id_ref: str = None
+    docref: str = None
+    doctype: str = None
 
 
 def read_ecu_proxy_ref(et_element):
@@ -52,11 +52,12 @@ def read_ecu_proxy_ref(et_element):
     return ECU_Proxy_Ref(id_ref, docref, doctype)
 
 
+@dataclass()
 class Protocol_Ref:
-    def __init__(self, id_ref, docref, doctype):
-        self.id_ref = id_ref
-        self.docref = docref
-        self.doctype = doctype
+    id_ref: str = None
+    docref: str = None
+    doctype: str = None
+    protocol: DiagLayer = None
 
 
 def read_protocol_ref(et_element):
@@ -66,11 +67,12 @@ def read_protocol_ref(et_element):
     return Protocol_Ref(id_ref, docref, doctype)
 
 
+@dataclass()
 class Base_Variant_Ref:
-    def __init__(self, id_ref, docref, doctype):
-        self.id_ref = id_ref
-        self.docref = docref
-        self.doctype = doctype
+    id_ref: str = None
+    docref: str = None
+    doctype: str = None
+    base_variant: DiagLayer = None
 
 
 def read_base_variant_ref(et_element):
@@ -106,6 +108,39 @@ class Logical_Link:
         self.protocol_ref = protocol_ref
         self.prot_stack_snref = prot_stack_snref
 
+    def _build_id_lookup(self, id_lookup):
+        pass
+
+    # build a dict, which key is element'short-name, therefore the value is the element, in order to solve snref references
+    def _build_sn_lookup(self, sn_lookup):
+        pass
+
+    # TODO: PROT-STACK-SNREF has not been resolved references for now
+    def _resolve_references(self, id_lookup):
+        if self.physical_vehicle_link_ref is not None:
+            self.physical_vehicle_link_ref.physical_vehicle_link = id_lookup[self.physical_vehicle_link_ref.id_ref]
+
+        if self.protocol_ref is not None:
+            if self.protocol_ref.id_ref in id_lookup.keys():
+                self.protocol_ref.protocol = id_lookup[self.protocol_ref.id_ref]
+            else:
+                self.protocol_ref.protocol = None
+
+        if self.functional_group_ref is not None:
+            if self.functional_group_ref.id_ref in id_lookup.keys():
+                self.functional_group_ref.functional_group = id_lookup[self.functional_group_ref.id_ref]
+            else:
+                self.functional_group_ref.functional_group = None
+
+        if self.base_variant_ref is not None:
+            if self.base_variant_ref.id_ref in id_lookup.keys():
+                self.base_variant_ref.base_variant = id_lookup[self.base_variant_ref.id_ref]
+            else:
+                self.base_variant_ref.base_variant = None
+
+        if self.ecu_proxy_ref is not None:
+            print(f"ECU Proxy is not defined for now")
+
 
 def read_logical_link_from_odx(et_element):
     id = et_element.get("ID")
@@ -113,18 +148,25 @@ def read_logical_link_from_odx(et_element):
     type = et_element.get(f"{xsi}type")
     short_name = et_element.find("SHORT-NAME").text
     long_name = et_element.find("LONG-NAME").text
+
     physical_vehicle_link_ref = read_physical_vehicle_link_ref(et_element.find("PHYSICAL-VEHICLE-LINK-REF")) \
         if et_element.find("PHYSICAL-VEHICLE-LINK-REF") is not None else None
+
     ecu_proxy_ref = read_ecu_proxy_ref(et_element.find("ECU-PROXY-REF")) \
         if et_element.find("ECU-PROXY-REF") is not None else None
+
     functional_group_ref = read_functional_group_ref(et_element.find("FUNCTIONAL-GROUP-REF")) \
         if et_element.find("FUNCTIONAL-GROUP-REF") is not None else None
+
     base_variant_ref = read_base_variant_ref(et_element.find("BASE-VARIANT-REF")) \
         if et_element.find("BASE-VARIANT-REF") is not None else None
+
     protocol_ref = read_protocol_ref(et_element.find("PROTOCOL-REF")) \
         if et_element.find("PROTOCOL-REF") is not None else None
+
     prot_stack_snref = et_element.find("PROT-STACK-SNREF").get("SHORT-NAME") \
         if et_element.find("PROT-STACK-SNREF") is not None else None
+
     return Logical_Link(id,
                         oid,
                         type,

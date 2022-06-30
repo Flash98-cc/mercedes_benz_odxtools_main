@@ -19,12 +19,14 @@ class NamedItemList(Generic[T]):
     avoid naming collisions. The user is responsible that the strings
     returned by the item-to-name function are valid identifiers in python.
     """
-    #Callable[[T],str]表示参数类型是T，返回值类型是str，在这里作用是类型检查，检查传入的参数是否是可调用的参数
-    #Interable[T]一次返回一个类型为T的对象
-    #self._item_to_name_fn = item_to_name_fn 相当于一个函数，输入一个类型T，输出一个str，
-    #以NamedItemList(lambda x: x.short_name, tmp)为例，输入一个tmp（diaglayercontainer类型）
-    #输出这个对象的short_name属性
+
+    # Callable[[T],str]表示参数类型是T，返回值类型是str，在这里作用是类型检查，检查传入的参数是否是可调用的参数
+    # Iterable[T]一次返回一个类型为T的对象
+    # self._item_to_name_fn = item_to_name_fn 相当于一个函数，输入一个类型T，输出一个str，
+    # 以NamedItemList(lambda x: x.short_name, tmp)为例，输入一个tmp（diaglayercontainer类型）
+    # 输出这个对象的short_name属性
     def __init__(self, item_to_name_fn: Callable[[T], str], input_list: Iterable[T] = None):
+
         self._item_to_name_fn = item_to_name_fn
         self._list: List[T] = []
         # TODO (?): This duplicates self.__dict__ -> Is there a prettier type-safe way?
@@ -42,21 +44,19 @@ class NamedItemList(Generic[T]):
         \return The name under which item is accessible
         """
         self._list.append(item)
-        
-        item_name = self._item_to_name_fn(item) #返回一个str
+
+        item_name = self._item_to_name_fn(item)  # 返回一个str
         i = 1
         tmp = item_name
         while True:
             if tmp not in self.__dict__:
                 self.__dict__[tmp] = item
                 self._typed_dict[tmp] = item
-                #print(tmp)
+                # print(tmp)
                 return tmp
 
-            print("run nameitemlist append function code here!")
             i += 1
             tmp = f"{item_name}_{i}"
-            print(f"{item_name}_{i}")
 
     def sort(self, key=None, reverse=False):
         return self._list.sort(key=key, reverse=reverse)
@@ -84,7 +84,7 @@ class NamedItemList(Generic[T]):
         return iter(self._list)
 
     def __str__(self):
-            return f"[{', '.join([self._item_to_name_fn(s) for s in self._list])}]"
+        return f"[{', '.join([self._item_to_name_fn(s) for s in self._list])}]"
 
     def __repr__(self):
         return self.__str__()

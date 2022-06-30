@@ -12,7 +12,7 @@ from ..utils import read_description_from_odx
 from ..nameditemlist import NamedItemList
 from ..admindata import AdminData, read_admin_data_from_odx
 from ..companydata import CompanyData, read_company_datas_from_odx
-from ..communicationparameter import CommunicationParameterRef, read_communication_param_ref_from_odx
+# from ..communicationparameter import CommunicationParameterRef, read_communication_param_ref_from_odx
 from ..diagdatadictionaryspec import DiagDataDictionarySpec, read_diag_data_dictionary_spec_from_odx
 from ..dataobjectproperty import DopBase
 from ..functionalclass import read_functional_class_from_odx
@@ -22,6 +22,8 @@ from ..service import DiagService, read_diag_service_from_odx
 from ..singleecujob import SingleEcuJob, read_single_ecu_job_from_odx
 from ..structures import Request, Response, read_structure_from_odx
 from .protstack import *
+from dataclasses import dataclass
+from ..parent_dl import Parent_Dl
 
 
 class Comparam_Spec:
@@ -41,20 +43,49 @@ class Comparam_Spec:
         self.company_datas = company_datas
         self.prot_stacks = prot_stacks
 
+    # build a dict which uses short-name to search element
+    def _build_sn_lookup(self, sn_lookup: Parent_Dl()):
+        if self.prot_stacks is not None:
+            for prot_stack in self.prot_stacks:
+                sn_lookup.prot_stacks[prot_stack.short_name] = prot_stack
+
+    def _resolve_references(self, id_lookup):
+        for prot_stack in self.prot_stacks:
+            comparam_subset_refs = prot_stack.comparam_subset_refs
+            for comparam_subset_ref in comparam_subset_refs:
+                if comparam_subset_ref.id_ref is not None:
+                    comparam_subset_ref.comparamsubset = id_lookup[comparam_subset_ref.id_ref]
+
+
+@dataclass()
+class Comparam_Spec_Ref:
+    id_ref: str = None
+    comparam_spec: Comparam_Spec = None
+
+
+def read_comparam_spec_ref(et_element):
+    if et_element is None:
+        return None
+    id_ref = et_element.get("ID-REF")
+    return Comparam_Spec_Ref(id_ref)
+
 
 def read_comparam_spec_from_odx(et_element, enable_candela_workarounds=True):
     id = et_element.get("ID")  # get()用于获取属性
     short_name = et_element.find("SHORT-NAME").text  # find是找到子元素
-    try:
-        long_name = et_element.find("LONG-NAME").text
-    except:
-        long_name = None
-    if et_element.find("DESC"):
-        description = read_description_from_odx(et_element.find("DESC"))
+    long_name = et_element.find("SHORT-NAME").text if et_element.find("SHORT-NAME") is not None else None
+
+    description = read_description_from_odx(et_element.find("DESC"))
+    if description is not None:
+        description = description
+    else:
+        description = None
+
     if et_element.find("ADMIN-DATA"):
         admin_data = read_admin_data_from_odx(et_element.find("ADMIN-DATA"))
     else:
         admin_data = None
+
     if et_element.find("COMPANY-DATAS"):
         company_datas = read_company_datas_from_odx(et_element.find("COMPANY-DATAS"))
     else:
@@ -63,8 +94,8 @@ def read_comparam_spec_from_odx(et_element, enable_candela_workarounds=True):
     prot_stacks = [read_prot_stack_from_odx(dl_element, enable_candela_workarounds=enable_candela_workarounds)
                    for dl_element in et_element.iterfind("PROT-STACKS/PROT-STACK")]
 
-    return Comparam_Spec(id,
-                         short_name,
+    return Comparam_Spec(id=id,
+                         short_name=short_name,
                          long_name=long_name,
                          description=description,
                          admin_data=admin_data,

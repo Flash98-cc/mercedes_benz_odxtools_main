@@ -1,4 +1,6 @@
 # created by Barry at 2022/5/31
+from ..odx_cs.comparamsubset import ComparamSubset
+
 
 class Comparam_subset_ref:
     def __init__(self,
@@ -8,6 +10,11 @@ class Comparam_subset_ref:
         self.id_ref = id_ref
         self.doctype = doctype
         self.docref = docref
+        self.comparamsubset = None
+
+    # PROT-STACK 引用了一个COMPARAM-SUBSET元素
+    def _resolve_reference(self, id_lookup):
+        self.comparamsubset = id_lookup[self.id_ref]
 
 
 def read_comparam_subset_ref_from_odx(et_element):

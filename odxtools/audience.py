@@ -43,6 +43,8 @@ class AdditionalAudience:
 
 
 def read_audience_from_odx(et_element):
+    if et_element is None:
+        return None
     enabled_audience_refs = [ref.get(
         "ID-REF") for ref in et_element.iterfind("ENABLED-AUDIENCE-REFS/ENABLED-AUDIENCE-REF")]
     disabled_audience_refs = [ref.get(
@@ -68,6 +70,9 @@ def read_audience_from_odx(et_element):
 
 
 def read_additional_audience_from_odx(et_element):
+    if et_element is None:
+        return None
+
     short_name = et_element.find("SHORT-NAME").text
     id = et_element.get("ID")
 

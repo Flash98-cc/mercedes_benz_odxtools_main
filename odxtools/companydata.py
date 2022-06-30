@@ -43,6 +43,8 @@ class TeamMember:
     fax: Optional[str] = None
     email: Optional[str] = None
 
+
+
 @dataclass()
 class CompanyData:
     id: str

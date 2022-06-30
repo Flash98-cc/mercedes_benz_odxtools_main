@@ -10,6 +10,7 @@ from .exceptions import *
 from .globals import logger, xsi
 from .state import read_state_from_odx
 from .state_transition import read_state_transition_from_odx
+from dataclasses import dataclass
 
 from .utils import read_description_from_odx
 from .nameditemlist import NamedItemList
@@ -24,6 +25,9 @@ from .message import Message
 from .service import DiagService, read_diag_service_from_odx
 from .singleecujob import SingleEcuJob, read_single_ecu_job_from_odx
 from .structures import Request, Response, read_structure_from_odx
+from .odx_c.comparamspec import Comparam_Spec_Ref, read_comparam_spec_ref
+from .odx_c.protstack import Prot_Stack_Snref, read_prot_stack_snref
+from .parent_dl import Parent_Dl
 
 # Defines priority of overiding objects
 PRIORITY_OF_DIAG_LAYER_TYPE = {
@@ -36,8 +40,22 @@ PRIORITY_OF_DIAG_LAYER_TYPE = {
 }
 
 
-class DiagLayer:
+def read_short_name(et_element):
+    if et_element is None:
+        return None
+    else:
+        return et_element.text
 
+
+def read_long_name(et_element):
+    if et_element is None:
+        return None
+    else:
+        return et_element.text
+
+
+class DiagLayer:
+    # P43 figure 29
     class ParentRef:
         def __init__(self,
                      reference,  # : Union[str, DiagLayer],
@@ -73,19 +91,18 @@ class DiagLayer:
                 logger.warning(
                     f"Could not resolve parent ref to {self.id_ref}")
 
-#修改:需要先判断self.referenced_diag_layer 是否为空，再操作
-#modified by Barry at 2022.6.1
+        # 修改:需要先判断self.referenced_diag_layer 是否为空，再操作
+        # modified by Barry at 2022.6.1
         def get_inheritance_priority(self):
             if self.referenced_diag_layer is not None:
                 return PRIORITY_OF_DIAG_LAYER_TYPE[self.referenced_diag_layer.variant_type]
             else:
                 return 0
-            
 
         def get_inherited_services_by_name(self):
             if self.referenced_diag_layer is not None:
                 services = {service.short_name: service for service in self.referenced_diag_layer._services
-                        if service.short_name not in self.not_inherited_diag_comms}
+                            if service.short_name not in self.not_inherited_diag_comms}
                 return services
             else:
                 return {}
@@ -93,19 +110,19 @@ class DiagLayer:
         def get_inherited_data_object_properties_by_name(self):
             if self.referenced_diag_layer is not None:
                 dops = {dop.short_name: dop for dop in self.referenced_diag_layer._data_object_properties
-                    if dop.short_name not in self.not_inherited_dops}
+                        if dop.short_name not in self.not_inherited_dops}
                 return dops
             else:
                 return {}
-            
+
         def get_inherited_communication_parameters_by_name(self):
             if self.referenced_diag_layer is not None:
                 return {cp.id_ref: cp for cp in self.referenced_diag_layer._communication_parameters}
             else:
                 return {}
 
-#修改
-
+    # 修改
+    # diag_layer init function
     def __init__(self,
                  variant_type,
                  id,
@@ -119,15 +136,18 @@ class DiagLayer:
                  single_ecu_jobs: List[SingleEcuJob] = [],
                  diag_comm_refs: List[str] = [],
                  parent_refs: List[ParentRef] = [],
+                 # Serves as the main container for the data elements necessary to decode the diagnostic messages
                  diag_data_dictionary_spec: DiagDataDictionarySpec = None,
-                 communication_parameters:
-                 List[CommunicationParameterRef] = [],
+                 communication_parameters: List[CommunicationParameterRef] = [],
                  enable_candela_workarounds=True,
                  id_lookup=None,
-                 additional_audiences=[],   
+                 additional_audiences=[],
+                 # Used to categorize the DIAG-COMM objects that belong to the DIAG-LAYER
                  functional_classes=[],
                  states=[],
-                 state_transitions=[]
+                 state_transitions=[],
+                 comparam_spec_ref: Comparam_Spec_Ref = None,
+                 prot_stack_snref: Prot_Stack_Snref = None
                  ):
         logger.info(f"Initializing variant type {variant_type}")
         self.variant_type = variant_type
@@ -139,12 +159,12 @@ class DiagLayer:
 
         # Requests and Responses
         self.requests = requests
+
         self.positive_responses = NamedItemList[Response](lambda pr: pr.short_name,
                                                           positive_responses)
         self.negative_responses = NamedItemList[Response](lambda nr: nr.short_name,
                                                           negative_responses)
-        #print(f"Positive response: ",self.positive_responses)
-        #print(f"Negative response: ",self.negative_responses)
+
         # ParentRefs
         self.parent_refs = parent_refs
 
@@ -168,13 +188,13 @@ class DiagLayer:
         self.state_transitions = state_transitions
 
         # Properties that include inherited objects
-        self._services: NamedItemList[Union[DiagService, SingleEcuJob]]\
-            = NamedItemList(lambda s: s.short_name, [])
-        self._communication_parameters: NamedItemList[CommunicationParameterRef]\
-            = NamedItemList(lambda s: s.id_ref, [])
-        self._data_object_properties: NamedItemList[DopBase]\
-            = NamedItemList(lambda s: s.short_name, [])
-        
+        self._services: NamedItemList[Union[DiagService, SingleEcuJob]] = NamedItemList(lambda s: s.short_name, [])
+        self._communication_parameters: NamedItemList[CommunicationParameterRef] = NamedItemList(lambda s: s.id_ref, [])
+        self._data_object_properties: NamedItemList[DopBase] = NamedItemList(lambda s: s.short_name, [])
+
+        # Protocol has Comparam-spec-ref, and prot-stack-snref
+        self.comparam_spec_ref = comparam_spec_ref
+        self.prot_stack_snref = prot_stack_snref
 
         if id_lookup is not None:
             self.finalize_init(id_lookup)
@@ -213,10 +233,10 @@ class DiagLayer:
 
     def _build_id_lookup(self):
         """Construct a mapping from IDs to all objects that are contained in this diagnostic layer."""
-        #logger.info(f"Adding {self.id} to id_lookup.")
-        #print(f"Adding {self.id} to id_lookup")
+        # logger.info(f"Adding {self.id} to id_lookup.")
+        # print(f"Adding {self.id} to id_lookup")
         id_lookup = {}
-        flag = 0 
+        flag = 0
         for obj in chain(self._local_services,
                          self._local_single_ecu_jobs,
                          self.requests,
@@ -237,29 +257,32 @@ class DiagLayer:
         return id_lookup
 
     def _resolve_references(self, id_lookup: Dict[str, Any]) -> None:
-        """Recursively resolve all references. 递归解析所有引用""" 
+        """Recursively resolve all references. 递归解析所有引用"""
         # Resolve inheritance 
         for pr in self.parent_refs:
             pr._resolve_references(id_lookup)
-        #计算可用的services
+
+        # 计算可用的services
         services = sorted(self._compute_available_services_by_name(id_lookup).values(),
                           key=lambda service: service.short_name)
         self._services = NamedItemList[Union[DiagService, SingleEcuJob]](
             lambda s: s.short_name,
             services)
-        #计算可用的dop
+
+        # 计算可用的dop
         dops = sorted(self._compute_available_data_object_properties_by_name().values(),
                       key=lambda dop: dop.short_name)
         self._data_object_properties = NamedItemList[DopBase](
             lambda dop: dop.short_name,
             dops)
-        #计算可用的通信参数
+
+        # 计算可用的通信参数
         comparams = sorted(self._compute_available_commmunication_parameters_by_name().values(),
                            key=lambda comparam: comparam.id_ref)
         self._communication_parameters = NamedItemList[CommunicationParameterRef](
             lambda cp: cp._python_name(),
             comparams)
-        #iterable.chain()接受一个可迭代对象列表输入，并返回一个迭代器；常用场景：对不同集合执行同一个操作。
+        # iterable.chain()接受一个可迭代对象列表输入，并返回一个迭代器；常用场景：对不同集合执行同一个操作。
         # Resolve all other references
         for struct in chain(self.requests,
                             self.positive_responses,
@@ -274,6 +297,21 @@ class DiagLayer:
         if self.local_diag_data_dictionary_spec:
             self.local_diag_data_dictionary_spec._resolve_references(self,
                                                                      id_lookup)
+        # add by Barry
+        if self.communication_parameters:
+            for communication_parameter in self.communication_parameters:
+                communication_parameter.resolve_references(id_lookup)
+
+        if (self.comparam_spec_ref is not None) and (self.comparam_spec_ref.id_ref in id_lookup.keys()):
+            self.comparam_spec_ref.comparam_spec = id_lookup[self.comparam_spec_ref.id_ref]
+
+    def resolve_snref_references(self, sn_lookup):
+        if (self.prot_stack_snref is not None) and (self.prot_stack_snref.snref in sn_lookup.prot_stacks.keys()):
+            self.prot_stack_snref.prot_stack = sn_lookup.prot_stacks[self.prot_stack_snref.snref]
+
+        if self.communication_parameters:
+            for communication_parameter in self.communication_parameters:
+                communication_parameter.resolve_snref_references(sn_lookup)
 
     def __local_services_by_name(self, id_lookup) -> Dict[str, Union[DiagService, SingleEcuJob]]:
         services_by_name: Dict[str, Union[DiagService, SingleEcuJob]] = {}
@@ -336,7 +374,7 @@ class DiagLayer:
         return com_params_by_name
 
     def _get_parent_refs_sorted_by_priority(self, reverse=False):
-            return sorted(self.parent_refs, key=lambda pr:  pr.get_inheritance_priority(), reverse=reverse)
+        return sorted(self.parent_refs, key=lambda pr: pr.get_inheritance_priority(), reverse=reverse)
 
     def _build_coded_prefix_tree(self):
         """Constructs the coded prefix tree of the services.
@@ -429,7 +467,8 @@ class DiagLayer:
                 f"None of the services {possible_services} could parse {message.hex()}.")
         return decoded_messages
 
-    def decode_response(self, response: Union[bytes, bytearray], request: Union[bytes, bytearray, Message]) -> Iterable[Message]:
+    def decode_response(self, response: Union[bytes, bytearray], request: Union[bytes, bytearray, Message]) -> Iterable[
+        Message]:
         if isinstance(request, Message):
             possible_services = [request.service]
         else:
@@ -555,7 +594,6 @@ def read_parent_ref_from_odx(et_element):
 
 
 def read_diag_layer_from_odx(et_element, enable_candela_workarounds=True):
-    
     # logger.info(et_element)
     variant_type = et_element.tag
 
@@ -612,11 +650,14 @@ def read_diag_layer_from_odx(et_element, enable_candela_workarounds=True):
             et_element.find("DIAG-DATA-DICTIONARY-SPEC"))
     else:
         diag_data_dictionary_spec = None
-    
+
+    # add Protocol comparam-spec-ref and prot-stack-snref
+    comparam_spec_ref = read_comparam_spec_ref(et_element.find("COMPARAM-SPEC-REF"))
+    prot_stack_snref = read_prot_stack_snref(et_element.find("PROT-STACK-SNREF"))
 
     # TODO: Are UNIT-SPEC and SDGS needed?
 
-    # Create DiagLayer
+    # Create DiagLayer, not return id_lookup
     dl = DiagLayer(variant_type,
                    id,
                    short_name,
@@ -636,8 +677,9 @@ def read_diag_layer_from_odx(et_element, enable_candela_workarounds=True):
                    states=states,
                    state_transitions=state_transitions,
                    enable_candela_workarounds=enable_candela_workarounds,
+                   comparam_spec_ref=comparam_spec_ref,
+                   prot_stack_snref=prot_stack_snref
                    )
-
     return dl
 
 
@@ -668,29 +710,35 @@ class DiagLayerContainer:
         self.base_variants = base_variants
         self.ecu_variants = ecu_variants
 
+        # 提取出diaglayer 用nameitemlist 包装
         self._diag_layers = NamedItemList[DiagLayer](
             lambda dop: dop.short_name,
-            list(chain(self.ecu_shared_datas, self.protocols, self.functional_groups, self.base_variants, self.ecu_variants))) #转换成list格式
+            list(chain(self.ecu_shared_datas, self.protocols, self.functional_groups, self.base_variants,
+                       self.ecu_variants)))
 
     def _build_id_lookup(self):
         result = {}
         if self.admin_data is not None:
             result.update(self.admin_data._build_id_lookup())
-           
+
         if self.company_datas is not None:
             for cd in self.company_datas:
                 result.update(cd._build_id_lookup())
-
         return result
 
-    """ def _resolve_references(self, id_lookup: Dict[str, Any]) -> None:
+    def build_sn_lookup(self, sn_lookup: Parent_Dl()):
+        if self.protocols is not None:
+            for protocol in self.protocols:
+                sn_lookup.protocols[protocol.short_name] = protocol
+
+    # it did work
+    def _resolve_references(self, id_lookup: Dict[str, Any]) -> None:
         if self.admin_data is not None:
             self.admin_data._resolve_references(id_lookup)
 
         if self.company_datas is not None:
             for cd in self.company_datas:
-                cd._resolve_references(id_lookup) """
-
+                cd._resolve_references(id_lookup)
 
     @property
     def diag_layers(self):

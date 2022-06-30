@@ -46,7 +46,10 @@ def _parse_compu_scale_to_linear_compu_method(scale_element,
     nums = coeffs.iterfind("COMPU-NUMERATOR/V")
 
     offset = computation_python_type(next(nums).text)
-    factor = computation_python_type(next(nums).text)
+    # there is an error, when nums.text is 0.01(a float number)
+    # factor = computation_python_type(next(nums).text)
+    factor = float(next(nums).text)
+
     if coeffs.find("COMPU-DENOMINATOR/V") is not None:
         kwargs["denominator"] = float(
             coeffs.find("COMPU-DENOMINATOR/V").text)
@@ -114,9 +117,10 @@ def read_compu_method_from_odx(et_element, internal_type: DataType, physical_typ
 
     kwargs: Dict[str, Any] = {"internal_type": internal_type}
 
+    # TODO: internal_type is A_BYTEFIELD how to solve?
     if compu_category == "IDENTICAL":
         assert (internal_type == physical_type or (
-            internal_type in [DataType.A_ASCIISTRING,  DataType.A_UTF8STRING] and physical_type == DataType.A_UNICODE2STRING)
+            internal_type in [DataType.A_ASCIISTRING,  DataType.A_UTF8STRING, DataType.A_BYTEFIELD] and physical_type == DataType.A_UNICODE2STRING)
         ), (f"Internal type '{internal_type}' and physical type '{physical_type}'"
             f" must be the same for compu methods of category '{compu_category}'")
         return IdenticalCompuMethod(internal_type=internal_type, physical_type=physical_type)

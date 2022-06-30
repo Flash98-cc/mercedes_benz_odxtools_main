@@ -14,6 +14,11 @@ class Vehicle_Connector:
         self.long_name = long_name
         self.vehicle_connector_pins = vehicle_connector_pins
 
+    def _build_id_lookup(self, id_lookup):
+        if self.vehicle_connector_pins is not None:
+            for vehicle_connector_pin in self.vehicle_connector_pins:
+                id_lookup[vehicle_connector_pin.id] = vehicle_connector_pin
+
 
 def read_vehicle_connector_from_odx(et_element):
     oid = et_element.get("OID")

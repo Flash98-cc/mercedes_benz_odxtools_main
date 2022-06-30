@@ -24,10 +24,11 @@ class Internal_Constr:
 
 
 def read_internal_constr_from_odx(et_element):
-    lower_limit = et_element.find("LOWER-LIMIT").text
-    upper_limit = et_element.find("UPPER-LIMIT").text
+    lower_limit = et_element.find("LOWER-LIMIT").text if et_element.find("LOWER-LIMIT") is not None else None
+    upper_limit = et_element.find("UPPER-LIMIT").text if et_element.find("UPPER-LIMIT") is not None else None
     return Internal_Constr(lower_limit=lower_limit,
                            upper_limit=upper_limit)
+
 
 class DopBase(abc.ABC):
     """ Base class for all DOPs.
@@ -58,8 +59,6 @@ class DopBase(abc.ABC):
     def convert_bytes_to_physical(self, decode_state: DecodeState, bit_position: int = 0):
         """Extract the bytes from the PDU and convert them to the physical value."""
         pass
-
-
 
 
 class DataObjectProperty(DopBase):
@@ -119,7 +118,7 @@ class DataObjectProperty(DopBase):
         return self.diag_coded_type.convert_internal_to_bytes(internal_val, encode_state, bit_position=bit_position)
 
     def convert_bytes_to_physical(self, decode_state, bit_position: int = 0):
-        assert 0 <= bit_position and bit_position < 8
+        assert 0 <= bit_position < 8
 
         internal, next_byte_position = self.diag_coded_type.convert_bytes_to_internal(decode_state,
                                                                                       bit_position=bit_position)

@@ -11,13 +11,10 @@ class Info_Component:
                  short_name,
                  long_name):
         self.id = id
+        self.oid = oid
         self.type = type
         self.short_name = short_name
         self.long_name = long_name
-
-    # TODO parse info-component-ref
-    def resolve_reference(self):
-        pass
 
 
 def read_info_component_from_odx(et_elemnet):

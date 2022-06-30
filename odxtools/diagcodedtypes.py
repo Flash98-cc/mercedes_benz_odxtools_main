@@ -504,7 +504,7 @@ def read_diag_coded_type_from_odx(et_element):
     assert base_data_type in ["A_INT32", "A_UINT32", "A_FLOAT32", "A_FLOAT64",
                               "A_ASCIISTRING", "A_UTF8STRING", "A_UNICODE2STRING", "A_BYTEFIELD"]
 
-    if et_element.get("IS-HIGHLOW-BYTE-ORDER") is not None:
+    if et_element.get("IS-HIGHLOW-SBYTE-ORDER") is not None:
         assert et_element.get("IS-HIGHLOW-BYTE-ORDER") in ["true", "false"]
         is_highlow_byte_order = et_element.get(
             "IS-HIGHLOW-BYTE-ORDER") == "true"

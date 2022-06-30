@@ -30,8 +30,22 @@ class Vehicle_Info_Spec:
         self.info_components = info_components
         self.vehicle_informations = vehicle_informations
 
+    def _build_id_lookup(self, id_lookup):
+        if self.info_components is not None:
+            for info_component in self.info_components:
+                id_lookup[info_component.id] = info_component
 
-def read_vehicle_info_spec_from_odx(et_element):
+        if self.vehicle_informations is not None:
+            for vehicle_information in self.vehicle_informations:
+                vehicle_information._build_id_lookup(id_lookup)
+
+    def _resolve_references(self, id_lookup):
+        if self.vehicle_informations is not None:
+            for vehicle_information in self.vehicle_informations:
+                vehicle_information._resolve_references(id_lookup)
+
+
+def read_vehicle_info_spec_from_odx(et_element, enable_candela_workarounds=True):
     id = et_element.get("ID")
     short_name = et_element.find("SHORT-NAME").text if et_element.find("SHORT-NAME") is not None else None
     long_name = et_element.find("LONG-NAME").text if et_element.find("LONG-NAME") is not None else None

@@ -107,14 +107,15 @@ class Unit:
     offset_si_to_unit: Optional[float] = None
     physical_dimension_ref: Optional[str] = None
 
-    def __post_init__(self):
-        self._physical_dimension = None
 
-        if self.factor_si_to_unit is not None or self.offset_si_to_unit is not None or self.physical_dimension_ref is not None:
-            assert self.factor_si_to_unit is not None and self.offset_si_to_unit is not None and self.physical_dimension_ref is not None, (
-                f"Error 54: If one of factor_si_to_unit, offset_si_to_unit and physical_dimension_ref is defined,"
-                f" all of them must be defined: {self.factor_si_to_unit} and {self.offset_si_to_unit} and {self.physical_dimension_ref}"
-            )
+    # def __post_init__(self):
+    #     self._physical_dimension = None
+    #
+    #     if self.factor_si_to_unit is not None or self.offset_si_to_unit is not None or self.physical_dimension_ref is not None:
+    #         assert self.factor_si_to_unit is not None and self.offset_si_to_unit is not None and self.physical_dimension_ref is not None, (
+    #             f"Error 54: If one of factor_si_to_unit, offset_si_to_unit and physical_dimension_ref is defined,"
+    #             f" all of them must be defined: {self.factor_si_to_unit} and {self.offset_si_to_unit} and {self.physical_dimension_ref}"
+    #         )
 
     @property
     def physical_dimension(self) -> PhysicalDimension:
