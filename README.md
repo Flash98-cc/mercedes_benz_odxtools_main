@@ -1,6 +1,10 @@
 <!-- SPDX-License-Identifier: MIT -->
 # odxtools
 
+## OSCS
+<a href="https://www.oscs1024.com/project/oscs/Flash98-cc/mercedes_benz_odxtools_main?ref=badge_large" alt="OSCS Status"><img src="https://www.oscs1024.com/platform/badge/Flash98-cc/mercedes_benz_odxtools_main.svg?size=large"/></a>
+
+## Introduction
 `odxtools` is a set of utilities for working with diagnostic
 descriptions of automotive electronic control units using the data
 model and the associated technologies of the ODX standard.
