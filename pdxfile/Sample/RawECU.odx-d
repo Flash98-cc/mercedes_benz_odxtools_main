@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ODX MODEL-VERSION="2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="odx.xsd">
+  <DIAG-LAYER-CONTAINER ID="DLC.New_Diagnostic_Layer_Container">
+    <SHORT-NAME>RawECU</SHORT-NAME>
+    <LONG-NAME>RawECU</LONG-NAME>
+   	<BASE-VARIANTS>
+      <BASE-VARIANT ID="DLC.New_Diagnostic_Layer_Container.BV.RawECU">
+        <SHORT-NAME>RawECU</SHORT-NAME>
+        <LONG-NAME>RawECU</LONG-NAME>
+		<COMPARAM-REFS>
+			<COMPARAM-REF ID-REF="ISO_11898_RAW_TRANS.CP_CanPhysReqId" DOCREF="ISO_11898_RAW_TRANS" DOCTYPE="COMPARAM-SUBSET">
+				<SIMPLE-VALUE>256</SIMPLE-VALUE>
+				<PROTOCOL-SNREF SHORT-NAME="Raw_Can"/>
+			</COMPARAM-REF>
+			<COMPARAM-REF ID-REF="ISO_11898_RAW_TRANS.CP_UniqueRespIdTable" DOCREF="ISO_11898_RAW_TRANS" DOCTYPE="COMPARAM-SUBSET">
+	            <COMPLEX-VALUE>	
+	            	<SIMPLE-VALUE>0</SIMPLE-VALUE>
+	            	<SIMPLE-VALUE>normal unsegmented 11-bit transmit</SIMPLE-VALUE>
+	            	<SIMPLE-VALUE>256</SIMPLE-VALUE>
+	            	<SIMPLE-VALUE>0</SIMPLE-VALUE>
+	            	<SIMPLE-VALUE>normal unsegmented 11-bit receive</SIMPLE-VALUE>
+	            	<SIMPLE-VALUE>4294967295</SIMPLE-VALUE>
+	            	<SIMPLE-VALUE>RawECU</SIMPLE-VALUE>
+	            </COMPLEX-VALUE>
+			</COMPARAM-REF>
+		</COMPARAM-REFS>
+        <PARENT-REFS>
+          <PARENT-REF ID-REF="DLC.FG_UDS_CAN.FG.FGRAW" DOCREF="FG_UDS_CAN" DOCTYPE="CONTAINER" xsi:type="FUNCTIONAL-GROUP-REF"/>
+        </PARENT-REFS>
+      </BASE-VARIANT>
+    </BASE-VARIANTS>
+  </DIAG-LAYER-CONTAINER>
+</ODX>

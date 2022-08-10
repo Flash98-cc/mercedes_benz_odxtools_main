@@ -1,0 +1,1324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ODX MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DIAG-LAYER-CONTAINER ID="DLC.FG_UDS_CAN">
+    <SHORT-NAME>FG_UDS_CAN</SHORT-NAME>
+    <LONG-NAME>FG UDS on CAN Bus</LONG-NAME>
+    <PROTOCOLS>
+      <PROTOCOL ID="DLC.DLC_FG_UDS_CAN.PRT.UDS_ON_CAN">
+        <SHORT-NAME>UDS_ON_CAN</SHORT-NAME>
+        <LONG-NAME>UDS on CAN</LONG-NAME>
+        <COMPARAM-SPEC-REF ID-REF="CPS_ISO_15765_3_on_ISO_15765_2" DOCREF="ISO_15765_3_on_ISO_15765_2" DOCTYPE="COMPARAM-SPEC"/>
+        <PROT-STACK-SNREF SHORT-NAME="PS_ISO_15765_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN"/>
+      </PROTOCOL>
+      <PROTOCOL ID="DLC.RawCAN.PT.Raw_CAN">
+        <SHORT-NAME>Raw_Can</SHORT-NAME>
+        <LONG-NAME>Raw_Can</LONG-NAME>
+        <COMPARAM-SPEC-REF ID-REF="CPS.Raw_Can" DOCREF="Raw_Can" DOCTYPE="COMPARAM-SPEC"/>
+        <PROT-STACK-SNREF SHORT-NAME="ISO_11898_RAW"/>
+      </PROTOCOL>
+      <PROTOCOL ID="DoIP_ISO13400">
+        <SHORT-NAME>DoIP_ISO13400</SHORT-NAME>
+        <LONG-NAME>DoIP (ISO13400)</LONG-NAME>
+        <COMPARAM-SPEC-REF DOCREF="ISO_14229_5_on_ISO_13400_2" DOCTYPE="COMPARAM-SPEC" ID-REF="ISO_14229_5_on_ISO_13400_2"/>
+        <PROT-STACK-SNREF SHORT-NAME="ISO_14229_5_on_ISO_13400_2_on_IEEE_802_3"/>
+      </PROTOCOL>
+    </PROTOCOLS>
+    <FUNCTIONAL-GROUPS>
+      <FUNCTIONAL-GROUP ID="DLC.FG_UDS_CAN.FG.FG">
+        <SHORT-NAME>FG</SHORT-NAME>
+        <LONG-NAME>FG</LONG-NAME>
+        <DESC>
+          <p>This layer represents all ECUs that are connected to the Vehicle</p>
+        </DESC>
+        <DIAG-DATA-DICTIONARY-SPEC>
+          <DATA-OBJECT-PROPS>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.DOP_Unit_1Byte">
+              <SHORT-NAME>DOP_Uint_1Byte</SHORT-NAME>
+              <LONG-NAME>Unsigned integer 1 Byte</LONG-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>IDENTICAL</CATEGORY>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-TYPE-ENCODING="NONE" BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.DOP_Hex_1Byte">
+              <SHORT-NAME>DOP_Hex_1Byte</SHORT-NAME>
+              <LONG-NAME>Hex 1Byte</LONG-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>IDENTICAL</CATEGORY>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-TYPE-ENCODING="NONE" BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32" DISPLAY-RADIX="HEX"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.DOP_Unit_3Bytes">
+              <SHORT-NAME>DOP_Uint_3Bytes</SHORT-NAME>
+              <LONG-NAME>Unsigned integer 3 Bytes</LONG-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>IDENTICAL</CATEGORY>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-TYPE-ENCODING="NONE" BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>24</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.DOP_Unit_2Bytes">
+              <SHORT-NAME>DOP_Uint_2Bytes</SHORT-NAME>
+              <LONG-NAME>Unsigned integer 2 Bytes</LONG-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>IDENTICAL</CATEGORY>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-TYPE-ENCODING="NONE" BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>16</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.DOP_DTCFormat">
+              <SHORT-NAME>DOP_DTCFormat</SHORT-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>TEXTTABLE</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>1</LOWER-LIMIT>
+                      <UPPER-LIMIT>1</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT>ISO14229-1</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.DtcStatusEvaluated">
+              <SHORT-NAME>StatusEvaluated</SHORT-NAME>
+              <LONG-NAME>Evaluated DTC Status</LONG-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>TEXTTABLE</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>0</LOWER-LIMIT>
+                      <UPPER-LIMIT>0</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT>noDtcLampOff</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>4</LOWER-LIMIT>
+                      <UPPER-LIMIT>4</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT>noDtcLampOn</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>2</LOWER-LIMIT>
+                      <UPPER-LIMIT>2</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT>historicDtcLampOff</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>6</LOWER-LIMIT>
+                      <UPPER-LIMIT>6</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT>historicDtcLampOn</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>1</LOWER-LIMIT>
+                      <UPPER-LIMIT>1</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT>pendingDtcLampOff</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>5</LOWER-LIMIT>
+                      <UPPER-LIMIT>5</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT>pendingDtcLampOn</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>3</LOWER-LIMIT>
+                      <UPPER-LIMIT>3</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT>currentDtcLampOff</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>7</LOWER-LIMIT>
+                      <UPPER-LIMIT>7</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT>currentDtcLampOn</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                  <COMPU-DEFAULT-VALUE>
+                    <VT>invalid</VT>
+                  </COMPU-DEFAULT-VALUE>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" CONDENSED="true" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+                <BIT-MASK>89</BIT-MASK>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.EvaluatedDTCStatusNumeric">
+              <SHORT-NAME>EvaluatedDTCStatusNumeric</SHORT-NAME>
+              <LONG-NAME>Evaluated DTC Status Numeric</LONG-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>IDENTICAL</CATEGORY>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" CONDENSED="true" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+                <BIT-MASK>89</BIT-MASK>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.DOP_TrueFalse">
+              <SHORT-NAME>DOP_TrueFalse</SHORT-NAME>
+              <LONG-NAME>Dop True False</LONG-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>TEXTTABLE</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>0</LOWER-LIMIT>
+                      <UPPER-LIMIT>0</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT>False</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>1</LOWER-LIMIT>
+                      <UPPER-LIMIT>1</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT>True</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-TYPE-ENCODING="NONE" BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>1</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.DOP_OnOff">
+              <SHORT-NAME>DOP_OnOff</SHORT-NAME>
+              <LONG-NAME>DOP ON OFF</LONG-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>TEXTTABLE</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>0</LOWER-LIMIT>
+                      <UPPER-LIMIT>0</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT>On</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>1</LOWER-LIMIT>
+                      <UPPER-LIMIT>1</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT>Off</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-TYPE-ENCODING="NONE" BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>1</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function1">
+              <SHORT-NAME>DOP_Sub_function1</SHORT-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>TEXTTABLE</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>1</LOWER-LIMIT>
+                      <UPPER-LIMIT>1</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.DEFAULTSESSION">DefaultSession</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>2</LOWER-LIMIT>
+                      <UPPER-LIMIT>2</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.PROGRAMMINGSESSION">ProgrammingSession</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>3</LOWER-LIMIT>
+                      <UPPER-LIMIT>3</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.EXTENDEDDIAGNOSTICSESSION">ExtendedDiagnosticSession</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function2">
+              <SHORT-NAME>DOP_Sub_function2</SHORT-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>TEXTTABLE</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>129</LOWER-LIMIT>
+                      <UPPER-LIMIT>129</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.DEFAULTSESSIONSUPPRESSPOSRES">DefaultSessionSuppressPosRes</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>130</LOWER-LIMIT>
+                      <UPPER-LIMIT>130</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.PROGRAMMINGSESSIONSUPPRESSPOSRES">ProgrammingSessionSuppressPosRes</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>131</LOWER-LIMIT>
+                      <UPPER-LIMIT>131</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.EXTENDEDDIAGNOSTICSESSIONSUPPRESSPOSRES">ExtendedDiagnosticSessionSuppressPosRes</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function3">
+              <SHORT-NAME>DOP_Sub_function3</SHORT-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>TEXTTABLE</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>1</LOWER-LIMIT>
+                      <UPPER-LIMIT>1</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.ECUHARDWARERESET">ECUHardwareReset</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>2</LOWER-LIMIT>
+                      <UPPER-LIMIT>2</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.KL_15RESET">KL.15Reset</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>3</LOWER-LIMIT>
+                      <UPPER-LIMIT>3</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.ECUSOFTWARERESET">ECUSoftwareReset</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>64</LOWER-LIMIT>
+                      <UPPER-LIMIT>64</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.SUPPLIERRESET">SupplierReset</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function4">
+              <SHORT-NAME>DOP_Sub_function4</SHORT-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>TEXTTABLE</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>129</LOWER-LIMIT>
+                      <UPPER-LIMIT>129</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.ECUHARDWARERESETSUPPRESSPOSRES">ECUHardwareResetSuppressPosRes</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function5">
+              <SHORT-NAME>DOP_Sub_function5</SHORT-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>TEXTTABLE</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>0</LOWER-LIMIT>
+                      <UPPER-LIMIT>0</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.ENABLERXANDTX">EnableRxAndTx</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>3</LOWER-LIMIT>
+                      <UPPER-LIMIT>3</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.DISABLERXANDTX">DisableRxAndTx</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_communicationType1">
+              <SHORT-NAME>DOP_communicationType1</SHORT-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>TEXTTABLE</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>1</LOWER-LIMIT>
+                      <UPPER-LIMIT>1</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.NORMALCOMMUNICATIONMESSAGES">NormalCommunicationMessages</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>2</LOWER-LIMIT>
+                      <UPPER-LIMIT>2</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.NETWORKMANAGEMENTCOMMUNICATIONMESSAGES">NetworkManagementCommunicationMessages</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>3</LOWER-LIMIT>
+                      <UPPER-LIMIT>3</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.NORMALCOMMUNICATIONMESSAGESANDNETWORKMANAGEMENTCOMMUNICATIONMESSAGES">NormalCommunicationMessagesAndNetworkManagementCommunicationMessages</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function6">
+              <SHORT-NAME>DOP_Sub_function6</SHORT-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>TEXTTABLE</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>128</LOWER-LIMIT>
+                      <UPPER-LIMIT>128</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.ENABLERXANDTXSUPPRESSPOSRES">EnableRxAndTxSuppressPosRes</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>131</LOWER-LIMIT>
+                      <UPPER-LIMIT>131</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.DISABLERXANDTXSUPPRESSPOSRES">DisableRxAndTxSuppressPosRes</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_communicationType2">
+              <SHORT-NAME>DOP_communicationType2</SHORT-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>TEXTTABLE</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>1</LOWER-LIMIT>
+                      <UPPER-LIMIT>1</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.NORMALCOMMUNICATIONMESSAGES">NormalCommunicationMessages</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>2</LOWER-LIMIT>
+                      <UPPER-LIMIT>2</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.NETWORKMANAGEMENTCOMMUNICATIONMESSAGES">NetworkManagementCommunicationMessages</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>3</LOWER-LIMIT>
+                      <UPPER-LIMIT>3</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.NORMALCOMMUNICATIONMESSAGESANDNETWORKMANAGEMENTCOMMUNICATIONMESSAGES">NormalCommunicationMessagesAndNetworkManagementCommunicationMessages</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function7">
+              <SHORT-NAME>DOP_Sub_function7</SHORT-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>TEXTTABLE</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>0</LOWER-LIMIT>
+                      <UPPER-LIMIT>0</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.TESTPRESENT">TestPresent</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function8">
+              <SHORT-NAME>DOP_Sub_function8</SHORT-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>TEXTTABLE</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>128</LOWER-LIMIT>
+                      <UPPER-LIMIT>128</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.TESTPRESENTSUPPRESSPOSRES">TestPresentSuppressPosRes</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function9">
+              <SHORT-NAME>DOP_Sub_function9</SHORT-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>TEXTTABLE</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>1</LOWER-LIMIT>
+                      <UPPER-LIMIT>1</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.DTCLOGGINGON">DTCLoggingOn</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>2</LOWER-LIMIT>
+                      <UPPER-LIMIT>2</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.DTCLOGGINGOFF">DTCLoggingOff</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function10">
+              <SHORT-NAME>DOP_Sub_function10</SHORT-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>TEXTTABLE</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>129</LOWER-LIMIT>
+                      <UPPER-LIMIT>129</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.DTCLOGGINGONSUPPRESSPOSRES">DTCLoggingOnSuppressPosRes</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>130</LOWER-LIMIT>
+                      <UPPER-LIMIT>130</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.DTCLOGGINGOFFSUPPRESSPOSRES">DTCLoggingOffSuppressPosRes</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function11">
+              <SHORT-NAME>DOP_Sub_function11</SHORT-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>TEXTTABLE</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>1</LOWER-LIMIT>
+                      <UPPER-LIMIT>1</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.REPORTNUMBEROFDTCBYSTATUSMASK">ReportNumberOfDTCByStatusMask</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>2</LOWER-LIMIT>
+                      <UPPER-LIMIT>2</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.REPORTDTCBYSTATUSMASK">ReportDTCByStatusMask</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>4</LOWER-LIMIT>
+                      <UPPER-LIMIT>4</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.REPORTDTCSNAPSHOTRECORDBYDTCNUMBER">ReportDTCSnapshotRecordByDTCNumber</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>6</LOWER-LIMIT>
+                      <UPPER-LIMIT>6</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.REPORTDTCEXTENDEDDATARRECORDBYDTCNUMBER">ReportDTCExtendedDatarRecordByDTCNumber</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                    <COMPU-SCALE>
+                      <LOWER-LIMIT>10</LOWER-LIMIT>
+                      <UPPER-LIMIT>10</UPPER-LIMIT>
+                      <COMPU-CONST>
+                        <VT TI="BOSCH_EV79_HCM.DS_TEXTTABLE.REPORTSUPPORTEDDTC">ReportSupportedDTC</VT>
+                      </COMPU-CONST>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+            </DATA-OBJECT-PROP>
+          </DATA-OBJECT-PROPS>
+          <STRUCTURES>
+            <STRUCTURE ID="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.STR.STR_DtcStatusStructure">
+              <SHORT-NAME>DtcStatusStructure</SHORT-NAME>
+              <LONG-NAME>DTC Status Structure</LONG-NAME>
+              <BYTE-SIZE>1</BYTE-SIZE>
+              <PARAMS>
+                <PARAM SEMANTIC="DATA" xsi:type="VALUE">
+                  <SHORT-NAME>StatusEvaluated</SHORT-NAME>
+                  <LONG-NAME>Evaluated DTC status</LONG-NAME>
+                  <BYTE-POSITION>0</BYTE-POSITION>
+                  <BIT-POSITION>0</BIT-POSITION>
+                  <PHYSICAL-DEFAULT-VALUE>invalid</PHYSICAL-DEFAULT-VALUE>
+                  <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.DtcStatusEvaluated"/>
+                </PARAM>
+                <PARAM SEMANTIC="DATA" xsi:type="VALUE">
+                  <SHORT-NAME>StatusRaw</SHORT-NAME>
+                  <LONG-NAME>Raw DTC status</LONG-NAME>
+                  <BYTE-POSITION>0</BYTE-POSITION>
+                  <BIT-POSITION>0</BIT-POSITION>
+                  <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.DOP_Unit_1Byte"/>
+                </PARAM>
+                <PARAM SEMANTIC="DATA" xsi:type="VALUE">
+                  <SHORT-NAME>StatusEvaluatedNumeric</SHORT-NAME>
+                  <LONG-NAME>StatusEvaluatedNumeric</LONG-NAME>
+                  <BYTE-POSITION>0</BYTE-POSITION>
+                  <BIT-POSITION>0</BIT-POSITION>
+                  <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.EvaluatedDTCStatusNumeric"/>
+                </PARAM>
+              </PARAMS>
+            </STRUCTURE>
+            <STRUCTURE ID="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.STR.DtcStatusFailureStructure">
+              <SHORT-NAME>DtcStatusFailureStructure</SHORT-NAME>
+              <LONG-NAME>Dtc Status Byte</LONG-NAME>
+              <BYTE-SIZE>1</BYTE-SIZE>
+              <PARAMS>
+                <PARAM SEMANTIC="DATA" xsi:type="VALUE">
+                  <SHORT-NAME>TestFailed</SHORT-NAME>
+                  <LONG-NAME>TestFailed</LONG-NAME>
+                  <BYTE-POSITION>0</BYTE-POSITION>
+                  <BIT-POSITION>0</BIT-POSITION>
+                  <PHYSICAL-DEFAULT-VALUE>false</PHYSICAL-DEFAULT-VALUE>
+                  <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.DOP_TrueFalse"/>
+                </PARAM>
+                <PARAM SEMANTIC="DATA" xsi:type="VALUE">
+                  <SHORT-NAME>TestFailedThisOperationCycle</SHORT-NAME>
+                  <LONG-NAME>TestFailedThisOperationCycle</LONG-NAME>
+                  <BYTE-POSITION>0</BYTE-POSITION>
+                  <BIT-POSITION>1</BIT-POSITION>
+                  <PHYSICAL-DEFAULT-VALUE>false</PHYSICAL-DEFAULT-VALUE>
+                  <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.DOP_TrueFalse"/>
+                </PARAM>
+                <PARAM SEMANTIC="DATA" xsi:type="VALUE">
+                  <SHORT-NAME>DTCPending</SHORT-NAME>
+                  <LONG-NAME>Pending DTC</LONG-NAME>
+                  <BYTE-POSITION>0</BYTE-POSITION>
+                  <BIT-POSITION>2</BIT-POSITION>
+                  <PHYSICAL-DEFAULT-VALUE>false</PHYSICAL-DEFAULT-VALUE>
+                  <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.DOP_TrueFalse"/>
+                </PARAM>
+                <PARAM SEMANTIC="DATA" xsi:type="VALUE">
+                  <SHORT-NAME>DTCConfirmed</SHORT-NAME>
+                  <LONG-NAME>Confirmed DTC</LONG-NAME>
+                  <BYTE-POSITION>0</BYTE-POSITION>
+                  <BIT-POSITION>3</BIT-POSITION>
+                  <PHYSICAL-DEFAULT-VALUE>false</PHYSICAL-DEFAULT-VALUE>
+                  <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.DOP_TrueFalse"/>
+                </PARAM>
+                <PARAM SEMANTIC="DATA" xsi:type="VALUE">
+                  <SHORT-NAME>TestNotCompletedSinceLastClear</SHORT-NAME>
+                  <LONG-NAME>Test not completed since last clear</LONG-NAME>
+                  <BYTE-POSITION>0</BYTE-POSITION>
+                  <BIT-POSITION>4</BIT-POSITION>
+                  <PHYSICAL-DEFAULT-VALUE>true</PHYSICAL-DEFAULT-VALUE>
+                  <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.DOP_TrueFalse"/>
+                </PARAM>
+                <PARAM SEMANTIC="DATA" xsi:type="VALUE">
+                  <SHORT-NAME>TestFailedSinceLastClear</SHORT-NAME>
+                  <LONG-NAME>Test failed since last clear</LONG-NAME>
+                  <BYTE-POSITION>0</BYTE-POSITION>
+                  <BIT-POSITION>5</BIT-POSITION>
+                  <PHYSICAL-DEFAULT-VALUE>false</PHYSICAL-DEFAULT-VALUE>
+                  <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.DOP_TrueFalse"/>
+                </PARAM>
+                <PARAM SEMANTIC="DATA" xsi:type="VALUE">
+                  <SHORT-NAME>TestNotCompletedThisOperationCycle</SHORT-NAME>
+                  <LONG-NAME>Test not completed this operation cycle</LONG-NAME>
+                  <BYTE-POSITION>0</BYTE-POSITION>
+                  <BIT-POSITION>6</BIT-POSITION>
+                  <PHYSICAL-DEFAULT-VALUE>true</PHYSICAL-DEFAULT-VALUE>
+                  <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.DOP_TrueFalse"/>
+                </PARAM>
+                <PARAM SEMANTIC="DATA" xsi:type="VALUE">
+                  <SHORT-NAME>WarningIndicatorRequested</SHORT-NAME>
+                  <LONG-NAME>Warning indicator requested</LONG-NAME>
+                  <BYTE-POSITION>0</BYTE-POSITION>
+                  <BIT-POSITION>7</BIT-POSITION>
+                  <PHYSICAL-DEFAULT-VALUE>false</PHYSICAL-DEFAULT-VALUE>
+                  <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.DOP_TrueFalse"/>
+                </PARAM>
+              </PARAMS>
+            </STRUCTURE>
+          </STRUCTURES>
+        </DIAG-DATA-DICTIONARY-SPEC>
+        <DIAG-COMMS>
+          <DIAG-SERVICE ID="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DS.DS_ClearDTCInformation" SEMANTIC="DEFAULT-FAULT-CLEAR">
+            <SHORT-NAME>DS_ClearDTCInformation</SHORT-NAME>
+            <REQUEST-REF ID-REF="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.RQ.RQ_DS_ClearDTCInformation"/>
+            <POS-RESPONSE-REFS>
+              <POS-RESPONSE-REF ID-REF="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.PR.PR_DS_ClearDTCInformation"/>
+            </POS-RESPONSE-REFS>
+          </DIAG-SERVICE>
+          <DIAG-SERVICE ID="DLC.FG_UDS_CAN.FG.FG.DS.DS_DiagnosticSessionControl" SEMANTIC="session">
+            <SHORT-NAME>DS_DiagnosticSessionControl</SHORT-NAME>
+            <LONG-NAME TI="BOSCH_EV79_HCM.DS_NAME.DS_DIAGNOSTICSESSIONCONTROL">DiagnosticSessionControl</LONG-NAME>
+            <REQUEST-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_DiagnosticSessionControl"/>
+            <POS-RESPONSE-REFS>
+              <POS-RESPONSE-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.PR.PR_DS_DiagnosticSessionControl"/>
+            </POS-RESPONSE-REFS>
+            <POS-RESPONSE-SUPPRESSABLE>
+              <BIT-MASK>0132</BIT-MASK>
+              <VALUE-SNREF SHORT-NAME="Sub_function"/>
+            </POS-RESPONSE-SUPPRESSABLE>
+          </DIAG-SERVICE>
+          <DIAG-SERVICE ID="DLC.FG_UDS_CAN.FG.FG.DS.DS_DiagnosticSessionControl_SuppressPosRes" TRANSMISSION-MODE="SEND-ONLY" SEMANTIC="session">
+            <SHORT-NAME>DS_DiagnosticSessionControl_SuppressPosRes</SHORT-NAME>
+            <LONG-NAME TI="BOSCH_EV79_HCM.DS_NAME.DS_DIAGNOSTICSESSIONCONTROL_SUPPRESSPOSRES">DiagnosticSessionControl SuppressPosRes</LONG-NAME>
+            <REQUEST-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_DiagnosticSessionControl_SuppressPosRes"/>
+          </DIAG-SERVICE>
+          <DIAG-SERVICE ID="DLC.FG_UDS_CAN.FG.FG.DS.DS_ECUReset" SEMANTIC="session">
+            <SHORT-NAME>DS_ECUReset</SHORT-NAME>
+            <LONG-NAME TI="BOSCH_EV79_HCM.DS_NAME.DS_ECURESET">ECUReset</LONG-NAME>
+            <REQUEST-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_ECUReset"/>
+            <POS-RESPONSE-REFS>
+              <POS-RESPONSE-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.PR.PR_DS_ECUReset"/>
+            </POS-RESPONSE-REFS>
+            <POS-RESPONSE-SUPPRESSABLE>
+              <BIT-MASK>0128</BIT-MASK>
+              <VALUE-SNREF SHORT-NAME="Sub_function"/>
+            </POS-RESPONSE-SUPPRESSABLE>
+          </DIAG-SERVICE>
+          <DIAG-SERVICE ID="DLC.FG_UDS_CAN.FG.FG.DS.DS_ECUReset_SuppressPosRes" TRANSMISSION-MODE="SEND-ONLY" SEMANTIC="session">
+            <SHORT-NAME>DS_ECUReset_SuppressPosRes</SHORT-NAME>
+            <LONG-NAME TI="BOSCH_EV79_HCM.DS_NAME.DS_ECURESET_SUPPRESSPOSRES">ECUReset SuppressPosRes</LONG-NAME>
+            <REQUEST-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_ECUReset_SuppressPosRes"/>
+          </DIAG-SERVICE>
+          <DIAG-SERVICE ID="DLC.FG_UDS_CAN.FG.FG.DS.DS_CommunicationControl" SEMANTIC="session">
+            <SHORT-NAME>DS_CommunicationControl</SHORT-NAME>
+            <LONG-NAME TI="BOSCH_EV79_HCM.DS_NAME.DS_COMMUNICATIONCONTROL">CommunicationControl</LONG-NAME>
+            <REQUEST-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_CommunicationControl"/>
+            <POS-RESPONSE-REFS>
+              <POS-RESPONSE-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.PR.PR_DS_CommunicationControl"/>
+            </POS-RESPONSE-REFS>
+            <POS-RESPONSE-SUPPRESSABLE>
+              <BIT-MASK>0132</BIT-MASK>
+              <VALUE-SNREF SHORT-NAME="Sub_function"/>
+            </POS-RESPONSE-SUPPRESSABLE>
+          </DIAG-SERVICE>
+          <DIAG-SERVICE ID="DLC.FG_UDS_CAN.FG.FG.DS.DS_CommunicationControl_SuppressPosRes" TRANSMISSION-MODE="SEND-ONLY" SEMANTIC="session">
+            <SHORT-NAME>DS_CommunicationControl_SuppressPosRes</SHORT-NAME>
+            <LONG-NAME TI="BOSCH_EV79_HCM.DS_NAME.DS_COMMUNICATIONCONTROL_SUPPRESSPOSRES">CommunicationControl SuppressPosRes</LONG-NAME>
+            <REQUEST-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_CommunicationControl_SuppressPosRes"/>
+          </DIAG-SERVICE>
+          <DIAG-SERVICE ID="DLC.FG_UDS_CAN.FG.FG.DS.DS_TesterPresent" SEMANTIC="TESTERPRESENT">
+            <SHORT-NAME>DS_TesterPresent</SHORT-NAME>
+            <LONG-NAME TI="BOSCH_EV79_HCM.DS_NAME.DS_TESTERPRESENT">TesterPresent</LONG-NAME>
+            <REQUEST-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_TesterPresent"/>
+            <POS-RESPONSE-REFS>
+              <POS-RESPONSE-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.PR.PR_DS_TesterPresent"/>
+            </POS-RESPONSE-REFS>
+            <POS-RESPONSE-SUPPRESSABLE>
+              <BIT-MASK>0128</BIT-MASK>
+              <VALUE-SNREF SHORT-NAME="Sub_function"/>
+            </POS-RESPONSE-SUPPRESSABLE>
+          </DIAG-SERVICE>
+          <DIAG-SERVICE ID="DLC.FG_UDS_CAN.FG.FG.DS.DS_TesterPresent_SuppressPosRes" TRANSMISSION-MODE="SEND-ONLY" SEMANTIC="TESTERPRESENT">
+            <SHORT-NAME>DS_TesterPresent_SuppressPosRes</SHORT-NAME>
+            <LONG-NAME TI="BOSCH_EV79_HCM.DS_NAME.DS_TESTERPRESENT_SUPPRESSPOSRES">TesterPresent SuppressPosRes</LONG-NAME>
+            <REQUEST-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_TesterPresent_SuppressPosRes"/>
+          </DIAG-SERVICE>
+          <DIAG-SERVICE ID="DLC.FG_UDS_CAN.FG.FG.DS.DS_ControlDTCSetting" SEMANTIC="session">
+            <SHORT-NAME>DS_ControlDTCSetting</SHORT-NAME>
+            <LONG-NAME TI="BOSCH_EV79_HCM.DS_NAME.DS_CONTROLDTCSETTING">ControlDTCSetting</LONG-NAME>
+            <REQUEST-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_ControlDTCSetting"/>
+            <POS-RESPONSE-REFS>
+              <POS-RESPONSE-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.PR.PR_DS_ControlDTCSetting"/>
+            </POS-RESPONSE-REFS>
+            <POS-RESPONSE-SUPPRESSABLE>
+              <BIT-MASK>0132</BIT-MASK>
+              <VALUE-SNREF SHORT-NAME="Sub_function"/>
+            </POS-RESPONSE-SUPPRESSABLE>
+          </DIAG-SERVICE>
+          <DIAG-SERVICE ID="DLC.FG_UDS_CAN.FG.FG.DS.DS_ControlDTCSetting_SuppressPosRes" TRANSMISSION-MODE="SEND-ONLY" SEMANTIC="session">
+            <SHORT-NAME>DS_ControlDTCSetting_SuppressPosRes</SHORT-NAME>
+            <LONG-NAME TI="BOSCH_EV79_HCM.DS_NAME.DS_CONTROLDTCSETTING_SUPPRESSPOSRES">ControlDTCSetting SuppressPosRes</LONG-NAME>
+            <REQUEST-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_ControlDTCSetting_SuppressPosRes"/>
+          </DIAG-SERVICE>
+          <DIAG-SERVICE ID="DLC.FG_UDS_CAN.FG.FG.DS.DS_ReadDTCInformation" SEMANTIC="session">
+            <SHORT-NAME>DS_ReadDTCInformation</SHORT-NAME>
+            <LONG-NAME TI="BOSCH_EV79_HCM.DS_NAME.DS_READDTCINFORMATION">ReadDTCInformation</LONG-NAME>
+            <REQUEST-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_ReadDTCInformation"/>
+            <POS-RESPONSE-REFS>
+              <POS-RESPONSE-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.PR.PR_DS_ReadDTCInformation"/>
+            </POS-RESPONSE-REFS>
+          </DIAG-SERVICE>
+        </DIAG-COMMS>
+        <REQUESTS>
+          <REQUEST ID="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.RQ.RQ_DS_ClearDTCInformation">
+            <SHORT-NAME>ClearDTCInformation</SHORT-NAME>
+            <PARAMS>
+              <PARAM xsi:type="CODED-CONST">
+                <SHORT-NAME>SID</SHORT-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>20</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+              <PARAM xsi:type="VALUE">
+                <SHORT-NAME>GroupOfDTC</SHORT-NAME>
+                <BYTE-POSITION>1</BYTE-POSITION>
+                <PHYSICAL-DEFAULT-VALUE>16777215</PHYSICAL-DEFAULT-VALUE>
+                <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.DOP_Unit_3Bytes"/>
+              </PARAM>
+            </PARAMS>
+          </REQUEST>
+          <REQUEST ID="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_DiagnosticSessionControl">
+            <SHORT-NAME>RQ_DS_DiagnosticSessionControl</SHORT-NAME>
+            <PARAMS>
+              <PARAM xsi:type="CODED-CONST">
+                <SHORT-NAME>SID</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SID">SID</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>16</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+              <PARAM xsi:type="VALUE">
+                <SHORT-NAME>Sub_function</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SUB_FUNCTION">Sub function</LONG-NAME>
+                <BYTE-POSITION>1</BYTE-POSITION>
+                <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function1"/>
+              </PARAM>
+            </PARAMS>
+          </REQUEST>
+          <REQUEST ID="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_DiagnosticSessionControl_SuppressPosRes">
+            <SHORT-NAME>RQ_DS_DiagnosticSessionControl_SuppressPosRes_SuppressPosRes</SHORT-NAME>
+            <PARAMS>
+              <PARAM xsi:type="CODED-CONST">
+                <SHORT-NAME>SID</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SID">SID</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>16</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+              <PARAM xsi:type="VALUE">
+                <SHORT-NAME>Sub_function</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SUB_FUNCTION">Sub function</LONG-NAME>
+                <BYTE-POSITION>1</BYTE-POSITION>
+                <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function2"/>
+              </PARAM>
+            </PARAMS>
+          </REQUEST>
+          <REQUEST ID="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_ECUReset">
+            <SHORT-NAME>RQ_DS_ECUReset</SHORT-NAME>
+            <PARAMS>
+              <PARAM xsi:type="CODED-CONST">
+                <SHORT-NAME>SID</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SID">SID</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>17</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+              <PARAM xsi:type="VALUE">
+                <SHORT-NAME>Sub_function</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SUB_FUNCTION">Sub function</LONG-NAME>
+                <BYTE-POSITION>1</BYTE-POSITION>
+                <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function3"/>
+              </PARAM>
+            </PARAMS>
+          </REQUEST>
+          <REQUEST ID="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_ECUReset_SuppressPosRes">
+            <SHORT-NAME>RQ_DS_ECUReset_SuppressPosRes_SuppressPosRes</SHORT-NAME>
+            <PARAMS>
+              <PARAM xsi:type="CODED-CONST">
+                <SHORT-NAME>SID</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SID">SID</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>17</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+              <PARAM xsi:type="VALUE">
+                <SHORT-NAME>Sub_function</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SUB_FUNCTION">Sub function</LONG-NAME>
+                <BYTE-POSITION>1</BYTE-POSITION>
+                <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function4"/>
+              </PARAM>
+            </PARAMS>
+          </REQUEST>
+          <REQUEST ID="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_CommunicationControl">
+            <SHORT-NAME>RQ_DS_CommunicationControl</SHORT-NAME>
+            <PARAMS>
+              <PARAM xsi:type="CODED-CONST">
+                <SHORT-NAME>SID</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SID">SID</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>40</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+              <PARAM xsi:type="VALUE">
+                <SHORT-NAME>Sub_function</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SUB_FUNCTION">Sub function</LONG-NAME>
+                <BYTE-POSITION>1</BYTE-POSITION>
+                <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function5"/>
+              </PARAM>
+              <PARAM xsi:type="VALUE">
+                <SHORT-NAME>communicationType</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_COMMUNICATIONTYPE">communicationType</LONG-NAME>
+                <BYTE-POSITION>2</BYTE-POSITION>
+                <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_communicationType1"/>
+              </PARAM>
+            </PARAMS>
+          </REQUEST>
+          <REQUEST ID="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_CommunicationControl_SuppressPosRes">
+            <SHORT-NAME>RQ_DS_CommunicationControl_SuppressPosRes_SuppressPosRes</SHORT-NAME>
+            <PARAMS>
+              <PARAM xsi:type="CODED-CONST">
+                <SHORT-NAME>SID</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SID">SID</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>40</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+              <PARAM xsi:type="VALUE">
+                <SHORT-NAME>Sub_function</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SUB_FUNCTION">Sub function</LONG-NAME>
+                <BYTE-POSITION>1</BYTE-POSITION>
+                <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function6"/>
+              </PARAM>
+              <PARAM xsi:type="VALUE">
+                <SHORT-NAME>communicationType</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_COMMUNICATIONTYPE">communicationType</LONG-NAME>
+                <BYTE-POSITION>2</BYTE-POSITION>
+                <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_communicationType2"/>
+              </PARAM>
+            </PARAMS>
+          </REQUEST>
+          <REQUEST ID="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_TesterPresent">
+            <SHORT-NAME>RQ_DS_TesterPresent</SHORT-NAME>
+            <PARAMS>
+              <PARAM xsi:type="CODED-CONST">
+                <SHORT-NAME>SID</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SID">SID</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>62</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+              <PARAM xsi:type="VALUE">
+                <SHORT-NAME>Sub_function</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SUB_FUNCTION">Sub function</LONG-NAME>
+                <BYTE-POSITION>1</BYTE-POSITION>
+                <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function7"/>
+              </PARAM>
+            </PARAMS>
+          </REQUEST>
+          <REQUEST ID="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_TesterPresent_SuppressPosRes">
+            <SHORT-NAME>RQ_DS_TesterPresent_SuppressPosRes_SuppressPosRes</SHORT-NAME>
+            <PARAMS>
+              <PARAM xsi:type="CODED-CONST">
+                <SHORT-NAME>SID</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SID">SID</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>62</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+              <PARAM xsi:type="VALUE">
+                <SHORT-NAME>Sub_function</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SUB_FUNCTION">Sub function</LONG-NAME>
+                <BYTE-POSITION>1</BYTE-POSITION>
+                <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function8"/>
+              </PARAM>
+            </PARAMS>
+          </REQUEST>
+          <REQUEST ID="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_ControlDTCSetting">
+            <SHORT-NAME>RQ_DS_ControlDTCSetting</SHORT-NAME>
+            <PARAMS>
+              <PARAM xsi:type="CODED-CONST">
+                <SHORT-NAME>SID</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SID">SID</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>133</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+              <PARAM xsi:type="VALUE">
+                <SHORT-NAME>Sub_function</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SUB_FUNCTION">Sub function</LONG-NAME>
+                <BYTE-POSITION>1</BYTE-POSITION>
+                <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function9"/>
+              </PARAM>
+            </PARAMS>
+          </REQUEST>
+          <REQUEST ID="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_ControlDTCSetting_SuppressPosRes">
+            <SHORT-NAME>RQ_DS_ControlDTCSetting_SuppressPosRes_SuppressPosRes</SHORT-NAME>
+            <PARAMS>
+              <PARAM xsi:type="CODED-CONST">
+                <SHORT-NAME>SID</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SID">SID</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>133</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+              <PARAM xsi:type="VALUE">
+                <SHORT-NAME>Sub_function</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SUB_FUNCTION">Sub function</LONG-NAME>
+                <BYTE-POSITION>1</BYTE-POSITION>
+                <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function10"/>
+              </PARAM>
+            </PARAMS>
+          </REQUEST>
+          <REQUEST ID="DLC.FG_UDS_CAN.FG.FG.RQ.RQ_DS_ReadDTCInformation">
+            <SHORT-NAME>RQ_DS_ReadDTCInformation</SHORT-NAME>
+            <PARAMS>
+              <PARAM xsi:type="CODED-CONST">
+                <SHORT-NAME>SID</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SID">SID</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>25</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+              <PARAM xsi:type="VALUE">
+                <SHORT-NAME>Sub_function</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SUB_FUNCTION">Sub function</LONG-NAME>
+                <BYTE-POSITION>1</BYTE-POSITION>
+                <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG.DOP.DOP_Sub_function11"/>
+              </PARAM>
+            </PARAMS>
+          </REQUEST>
+        </REQUESTS>
+        <POS-RESPONSES>
+          <POS-RESPONSE ID="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.PR.PR_DS_ClearDTCInformation">
+            <SHORT-NAME>ClearDTCInformation</SHORT-NAME>
+            <PARAMS>
+              <PARAM xsi:type="CODED-CONST">
+                <SHORT-NAME>SID</SHORT-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>84</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+            </PARAMS>
+          </POS-RESPONSE>
+          <POS-RESPONSE ID="DLC.FG_UDS_CAN.FG.FG.PR.PR_DS_DiagnosticSessionControl">
+            <SHORT-NAME>PR_DS_DiagnosticSessionControl</SHORT-NAME>
+            <PARAMS>
+              <PARAM xsi:type="CODED-CONST">
+                <SHORT-NAME>SID</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SID">SID</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>80</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+            </PARAMS>
+          </POS-RESPONSE>
+          <POS-RESPONSE ID="DLC.FG_UDS_CAN.FG.FG.PR.PR_DS_ECUReset">
+            <SHORT-NAME>PR_DS_ECUReset</SHORT-NAME>
+            <PARAMS>
+              <PARAM xsi:type="CODED-CONST">
+                <SHORT-NAME>SID</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SID">SID</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>81</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+            </PARAMS>
+          </POS-RESPONSE>
+          <POS-RESPONSE ID="DLC.FG_UDS_CAN.FG.FG.PR.PR_DS_CommunicationControl">
+            <SHORT-NAME>PR_DS_CommunicationControl</SHORT-NAME>
+            <PARAMS>
+              <PARAM xsi:type="CODED-CONST">
+                <SHORT-NAME>SID</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SID">SID</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>104</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+            </PARAMS>
+          </POS-RESPONSE>
+          <POS-RESPONSE ID="DLC.FG_UDS_CAN.FG.FG.PR.PR_DS_TesterPresent">
+            <SHORT-NAME>PR_DS_TesterPresent</SHORT-NAME>
+            <PARAMS>
+              <PARAM xsi:type="CODED-CONST">
+                <SHORT-NAME>SID</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SID">SID</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>126</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+            </PARAMS>
+          </POS-RESPONSE>
+          <POS-RESPONSE ID="DLC.FG_UDS_CAN.FG.FG.PR.PR_DS_ControlDTCSetting">
+            <SHORT-NAME>PR_DS_ControlDTCSetting</SHORT-NAME>
+            <PARAMS>
+              <PARAM xsi:type="CODED-CONST">
+                <SHORT-NAME>SID</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SID">SID</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>197</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+            </PARAMS>
+          </POS-RESPONSE>
+          <POS-RESPONSE ID="DLC.FG_UDS_CAN.FG.FG.PR.PR_DS_ReadDTCInformation">
+            <SHORT-NAME>PR_DS_ReadDTCInformation</SHORT-NAME>
+            <PARAMS>
+              <PARAM xsi:type="CODED-CONST">
+                <SHORT-NAME>SID</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_HCM.DS_PARAM.PARAM_SID">SID</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>89</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+            </PARAMS>
+          </POS-RESPONSE>
+        </POS-RESPONSES>
+        <GLOBAL-NEG-RESPONSES>
+          <GLOBAL-NEG-RESPONSE ID="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.GNR.GNR_SERVICE_UNSUPPORTED">
+            <SHORT-NAME>GNR_SERVICE_UNSUPPORTED</SHORT-NAME>
+            <LONG-NAME>Global Negative Response Codes</LONG-NAME>
+            <PARAMS>
+              <PARAM SEMANTIC="SERVICE-ID" xsi:type="CODED-CONST">
+                <SHORT-NAME>SID</SHORT-NAME>
+                <LONG-NAME>SID</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <CODED-VALUE>127</CODED-VALUE>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                  <BIT-LENGTH>8</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+              </PARAM>
+              <PARAM xsi:type="MATCHING-REQUEST-PARAM">
+                <SHORT-NAME>SID_RQ</SHORT-NAME>
+                <LONG-NAME>SID-RQ</LONG-NAME>
+                <BYTE-POSITION>1</BYTE-POSITION>
+                <REQUEST-BYTE-POS>0</REQUEST-BYTE-POS>
+                <BYTE-LENGTH>1</BYTE-LENGTH>
+              </PARAM>
+              <PARAM SEMANTIC="DATA" xsi:type="VALUE">
+                <SHORT-NAME>NRC</SHORT-NAME>
+                <LONG-NAME>NEGATIVE RESPONSE CODES</LONG-NAME>
+                <BYTE-POSITION>2</BYTE-POSITION>
+                <DOP-REF ID-REF="DLC.FG_UDS_CAN.FG.FG_FOTON_S700.DOP.DOP_Hex_1Byte"/>
+              </PARAM>
+            </PARAMS>
+          </GLOBAL-NEG-RESPONSE>
+        </GLOBAL-NEG-RESPONSES>
+        <COMPARAM-REFS>
+          <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentHandling" DOCREF="ISO_15765_3" DOCTYPE="COMPARAM-SUBSET">
+            <SIMPLE-VALUE>Enabled</SIMPLE-VALUE>
+            <PROTOCOL-SNREF SHORT-NAME="UDS_ON_CAN"/>
+          </COMPARAM-REF>
+          <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentTime" DOCREF="ISO_15765_3" DOCTYPE="COMPARAM-SUBSET">
+            <SIMPLE-VALUE>4000000</SIMPLE-VALUE>
+            <PROTOCOL-SNREF SHORT-NAME="UDS_ON_CAN"/>
+          </COMPARAM-REF>
+          <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentAddrMode" DOCREF="ISO_15765_3" DOCTYPE="COMPARAM-SUBSET">
+            <SIMPLE-VALUE>Functional</SIMPLE-VALUE>
+            <PROTOCOL-SNREF SHORT-NAME="UDS_ON_CAN"/>
+          </COMPARAM-REF>
+          <COMPARAM-REF ID-REF="ISO_15765_2.CP_RequestAddrMode" DOCREF="ISO_15765_2" DOCTYPE="COMPARAM-SUBSET">
+            <SIMPLE-VALUE>Functional</SIMPLE-VALUE>
+            <PROTOCOL-SNREF SHORT-NAME="UDS_ON_CAN"/>
+          </COMPARAM-REF>
+          <COMPARAM-REF ID-REF="ISO_15765_2.CP_CanFuncReqId" DOCREF="ISO_15765_2" DOCTYPE="COMPARAM-SUBSET">
+                <SIMPLE-VALUE>2015</SIMPLE-VALUE>
+                <PROTOCOL-SNREF SHORT-NAME="UDS_ON_CAN"/>
+          </COMPARAM-REF>
+          <COMPARAM-REF ID-REF="ISO_15765_2.CP_CanFuncReqFormat" DOCREF="ISO_15765_2" DOCTYPE="COMPARAM-SUBSET">
+            <SIMPLE-VALUE>normal segmented 11-bit transmit with FC</SIMPLE-VALUE>
+            <PROTOCOL-SNREF SHORT-NAME="UDS_ON_CAN"/>
+          </COMPARAM-REF>
+          <COMPARAM-REF ID-REF="ISO_15765_3.CP_P3Func" DOCREF="ISO_15765_3" DOCTYPE="COMPARAM-SUBSET">
+            <SIMPLE-VALUE>50000</SIMPLE-VALUE>
+            <PROTOCOL-SNREF SHORT-NAME="UDS_ON_CAN"/>
+          </COMPARAM-REF>
+          <COMPARAM-REF DOCREF="ISO_13400_2" DOCTYPE="COMPARAM-SUBSET" ID-REF="id-5a9e1426-a571-4b15-9b60-7386cfecc474">
+            <COMPLEX-VALUE>
+              <SIMPLE-VALUE>58368</SIMPLE-VALUE>
+              <SIMPLE-VALUE>3712</SIMPLE-VALUE>
+              <SIMPLE-VALUE>FG_DOIP</SIMPLE-VALUE>
+            </COMPLEX-VALUE>
+            <PROTOCOL-SNREF SHORT-NAME="DoIP_ISO13400"/>
+          </COMPARAM-REF>
+          <COMPARAM-REF DOCREF="ISO_13400_2" DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_13400_2.CP_DoIPLogicalGatewayAddresss">
+            <SIMPLE-VALUE>9</SIMPLE-VALUE>
+            <PROTOCOL-SNREF SHORT-NAME="DoIP_ISO13400"/>
+          </COMPARAM-REF>
+          <COMPARAM-REF DOCREF="ISO_13400_2" DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_13400_2.CP_DoIPLogicalTesterAddress">
+            <SIMPLE-VALUE>3712</SIMPLE-VALUE>
+            <PROTOCOL-SNREF SHORT-NAME="DoIP_ISO13400"/>
+          </COMPARAM-REF>
+          <COMPARAM-REF DOCREF="ISO_13400_2" DOCTYPE="COMPARAM-SUBSET" ID-REF="id-6374c8e6-2791-426b-b4ab-7b17aac134dc">
+            <SIMPLE-VALUE>58368</SIMPLE-VALUE>
+            <PROTOCOL-SNREF SHORT-NAME="DoIP_ISO13400"/>
+          </COMPARAM-REF>
+          <COMPARAM-REF DOCREF="ISO_13400_2" DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_13400_2.CP_DoIPLogicalFunctionalAddress">
+            <SIMPLE-VALUE>58368</SIMPLE-VALUE>
+            <PROTOCOL-SNREF SHORT-NAME="DoIP_ISO13400"/>
+          </COMPARAM-REF>
+          <COMPARAM-REF DOCREF="ISO_13400_2" DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_13400_2.CP_RequestAddrMode">
+            <SIMPLE-VALUE>Functional</SIMPLE-VALUE>
+            <PROTOCOL-SNREF SHORT-NAME="DoIP_ISO13400"/>
+          </COMPARAM-REF>
+          <COMPARAM-REF DOCREF="ISO_14229_5" DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_14229_5.CP_TesterPresentAddrMode">
+            <SIMPLE-VALUE>Functional</SIMPLE-VALUE>
+            <PROTOCOL-SNREF SHORT-NAME="DoIP_ISO13400"/>
+          </COMPARAM-REF>
+        </COMPARAM-REFS>
+        <PARENT-REFS>
+          <PARENT-REF ID-REF="DLC.DLC_FG_UDS_CAN.PRT.UDS_ON_CAN" xsi:type="PROTOCOL-REF"/>
+          <PARENT-REF ID-REF="DoIP_ISO13400" xsi:type="PROTOCOL-REF"/>
+        </PARENT-REFS>
+      </FUNCTIONAL-GROUP>
+      <FUNCTIONAL-GROUP ID="DLC.FG_UDS_CAN.FG.FGRAW">
+        <SHORT-NAME>FGRAW</SHORT-NAME>
+        <LONG-NAME>FGRAW</LONG-NAME>
+        <DESC>
+          <p>This layer represents all Raw ECUs that are connected to the Vehicle</p>
+        </DESC>
+        <COMPARAM-REFS>
+          <COMPARAM-REF ID-REF="ISO_11898_RAW_TRANS.CP_CanPhysReqId" DOCREF="ISO_11898_RAW_TRANS" DOCTYPE="COMPARAM-SUBSET">
+            <SIMPLE-VALUE>256</SIMPLE-VALUE>
+            <PROTOCOL-SNREF SHORT-NAME="Raw_Can"/>
+          </COMPARAM-REF>
+        </COMPARAM-REFS>
+        <PARENT-REFS>
+          <PARENT-REF ID-REF="DLC.RawCAN.PT.Raw_CAN" xsi:type="PROTOCOL-REF"/>
+        </PARENT-REFS>
+      </FUNCTIONAL-GROUP>
+    </FUNCTIONAL-GROUPS>
+  </DIAG-LAYER-CONTAINER>
+</ODX>

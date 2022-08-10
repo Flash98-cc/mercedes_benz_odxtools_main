@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ODXStudioConfiguration>
+  <ProjectConfiguration>
+    <Attributes />
+  </ProjectConfiguration>
+  <ODXStudioProject ODX-Version="2.2.0">
+    <ProjectItems>
+      <Item-Group Name="ISO_15765_2.odx-cs" Type="ODX-File" Category="ODX-DATA" CurrentRevision="">
+        <Item Revision="">
+          <Location>ISO_15765_2.odx-cs</Location>
+          <File-Info Mime-Type="application/x-asam.odx.odx" />
+        </Item>
+      </Item-Group>
+    </ProjectItems>
+  </ODXStudioProject>
+</ODXStudioConfiguration>

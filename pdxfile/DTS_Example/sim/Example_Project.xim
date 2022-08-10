@@ -1,0 +1,1440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CVDS>
+  <Header>
+    <Version>x.x.x</Version>
+    <Origin>Softing Automotive Electronics GmbH</Origin>
+    <IgnoreDelay>false</IgnoreDelay>
+    <WasExtended>true</WasExtended>
+  </Header>
+  <ECUList>
+    <ECU name="BV_ACM" canId="1919">
+      <Protocol>PR_UDSOnCAN</Protocol>
+      <ComParameter>
+        <CanIdRequest>0x715</CanIdRequest>
+        <CanIdResponse>0x77F</CanIdResponse>
+        <FunctionalCanIdRequest>0x7DF</FunctionalCanIdRequest>
+      </ComParameter>
+      <DiagServiceList>
+        <DiagService pdupattern="false">
+          <Request responserequired="YES">0x22F180</Request>
+          <Response repetitioncount="1" delay="0">0x62F18031303233383939</Response>
+        </DiagService>
+        <DiagService pdupattern="false">
+          <Request responserequired="YES">0x22F18A</Request>
+          <Response repetitioncount="1" delay="0">0x62F18A34383336</Response>
+        </DiagService>
+      </DiagServiceList>
+      <VSDCT>
+        <ECUName text="BV_ACM"/>
+        <VariantList>
+          <Variant>
+            <VariantName text="EV_ACM_001"/>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x222222</Request>
+              <Response repetitioncount="1" delay="0">0x62222204E6</Response>
+              <Response repetitioncount="1" delay="0">0x62222204E7</Response>
+              <Response repetitioncount="1" delay="0">0x62222204E8</Response>
+              <Response repetitioncount="1" delay="0">0x62222204E9</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1081</Request>
+              <Response repetitioncount="1" delay="0"></Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1082</Request>
+              <Response repetitioncount="1" delay="0">0x7F1011</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1083</Request>
+              <Response repetitioncount="1" delay="0"></Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1084</Request>
+              <Response repetitioncount="1" delay="0">0x7F1011</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1001</Request>
+              <Response repetitioncount="1" delay="0">0x5001004009C4</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1002</Request>
+              <Response repetitioncount="1" delay="0">0x7F1011</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1003</Request>
+              <Response repetitioncount="1" delay="0">0x5003000009C4</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1004</Request>
+              <Response repetitioncount="1" delay="0">0x7F1011</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1101</Request>
+              <Response repetitioncount="1" delay="0">0x510100</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1103</Request>
+              <Response repetitioncount="1" delay="0">0x510300</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1181</Request>
+              <Response repetitioncount="1" delay="0"></Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1183</Request>
+              <Response repetitioncount="1" delay="0"></Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x190A</Request>
+              <Response repetitioncount="1" delay="0">0x590A99080001000800022108000300080004100800052808002010080021100800220008020009001311000013222808222210</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x19020C</Request>
+              <Response repetitioncount="1" delay="0">0x59020C08000221080005280013222808020009</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x190250</Request>
+              <Response repetitioncount="1" delay="0">0x590250080002210800052800132228</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x190F0C</Request>
+              <Response repetitioncount="1" delay="0">0x590F0C08000221080005280013222808020009</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x190050</Request>
+              <Response repetitioncount="1" delay="0">0x590250080002210800052800132228</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906080002FF</Request>
+              <Response repetitioncount="1" delay="0">0x59060800022100A4018604</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906080200FF</Request>
+              <Response repetitioncount="1" delay="0">0x59060802002100A2038603</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906080005FF</Request>
+              <Response repetitioncount="1" delay="0">0x5906080005280055029804</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906001322FF</Request>
+              <Response repetitioncount="1" delay="0">0x590600132228003304990101</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1910080002FF</Request>
+              <Response repetitioncount="1" delay="0">0x59100800022100A4018604</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1910080200FF</Request>
+              <Response repetitioncount="1" delay="0">0x59100802002100A2038603</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1910080005FF</Request>
+              <Response repetitioncount="1" delay="0">0x5910080005280055029804</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1910001322FF</Request>
+              <Response repetitioncount="1" delay="0">0x591000132228003304990101</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906080001FF</Request>
+              <Response repetitioncount="1" delay="0">0x590608000110</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906080003FF</Request>
+              <Response repetitioncount="1" delay="0">0x590608000310</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906080004FF</Request>
+              <Response repetitioncount="1" delay="0">0x590608000410</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906080020FF</Request>
+              <Response repetitioncount="1" delay="0">0x590608002010</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906080021FF</Request>
+              <Response repetitioncount="1" delay="0">0x590608002110</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906080200FF</Request>
+              <Response repetitioncount="1" delay="0">0x590608020010</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906001311FF</Request>
+              <Response repetitioncount="1" delay="0">0x590600131110</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906082222FF</Request>
+              <Response repetitioncount="1" delay="0">0x590608222210</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906080022FF</Request>
+              <Response repetitioncount="1" delay="0">0x590608002210</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F180</Request>
+              <Response repetitioncount="1" delay="0">0x62F18031303233383939</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F188</Request>
+              <Response repetitioncount="1" delay="0">0x62F188313233</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F189</Request>
+              <Response repetitioncount="1" delay="0">0x62F189352E31312E39</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F18A</Request>
+              <Response repetitioncount="1" delay="0">0x62F18A34383336</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F18C</Request>
+              <Response repetitioncount="1" delay="0">0x62F18C3438333634545A34</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F190</Request>
+              <Response repetitioncount="1" delay="0">0x62F190536F6674696E675F4143555F5834383336</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F199</Request>
+              <Response repetitioncount="1" delay="0">0x62F19920130315</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F19A</Request>
+              <Response repetitioncount="1" delay="0">0x62F19A524550343833365F5751</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x222027</Request>
+              <Response repetitioncount="1" delay="0">0x62202701</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x23..</Request>
+              <Response repetitioncount="1" delay="0">0x7F2311</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x24..</Request>
+              <Response repetitioncount="1" delay="0">0x7F2411</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2A..</Request>
+              <Response repetitioncount="1" delay="0">0x7F2A11</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2C..</Request>
+              <Response repetitioncount="1" delay="0">0x7F2C11</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x2701</Request>
+              <Response repetitioncount="1" delay="0">0x6701AA60522A</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2702..</Request>
+              <Response repetitioncount="1" delay="0">0x6702</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2EF199..</Request>
+              <Response repetitioncount="1" delay="0">0x6EF199</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2EF18C..</Request>
+              <Response repetitioncount="1" delay="0">0x6EF18C</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2EF190..</Request>
+              <Response repetitioncount="1" delay="0">0x6EF190</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2F2027..</Request>
+              <Response repetitioncount="1" delay="0">0x6F2027</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x31..</Request>
+              <Response repetitioncount="1" delay="0">0x7F3111</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x34</Request>
+              <Response repetitioncount="1" delay="0">0x7F3411</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x35..</Request>
+              <Response repetitioncount="1" delay="0">0x7F3511</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x36..</Request>
+              <Response repetitioncount="1" delay="0">0x7F3611</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x37..</Request>
+              <Response repetitioncount="1" delay="0">0x7F3711</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x3D..</Request>
+              <Response repetitioncount="1" delay="0">0x7F3D11</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x3E00</Request>
+              <Response repetitioncount="1" delay="0">0x7E00</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x83..</Request>
+              <Response repetitioncount="1" delay="0">0x7F8311</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x84..</Request>
+              <Response repetitioncount="1" delay="0">0x7F8411</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x85XX..</Request>
+              <Response repetitioncount="1" delay="0">0x7F8511</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x86..</Request>
+              <Response repetitioncount="1" delay="0">0x7F8611</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x87..</Request>
+              <Response repetitioncount="1" delay="0">0x7F8711</Response>
+            </DiagService>
+          </Variant>
+        </VariantList>
+      </VSDCT>
+    </ECU>
+    <ECU name="BV_RCM" canId="1922">
+      <Protocol>PR_UDSOnCAN</Protocol>
+      <ComParameter>
+        <CanIdRequest>0x722</CanIdRequest>
+        <CanIdResponse>0x782</CanIdResponse>
+        <FunctionalCanIdRequest>0x7DF</FunctionalCanIdRequest>
+      </ComParameter>
+      <DiagServiceList>
+        <DiagService pdupattern="false">
+          <Request responserequired="YES">0x22F180</Request>
+          <Response repetitioncount="2" delay="0">0x62F18031303233373835</Response>
+        </DiagService>
+        <DiagService pdupattern="false">
+          <Request responserequired="YES">0x22F18A</Request>
+          <Response repetitioncount="2" delay="0">0x62F18A31363938</Response>
+        </DiagService>
+      </DiagServiceList>
+      <VSDCT>
+        <ECUName text="BV_RCM"/>
+        <VariantList>
+          <Variant>
+            <VariantName text="EV_RCM_001"/>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22208A</Request>
+              <Response repetitioncount="1" delay="0">0x62208A0000</Response>
+              <Response repetitioncount="1" delay="0">0x62208A000A</Response>
+              <Response repetitioncount="1" delay="0">0x62208A0014</Response>
+              <Response repetitioncount="1" delay="0">0x62208A001E</Response>
+              <Response repetitioncount="1" delay="0">0x62208A0028</Response>
+              <Response repetitioncount="1" delay="0">0x62208A0032</Response>
+              <Response repetitioncount="1" delay="0">0x62208A003C</Response>
+              <Response repetitioncount="1" delay="0">0x62208A0046</Response>
+              <Response repetitioncount="1" delay="0">0x62208A0050</Response>
+              <Response repetitioncount="1" delay="0">0x62208A005A</Response>
+              <Response repetitioncount="1" delay="0">0x62208A0064</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22204A</Request>
+              <Response repetitioncount="1" delay="0">0x62204A0019</Response>
+              <Response repetitioncount="1" delay="0">0x62204A001A</Response>
+              <Response repetitioncount="1" delay="0">0x62204A001B</Response>
+              <Response repetitioncount="1" delay="0">0x62204A001C</Response>
+              <Response repetitioncount="1" delay="0">0x62204A001D</Response>
+            </DiagService>            
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1081</Request>
+              <Response repetitioncount="1" delay="0"></Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1082</Request>
+              <Response repetitioncount="1" delay="0">0x7F1011</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1083</Request>
+              <Response repetitioncount="1" delay="0"></Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1084</Request>
+              <Response repetitioncount="1" delay="0">0x7F1011</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1001</Request>
+              <Response repetitioncount="1" delay="0">0x5001004009C4</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1002</Request>
+              <Response repetitioncount="1" delay="0">0x7F1011</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1003</Request>
+              <Response repetitioncount="1" delay="0">0x5003004009C4</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1004</Request>
+              <Response repetitioncount="1" delay="0">0x7F1011</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1101</Request>
+              <Response repetitioncount="1" delay="0">0x510100</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1103</Request>
+              <Response repetitioncount="1" delay="0">0x510300</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1181</Request>
+              <Response repetitioncount="1" delay="0"></Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1183</Request>
+              <Response repetitioncount="1" delay="0"></Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x190A</Request>
+              <Response repetitioncount="1" delay="0">0x590A990812802808126928001322210811220008222200</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x19020C</Request>
+              <Response repetitioncount="1" delay="0">0x59020C081280280812692800132221</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x190250</Request>
+              <Response repetitioncount="1" delay="0">0x590250081280280812692800132221</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x190F0C</Request>
+              <Response repetitioncount="1" delay="0">0x590F0C081280280812692800132221</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x190050</Request>
+              <Response repetitioncount="1" delay="0">0x590050081280280812692800132221</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906081280FF</Request>
+              <Response repetitioncount="1" delay="0">0x5906081280280001010204</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906081269FF</Request>
+              <Response repetitioncount="1" delay="0">0x5906081269280001010204</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906001322FF</Request>
+              <Response repetitioncount="1" delay="0">0x590600132221000101020101</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1910081280FF</Request>
+              <Response repetitioncount="1" delay="0">0x5910081280280001010204</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1910081269FF</Request>
+              <Response repetitioncount="1" delay="0">0x5910081269280001010204</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1910001322FF</Request>
+              <Response repetitioncount="1" delay="0">0x591000132221000101020101</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906081122FF</Request>
+              <Response repetitioncount="1" delay="0">0x590608112210</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906082222FF</Request>
+              <Response repetitioncount="1" delay="0">0x590608222210</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F180</Request>
+              <Response repetitioncount="1" delay="0">0x62F18031303233373835</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F188</Request>
+              <Response repetitioncount="1" delay="0">0x62F188313233</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F189</Request>
+              <Response repetitioncount="1" delay="0">0x62F189352E31312E39</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F18A</Request>
+              <Response repetitioncount="1" delay="0">0x62F18A31363938</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F18C</Request>
+              <Response repetitioncount="1" delay="0">0x62F18C3136393834545A34</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F190</Request>
+              <Response repetitioncount="1" delay="0">0x62F190536F6674696E675F5243555F5831363938</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F199</Request>
+              <Response repetitioncount="1" delay="0">0x62F19920130327</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F19A</Request>
+              <Response repetitioncount="1" delay="0">0x62F19A524550313639385F5751</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22224C</Request>
+              <Response repetitioncount="1" delay="0">0x62224C01</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x221001</Request>
+              <Response repetitioncount="1" delay="0">0x62100101012C01</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x221002</Request>
+              <Response repetitioncount="1" delay="0">0x62100201001E</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x23..</Request>
+              <Response repetitioncount="1" delay="0">0x7F2311</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x24..</Request>
+              <Response repetitioncount="1" delay="0">0x7F2411</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2A..</Request>
+              <Response repetitioncount="1" delay="0">0x7F2A11</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2C..</Request>
+              <Response repetitioncount="1" delay="0">0x7F2C11</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x2701</Request>
+              <Response repetitioncount="1" delay="0">0x6701AA60522A</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2702..</Request>
+              <Response repetitioncount="1" delay="0">0x6702</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2EF199..</Request>
+              <Response repetitioncount="1" delay="0">0x6EF199</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2EF18C..</Request>
+              <Response repetitioncount="1" delay="0">0x6EF18C</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2EF190..</Request>
+              <Response repetitioncount="1" delay="0">0x6EF190</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2E1001..</Request>
+              <Response repetitioncount="1" delay="0">0x6E1001</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2E1002..</Request>
+              <Response repetitioncount="1" delay="0">0x6E1002</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x31..</Request>
+              <Response repetitioncount="1" delay="0">0x7F3111</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x34</Request>
+              <Response repetitioncount="1" delay="0">0x7F3411</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x35..</Request>
+              <Response repetitioncount="1" delay="0">0x7F3511</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x36..</Request>
+              <Response repetitioncount="1" delay="0">0x7F3611</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x37..</Request>
+              <Response repetitioncount="1" delay="0">0x7F3711</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x3D..</Request>
+              <Response repetitioncount="1" delay="0">0x7F3D11</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x3E00</Request>
+              <Response repetitioncount="1" delay="0">0x7E00</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x83..</Request>
+              <Response repetitioncount="1" delay="0">0x7F8311</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x84..</Request>
+              <Response repetitioncount="1" delay="0">0x7F8411</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x85XX..</Request>
+              <Response repetitioncount="1" delay="0">0x7F8511</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x86..</Request>
+              <Response repetitioncount="1" delay="0">0x7F8611</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x87..</Request>
+              <Response repetitioncount="1" delay="0">0x7F8711</Response>
+            </DiagService>
+          </Variant>
+        </VariantList>
+      </VSDCT>
+    </ECU>
+    <ECU name="BV_ECM" canId="2024">
+      <Protocol>PR_UDSOnCAN</Protocol>
+      <ComParameter>
+        <CanIdRequest>0x7E0</CanIdRequest>
+        <CanIdResponse>0x7E8</CanIdResponse>
+        <FunctionalCanIdRequest>0x7DF</FunctionalCanIdRequest>
+      </ComParameter>
+      <DiagServiceList>
+        <DiagService pdupattern="false">
+          <Request responserequired="YES">0x22F180</Request>
+          <Response repetitioncount="1" delay="0">0x62F18031303233363938</Response>
+        </DiagService>
+        <DiagService pdupattern="false">
+          <Request responserequired="YES">0x22F18A</Request>
+          <Response repetitioncount="1" delay="0">0x62F18A35393837</Response>
+        </DiagService>
+        <DiagService pdupattern="true">
+          <Request responserequired="YES">0x280X..</Request>
+          <Response repetitioncount="1" delay="0">0x68%01XX</Response>
+        </DiagService>
+        <DiagService pdupattern="true">
+          <Request responserequired="NO">0x288X..</Request>
+          <Response repetitioncount="1" delay="0"></Response>
+        </DiagService>
+      </DiagServiceList>
+      <VSDCT>
+        <ECUName text="BV_ECM"/>
+        <VariantList>
+          <Variant>
+            <VariantName text="EV_ECM_001"/>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x222002</Request>
+              <Response repetitioncount="1" delay="0">0x62200201F4</Response>
+              <Response repetitioncount="1" delay="0">0x6220020320</Response>
+              <Response repetitioncount="1" delay="0">0x622002044C</Response>
+              <Response repetitioncount="1" delay="0">0x6220020578</Response>
+              <Response repetitioncount="1" delay="0">0x62200206A4</Response>
+              <Response repetitioncount="1" delay="0">0x62200207D0</Response>
+              <Response repetitioncount="1" delay="0">0x62200208FC</Response>
+              <Response repetitioncount="1" delay="0">0x6220020A28</Response>
+              <Response repetitioncount="1" delay="0">0x6220020B54</Response>
+              <Response repetitioncount="1" delay="0">0x6220020C80</Response>
+              <Response repetitioncount="1" delay="0">0x6220020DAC</Response>
+              <Response repetitioncount="1" delay="0">0x6220020ED8</Response>
+              <Response repetitioncount="1" delay="0">0x6220021004</Response>
+              <Response repetitioncount="1" delay="0">0x6220021130</Response>
+              <Response repetitioncount="1" delay="0">0x622002125C</Response>
+              <Response repetitioncount="1" delay="0">0x6220021388</Response>
+              <Response repetitioncount="1" delay="0">0x62200214B4</Response>
+              <Response repetitioncount="1" delay="0">0x62200215E0</Response>
+              <Response repetitioncount="1" delay="0">0x622002170C</Response>
+              <Response repetitioncount="1" delay="0">0x6220021838</Response>
+              <Response repetitioncount="1" delay="0">0x6220021964</Response>
+              <Response repetitioncount="1" delay="0">0x6220021A90</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x222003</Request>
+              <Response repetitioncount="1" delay="0">0x6220030057</Response>
+              <Response repetitioncount="1" delay="0">0x6220030058</Response>
+              <Response repetitioncount="1" delay="0">0x6220030059</Response>
+              <Response repetitioncount="1" delay="0">0x622003005A</Response>
+              <Response repetitioncount="1" delay="0">0x622003005B</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x222001</Request>
+              <Response repetitioncount="1" delay="0">0x6220010000</Response>
+              <Response repetitioncount="1" delay="0">0x622001000A</Response>
+              <Response repetitioncount="1" delay="0">0x6220010014</Response>
+              <Response repetitioncount="1" delay="0">0x622001001E</Response>
+              <Response repetitioncount="1" delay="0">0x6220010028</Response>
+              <Response repetitioncount="1" delay="0">0x6220010032</Response>
+              <Response repetitioncount="1" delay="0">0x622001003C</Response>
+              <Response repetitioncount="1" delay="0">0x6220010046</Response>
+              <Response repetitioncount="1" delay="0">0x6220010050</Response>
+              <Response repetitioncount="1" delay="0">0x622001005A</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x222006</Request>
+              <Response repetitioncount="1" delay="0">0x6220060226</Response>
+              <Response repetitioncount="1" delay="0">0x622006028A</Response>
+              <Response repetitioncount="1" delay="0">0x62200602EE</Response>
+              <Response repetitioncount="1" delay="0">0x6220060352</Response>
+              <Response repetitioncount="1" delay="0">0x62200603B6</Response>
+              <Response repetitioncount="1" delay="0">0x622006041A</Response>
+              <Response repetitioncount="1" delay="0">0x622006047E</Response>
+              <Response repetitioncount="1" delay="0">0x62200604E2</Response>
+              <Response repetitioncount="1" delay="0">0x6220060546</Response>
+              <Response repetitioncount="1" delay="0">0x62200605AA</Response>
+              <Response repetitioncount="1" delay="0">0x622006060E</Response>
+              <Response repetitioncount="1" delay="0">0x6220060672</Response>
+              <Response repetitioncount="1" delay="0">0x62200606D6</Response>
+              <Response repetitioncount="1" delay="0">0x622006073A</Response>
+              <Response repetitioncount="1" delay="0">0x622006079E</Response>
+              <Response repetitioncount="1" delay="0">0x6220060802</Response>
+              <Response repetitioncount="1" delay="0">0x6220060866</Response>
+              <Response repetitioncount="1" delay="0">0x62200608CA</Response>
+              <Response repetitioncount="1" delay="0">0x622006092E</Response>
+              <Response repetitioncount="1" delay="0">0x6220060992</Response>
+              <Response repetitioncount="1" delay="0">0x62200609F6</Response>
+              <Response repetitioncount="1" delay="0">0x6220060A5A</Response>
+              <Response repetitioncount="1" delay="0">0x6220060ABE</Response>
+              <Response repetitioncount="1" delay="0">0x6220060B22</Response>
+              <Response repetitioncount="1" delay="0">0x6220060B86</Response>
+              <Response repetitioncount="1" delay="0">0x6220060BEA</Response>
+              <Response repetitioncount="1" delay="0">0x6220060C4E</Response>
+              <Response repetitioncount="1" delay="0">0x6220060CB2</Response>
+              <Response repetitioncount="1" delay="0">0x6220060D16</Response>
+              <Response repetitioncount="1" delay="0">0x6220060D7A</Response>
+              <Response repetitioncount="1" delay="0">0x6220060000</Response>
+              <Response repetitioncount="1" delay="0">0x6220060064</Response>
+              <Response repetitioncount="1" delay="0">0x62200600C8</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1081</Request>
+              <Response repetitioncount="1" delay="0"></Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1082</Request>
+              <Response repetitioncount="1" delay="0"></Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1083</Request>
+              <Response repetitioncount="1" delay="0"></Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1084</Request>
+              <Response repetitioncount="1" delay="0">0x7F1011</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1001</Request>
+              <Response repetitioncount="1" delay="0">0x5001008809C4</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1002</Request>
+              <Response repetitioncount="1" delay="0">0x5002008809C4</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1003</Request>
+              <Response repetitioncount="1" delay="0">0x5003008809C4</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1004</Request>
+              <Response repetitioncount="1" delay="0">0x7F1011</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1101</Request>
+              <Response repetitioncount="1" delay="0">0x510100</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1103</Request>
+              <Response repetitioncount="1" delay="0">0x510300</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1181</Request>
+              <Response repetitioncount="1" delay="0"></Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1183</Request>
+              <Response repetitioncount="1" delay="0"></Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x190A</Request>
+              <Response repetitioncount="1" delay="0">0x590A990003132100031628000492000004940000049528003512210005240000250F0000252FFF082222FF</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x19020C</Request>
+              <Response repetitioncount="1" delay="0">0x59020C00031321000316280035122100049528</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x190250</Request>
+              <Response repetitioncount="1" delay="0">0x59025000031321000316280035122100049528</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x190F0C</Request>
+              <Response repetitioncount="1" delay="0">0x590F0C00031321000316280035122100049528</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x190050</Request>
+              <Response repetitioncount="1" delay="0">0x59005000031321000316280035122100049528</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906000313FF</Request>
+              <Response repetitioncount="1" delay="0">0x590600031321000101020400A1</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906000316FF</Request>
+              <Response repetitioncount="1" delay="0">0x590600031628005204580F</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906003512FF</Request>
+              <Response repetitioncount="1" delay="0">0x59060035122100720458120055</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906000495FF</Request>
+              <Response repetitioncount="1" delay="0">0x59060004952801A204581F0F55</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1910000313FF</Request>
+              <Response repetitioncount="1" delay="0">0x591000031321000101020400A1</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1910000313FF</Request>
+              <Response repetitioncount="1" delay="0">0x591000031321000101020400A1</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1910000316FF</Request>
+              <Response repetitioncount="1" delay="0">0x591000031628005204580F</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1910003512FF</Request>
+              <Response repetitioncount="1" delay="0">0x59100035122100720458120055</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1910000495FF</Request>
+              <Response repetitioncount="1" delay="0">0x59100004952801A204581F0F55</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906000492FF</Request>
+              <Response repetitioncount="1" delay="0">0x590600049200</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906000494FF</Request>
+              <Response repetitioncount="1" delay="0">0x590600049400</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906000524FF</Request>
+              <Response repetitioncount="1" delay="0">0x590600052400</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x190600250FFF</Request>
+              <Response repetitioncount="1" delay="0">0x590600250F00</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x190600252FFF</Request>
+              <Response repetitioncount="1" delay="0">0x590600252FFF</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906082222FF</Request>
+              <Response repetitioncount="1" delay="0">0x5906082222FF</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F180</Request>
+              <Response repetitioncount="1" delay="0">0x62F18031303233363938</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F188</Request>
+              <Response repetitioncount="1" delay="0">0x62F188313233</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F189</Request>
+              <Response repetitioncount="1" delay="0">0x62F189352E31312E39</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F18C</Request>
+              <Response repetitioncount="1" delay="0">0x62F18C3539383734545A34</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F199</Request>
+              <Response repetitioncount="1" delay="0">0x62F19920130221</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F19A</Request>
+              <Response repetitioncount="1" delay="0">0x62F19A524550353938375F5751</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F190</Request>
+              <Response repetitioncount="1" delay="0">0x62F190536F6674696E675F4543555F5835393837</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F18A</Request>
+              <Response repetitioncount="1" delay="0">0x62F18A35393837</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x222004</Request>
+              <Response repetitioncount="1" delay="0">0x6220040023</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x222005</Request>
+              <Response repetitioncount="1" delay="0">0x6220050050</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x222007</Request>
+              <Response repetitioncount="1" delay="0">0x62200701</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x221003</Request>
+              <Response repetitioncount="1" delay="0">0x6210030145525F3331315F5332325F455535</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x221004</Request>
+              <Response repetitioncount="1" delay="0">0x6210040153030100</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x23..</Request>
+              <Response repetitioncount="1" delay="0">0x7F2311</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x24..</Request>
+              <Response repetitioncount="1" delay="0">0x7F2411</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x2A..</Request>
+              <Response repetitioncount="1" delay="0">0x7F2A11</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x2C..</Request>
+              <Response repetitioncount="1" delay="0">0x7F2C11</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x280X..</Request>
+              <Response repetitioncount="1" delay="0">0x68%01XX</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="NO">0x288X..</Request>
+              <Response repetitioncount="1" delay="0"></Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x2701</Request>
+              <Response repetitioncount="1" delay="0">0x6701AA60522A</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2702..</Request>
+              <Response repetitioncount="1" delay="0">0x6702</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2EF199..</Request>
+              <Response repetitioncount="1" delay="0">0x6EF199</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2EF18C..</Request>
+              <Response repetitioncount="1" delay="0">0x6EF18C</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2EF190..</Request>
+              <Response repetitioncount="1" delay="0">0x6EF190</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2E1003..</Request>
+              <Response repetitioncount="1" delay="0">0x6E1003</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2E1004..</Request>
+              <Response repetitioncount="1" delay="0">0x6E1004</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2F2007..</Request>
+              <Response repetitioncount="1" delay="0">0x6F2007</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x3101FF00..</Request>
+              <Response repetitioncount="1" delay="0">0x7101FF00</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x3101FF01..</Request>
+              <Response repetitioncount="1" delay="0">0x7101FF01</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x35..</Request>
+              <Response repetitioncount="1" delay="0">0x7F3511</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x3D..</Request>
+              <Response repetitioncount="1" delay="0">0x7F3D11</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x3E00</Request>
+              <Response repetitioncount="1" delay="0">0x7E00</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x83..</Request>
+              <Response repetitioncount="1" delay="0">0x7F8311</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x84..</Request>
+              <Response repetitioncount="1" delay="0">0x7F8411</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x8501..</Request>
+              <Response repetitioncount="1" delay="0">0xC501</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x8502..</Request>
+              <Response repetitioncount="1" delay="0">0xC502</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x86..</Request>
+              <Response repetitioncount="1" delay="0">0x7F8611</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x87..</Request>
+              <Response repetitioncount="1" delay="0">0x7F8711</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x340033XXXXXXXXXXXX</Request>
+              <Response repetitioncount="1" delay="0">0x74330100</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x34004400..</Request>
+              <Response repetitioncount="1" delay="0">0x742000FC</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x34XXXXXX00XXXXXX</Request>
+              <Response repetitioncount="1" delay="0">0x74FF</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x34XXXXXX01XXXXXX</Request>
+              <Response repetitioncount="1" delay="0">0x7480</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x34XXXXXX02XXXXXX</Request>
+              <Response repetitioncount="1" delay="0">0x7440</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x36..</Request>
+              <Response repetitioncount="1" delay="0">0x76%01</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x3700</Request>
+              <Response repetitioncount="1" delay="0">0x77</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F18C</Request>
+              <Response repetitioncount="1" delay="0">0x62F18C3539383734545A34</Response>
+            </DiagService>
+          </Variant>
+        </VariantList>
+      </VSDCT>
+    </ECU>
+    <ECU name="BV_ECM" canId="10">
+      <Protocol>PR_UDSOnDoIP</Protocol>
+      <ComParameter>
+        <CanIdRequest/>
+        <CanIdResponse>0xA</CanIdResponse>
+        <FunctionalCanIdRequest>0xE400</FunctionalCanIdRequest>
+      </ComParameter>
+      <DiagServiceList>
+        <DiagService pdupattern="false">
+          <Request responserequired="YES">0x22F180</Request>
+          <Response repetitioncount="1" delay="0">0x62F18031303233363938</Response>
+        </DiagService>
+        <DiagService pdupattern="false">
+          <Request responserequired="YES">0x22F18A</Request>
+          <Response repetitioncount="1" delay="0">0x62F18A35393837</Response>
+        </DiagService>
+        <DiagService pdupattern="true">
+          <Request responserequired="YES">0x280X..</Request>
+          <Response repetitioncount="1" delay="0">0x68%01XX</Response>
+        </DiagService>
+        <DiagService pdupattern="true">
+          <Request responserequired="NO">0x288X..</Request>
+          <Response repetitioncount="1" delay="0"></Response>
+        </DiagService>
+      </DiagServiceList>
+      <VSDCT>
+        <ECUName text="BV_ECM"/>
+        <VariantList>
+          <Variant>
+            <VariantName text="EV_ECM_001"/>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x222002</Request>
+              <Response repetitioncount="1" delay="0">0x62200201F4</Response>
+              <Response repetitioncount="1" delay="0">0x6220020320</Response>
+              <Response repetitioncount="1" delay="0">0x622002044C</Response>
+              <Response repetitioncount="1" delay="0">0x6220020578</Response>
+              <Response repetitioncount="1" delay="0">0x62200206A4</Response>
+              <Response repetitioncount="1" delay="0">0x62200207D0</Response>
+              <Response repetitioncount="1" delay="0">0x62200208FC</Response>
+              <Response repetitioncount="1" delay="0">0x6220020A28</Response>
+              <Response repetitioncount="1" delay="0">0x6220020B54</Response>
+              <Response repetitioncount="1" delay="0">0x6220020C80</Response>
+              <Response repetitioncount="1" delay="0">0x6220020DAC</Response>
+              <Response repetitioncount="1" delay="0">0x6220020ED8</Response>
+              <Response repetitioncount="1" delay="0">0x6220021004</Response>
+              <Response repetitioncount="1" delay="0">0x6220021130</Response>
+              <Response repetitioncount="1" delay="0">0x622002125C</Response>
+              <Response repetitioncount="1" delay="0">0x6220021388</Response>
+              <Response repetitioncount="1" delay="0">0x62200214B4</Response>
+              <Response repetitioncount="1" delay="0">0x62200215E0</Response>
+              <Response repetitioncount="1" delay="0">0x622002170C</Response>
+              <Response repetitioncount="1" delay="0">0x6220021838</Response>
+              <Response repetitioncount="1" delay="0">0x6220021964</Response>
+              <Response repetitioncount="1" delay="0">0x6220021A90</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x222003</Request>
+              <Response repetitioncount="1" delay="0">0x6220030057</Response>
+              <Response repetitioncount="1" delay="0">0x6220030058</Response>
+              <Response repetitioncount="1" delay="0">0x6220030059</Response>
+              <Response repetitioncount="1" delay="0">0x622003005A</Response>
+              <Response repetitioncount="1" delay="0">0x622003005B</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x222001</Request>
+              <Response repetitioncount="1" delay="0">0x6220010000</Response>
+              <Response repetitioncount="1" delay="0">0x622001000A</Response>
+              <Response repetitioncount="1" delay="0">0x6220010014</Response>
+              <Response repetitioncount="1" delay="0">0x622001001E</Response>
+              <Response repetitioncount="1" delay="0">0x6220010028</Response>
+              <Response repetitioncount="1" delay="0">0x6220010032</Response>
+              <Response repetitioncount="1" delay="0">0x622001003C</Response>
+              <Response repetitioncount="1" delay="0">0x6220010046</Response>
+              <Response repetitioncount="1" delay="0">0x6220010050</Response>
+              <Response repetitioncount="1" delay="0">0x622001005A</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x222006</Request>
+              <Response repetitioncount="1" delay="0">0x6220060226</Response>
+              <Response repetitioncount="1" delay="0">0x622006028A</Response>
+              <Response repetitioncount="1" delay="0">0x62200602EE</Response>
+              <Response repetitioncount="1" delay="0">0x6220060352</Response>
+              <Response repetitioncount="1" delay="0">0x62200603B6</Response>
+              <Response repetitioncount="1" delay="0">0x622006041A</Response>
+              <Response repetitioncount="1" delay="0">0x622006047E</Response>
+              <Response repetitioncount="1" delay="0">0x62200604E2</Response>
+              <Response repetitioncount="1" delay="0">0x6220060546</Response>
+              <Response repetitioncount="1" delay="0">0x62200605AA</Response>
+              <Response repetitioncount="1" delay="0">0x622006060E</Response>
+              <Response repetitioncount="1" delay="0">0x6220060672</Response>
+              <Response repetitioncount="1" delay="0">0x62200606D6</Response>
+              <Response repetitioncount="1" delay="0">0x622006073A</Response>
+              <Response repetitioncount="1" delay="0">0x622006079E</Response>
+              <Response repetitioncount="1" delay="0">0x6220060802</Response>
+              <Response repetitioncount="1" delay="0">0x6220060866</Response>
+              <Response repetitioncount="1" delay="0">0x62200608CA</Response>
+              <Response repetitioncount="1" delay="0">0x622006092E</Response>
+              <Response repetitioncount="1" delay="0">0x6220060992</Response>
+              <Response repetitioncount="1" delay="0">0x62200609F6</Response>
+              <Response repetitioncount="1" delay="0">0x6220060A5A</Response>
+              <Response repetitioncount="1" delay="0">0x6220060ABE</Response>
+              <Response repetitioncount="1" delay="0">0x6220060B22</Response>
+              <Response repetitioncount="1" delay="0">0x6220060B86</Response>
+              <Response repetitioncount="1" delay="0">0x6220060BEA</Response>
+              <Response repetitioncount="1" delay="0">0x6220060C4E</Response>
+              <Response repetitioncount="1" delay="0">0x6220060CB2</Response>
+              <Response repetitioncount="1" delay="0">0x6220060D16</Response>
+              <Response repetitioncount="1" delay="0">0x6220060D7A</Response>
+              <Response repetitioncount="1" delay="0">0x6220060000</Response>
+              <Response repetitioncount="1" delay="0">0x6220060064</Response>
+              <Response repetitioncount="1" delay="0">0x62200600C8</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1081</Request>
+              <Response repetitioncount="1" delay="0"></Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1082</Request>
+              <Response repetitioncount="1" delay="0"></Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1083</Request>
+              <Response repetitioncount="1" delay="0"></Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1084</Request>
+              <Response repetitioncount="1" delay="0">0x7F1011</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1001</Request>
+              <Response repetitioncount="1" delay="0">0x5001008809C4</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1002</Request>
+              <Response repetitioncount="1" delay="0">0x5002008809C4</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1003</Request>
+              <Response repetitioncount="1" delay="0">0x5003008809C4</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1004</Request>
+              <Response repetitioncount="1" delay="0">0x7F1011</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1101</Request>
+              <Response repetitioncount="1" delay="0">0x510100</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1103</Request>
+              <Response repetitioncount="1" delay="0">0x510300</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1181</Request>
+              <Response repetitioncount="1" delay="0"></Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="NO">0x1183</Request>
+              <Response repetitioncount="1" delay="0"></Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x190A</Request>
+              <Response repetitioncount="1" delay="0">0x590A990003132100031628000492000004940000049528003512210005240000250F0000252FFF082222FF</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x19020C</Request>
+              <Response repetitioncount="1" delay="0">0x59020C00031321000316280035122100049528</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x190250</Request>
+              <Response repetitioncount="1" delay="0">0x59025000031321000316280035122100049528</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x190F0C</Request>
+              <Response repetitioncount="1" delay="0">0x590F0C00031321000316280035122100049528</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x190050</Request>
+              <Response repetitioncount="1" delay="0">0x59005000031321000316280035122100049528</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906000313FF</Request>
+              <Response repetitioncount="1" delay="0">0x590600031321000101020400A1</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906000316FF</Request>
+              <Response repetitioncount="1" delay="0">0x590600031628005204580F</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906003512FF</Request>
+              <Response repetitioncount="1" delay="0">0x59060035122100720458120055</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906000495FF</Request>
+              <Response repetitioncount="1" delay="0">0x59060004952801A204581F0F55</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1910000313FF</Request>
+              <Response repetitioncount="1" delay="0">0x591000031321000101020400A1</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1910000313FF</Request>
+              <Response repetitioncount="1" delay="0">0x591000031321000101020400A1</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1910000316FF</Request>
+              <Response repetitioncount="1" delay="0">0x591000031628005204580F</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1910003512FF</Request>
+              <Response repetitioncount="1" delay="0">0x59100035122100720458120055</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1910000495FF</Request>
+              <Response repetitioncount="1" delay="0">0x59100004952801A204581F0F55</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906000492FF</Request>
+              <Response repetitioncount="1" delay="0">0x590600049200</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906000494FF</Request>
+              <Response repetitioncount="1" delay="0">0x590600049400</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906000524FF</Request>
+              <Response repetitioncount="1" delay="0">0x590600052400</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x190600250FFF</Request>
+              <Response repetitioncount="1" delay="0">0x590600250F00</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x190600252FFF</Request>
+              <Response repetitioncount="1" delay="0">0x590600252FFF</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x1906082222FF</Request>
+              <Response repetitioncount="1" delay="0">0x5906082222FF</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F180</Request>
+              <Response repetitioncount="1" delay="0">0x62F18031303233363938</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F188</Request>
+              <Response repetitioncount="1" delay="0">0x62F188313233</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F189</Request>
+              <Response repetitioncount="1" delay="0">0x62F189352E31312E39</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F18C</Request>
+              <Response repetitioncount="1" delay="0">0x62F18C3539383734545A34</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F199</Request>
+              <Response repetitioncount="1" delay="0">0x62F19920130221</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F19A</Request>
+              <Response repetitioncount="1" delay="0">0x62F19A524550353938375F5751</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F190</Request>
+              <Response repetitioncount="1" delay="0">0x62F190536F6674696E675F4543555F5835393837</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F18A</Request>
+              <Response repetitioncount="1" delay="0">0x62F18A35393837</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x222004</Request>
+              <Response repetitioncount="1" delay="0">0x6220040023</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x222005</Request>
+              <Response repetitioncount="1" delay="0">0x6220050050</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x222007</Request>
+              <Response repetitioncount="1" delay="0">0x62200701</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x221003</Request>
+              <Response repetitioncount="1" delay="0">0x6210030145525F3331315F5332325F455535</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x221004</Request>
+              <Response repetitioncount="1" delay="0">0x6210040153030100</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x23..</Request>
+              <Response repetitioncount="1" delay="0">0x7F2311</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x24..</Request>
+              <Response repetitioncount="1" delay="0">0x7F2411</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x2A..</Request>
+              <Response repetitioncount="1" delay="0">0x7F2A11</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x2C..</Request>
+              <Response repetitioncount="1" delay="0">0x7F2C11</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x280X..</Request>
+              <Response repetitioncount="1" delay="0">0x68%01XX</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="NO">0x288X..</Request>
+              <Response repetitioncount="1" delay="0"></Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x2701</Request>
+              <Response repetitioncount="1" delay="0">0x6701AA60522A</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2702..</Request>
+              <Response repetitioncount="1" delay="0">0x6702</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2EF199..</Request>
+              <Response repetitioncount="1" delay="0">0x6EF199</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2EF18C..</Request>
+              <Response repetitioncount="1" delay="0">0x6EF18C</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2EF190..</Request>
+              <Response repetitioncount="1" delay="0">0x6EF190</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2E1003..</Request>
+              <Response repetitioncount="1" delay="0">0x6E1003</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x2E1004..</Request>
+              <Response repetitioncount="1" delay="0">0x6E1004</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x3101FF00..</Request>
+              <Response repetitioncount="1" delay="0">0x7101FF00</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x3101FF01..</Request>
+              <Response repetitioncount="1" delay="0">0x7101FF01</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x35..</Request>
+              <Response repetitioncount="1" delay="0">0x7F3511</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x3D..</Request>
+              <Response repetitioncount="1" delay="0">0x7F3D11</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x3E00</Request>
+              <Response repetitioncount="1" delay="0">0x7E00</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x83..</Request>
+              <Response repetitioncount="1" delay="0">0x7F8311</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x84..</Request>
+              <Response repetitioncount="1" delay="0">0x7F8411</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x8501..</Request>
+              <Response repetitioncount="1" delay="0">0xC501</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x8502..</Request>
+              <Response repetitioncount="1" delay="0">0xC502</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x86..</Request>
+              <Response repetitioncount="1" delay="0">0x7F8611</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x87..</Request>
+              <Response repetitioncount="1" delay="0">0x7F8711</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x340033XXXXXXXXXXXX</Request>
+              <Response repetitioncount="1" delay="0">0x74330100</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x34004400..</Request>
+              <Response repetitioncount="1" delay="0">0x742000FC</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x34XXXXXX00XXXXXX</Request>
+              <Response repetitioncount="1" delay="0">0x74FF</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x34XXXXXX01XXXXXX</Request>
+              <Response repetitioncount="1" delay="0">0x7480</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x34XXXXXX02XXXXXX</Request>
+              <Response repetitioncount="1" delay="0">0x7440</Response>
+            </DiagService>
+            <DiagService pdupattern="true">
+              <Request responserequired="YES">0x36..</Request>
+              <Response repetitioncount="1" delay="0">0x76%01</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x3700</Request>
+              <Response repetitioncount="1" delay="0">0x77</Response>
+            </DiagService>
+            <DiagService pdupattern="false">
+              <Request responserequired="YES">0x22F18C</Request>
+              <Response repetitioncount="1" delay="0">0x62F18C3539383734545A34</Response>
+            </DiagService>
+          </Variant>
+        </VariantList>
+      </VSDCT>
+    </ECU>
+  </ECUList>
+</CVDS>

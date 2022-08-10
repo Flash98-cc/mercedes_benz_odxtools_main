@@ -1,0 +1,1819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ODX MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DIAG-LAYER-CONTAINER ID="DLC.DLC_ECU_EV68_FCS_133">
+    <SHORT-NAME>DLC_ECU_EV68_FCS_133</SHORT-NAME>
+    <BASE-VARIANTS>
+      <BASE-VARIANT ID="DLC.DLC_ECU_EV68_FCS_133.BV.EV68_FCS_133">
+        <SHORT-NAME>EV68_FCS_133</SHORT-NAME>
+        <FUNCT-CLASSS>
+          <FUNCT-CLASS ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.FC.Sessions">
+            <SHORT-NAME>Sessions</SHORT-NAME>
+            <LONG-NAME>Sessions</LONG-NAME>
+          </FUNCT-CLASS>
+          <FUNCT-CLASS ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.FC.Identification">
+            <SHORT-NAME>Identification</SHORT-NAME>
+            <LONG-NAME>Identification</LONG-NAME>
+          </FUNCT-CLASS>
+          <FUNCT-CLASS ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.FC.FaultMemory">
+            <SHORT-NAME>FaultMemory</SHORT-NAME>
+            <LONG-NAME>Fault Memory</LONG-NAME>
+          </FUNCT-CLASS>
+          <FUNCT-CLASS ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.FC.IOControl">
+            <SHORT-NAME>IOControl</SHORT-NAME>
+            <LONG-NAME>IO Control</LONG-NAME>
+          </FUNCT-CLASS>
+          <FUNCT-CLASS ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.FC.Routine">
+            <SHORT-NAME>Routine</SHORT-NAME>
+            <LONG-NAME>Routine</LONG-NAME>
+          </FUNCT-CLASS>
+        </FUNCT-CLASSS>
+        <DIAG-DATA-DICTIONARY-SPEC>
+          <DATA-OBJECT-PROPS>		  
+            <DATA-OBJECT-PROP ID="DLC.DLC_ECU_EV68_FCS_133.BV.EV68_FCS_133.DOP.DOP_H2_Leaking_Sensor_1">
+              <SHORT-NAME>DOP_H2_Leaking_Sensor_1</SHORT-NAME>
+              <LONG-NAME>Int 8 bits value for bit length</LONG-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>LINEAR</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <COMPU-RATIONAL-COEFFS>
+                        <COMPU-NUMERATOR>
+                          <V>0</V>
+                          <V>200</V>
+                        </COMPU-NUMERATOR>
+                        <COMPU-DENOMINATOR>
+                          <V>1</V>
+                        </COMPU-DENOMINATOR>
+                      </COMPU-RATIONAL-COEFFS>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="false" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32">
+			  <UNIT-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.ppm"/>
+			  </PHYSICAL-TYPE>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.DLC_ECU_EV68_FCS_133.BV.EV68_FCS_133.DOP.DOP_H2_Leaking_Sensor_2">
+              <SHORT-NAME>DOP_H2_Leaking_Sensor_2</SHORT-NAME>
+              <LONG-NAME>Int 8 bits value for bit length</LONG-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>LINEAR</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <COMPU-RATIONAL-COEFFS>
+                        <COMPU-NUMERATOR>
+                          <V>0</V>
+                          <V>200</V>
+                        </COMPU-NUMERATOR>
+                        <COMPU-DENOMINATOR>
+                          <V>1</V>
+                        </COMPU-DENOMINATOR>
+                      </COMPU-RATIONAL-COEFFS>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="false" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32">
+			  <UNIT-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.ppm"/>
+			  </PHYSICAL-TYPE>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.DLC_ECU_EV68_FCS_133.BV.EV68_FCS_133.DOP.DOP_H2_Leaking_Sensor_3">
+              <SHORT-NAME>DOP_H2_Leaking_Sensor_3</SHORT-NAME>
+              <LONG-NAME>Int 8 bits value for bit length</LONG-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>LINEAR</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <COMPU-RATIONAL-COEFFS>
+                        <COMPU-NUMERATOR>
+                          <V>0</V>
+                          <V>200</V>
+                        </COMPU-NUMERATOR>
+                        <COMPU-DENOMINATOR>
+                          <V>1</V>
+                        </COMPU-DENOMINATOR>
+                      </COMPU-RATIONAL-COEFFS>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="false" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32">
+			  <UNIT-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.ppm"/>
+			  </PHYSICAL-TYPE>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.DLC_ECU_EV68_FCS_133.BV.EV68_FCS_133.DOP.DOP_H2_Leaking_Sensor_4">
+              <SHORT-NAME>DOP_H2_Leaking_Sensor_4</SHORT-NAME>
+              <LONG-NAME>Int 8 bits value for bit length</LONG-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>LINEAR</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <COMPU-RATIONAL-COEFFS>
+                        <COMPU-NUMERATOR>
+                          <V>0</V>
+                          <V>200</V>
+                        </COMPU-NUMERATOR>
+                        <COMPU-DENOMINATOR>
+                          <V>1</V>
+                        </COMPU-DENOMINATOR>
+                      </COMPU-RATIONAL-COEFFS>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="false" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32">
+			  <UNIT-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.ppm"/>
+			  </PHYSICAL-TYPE>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.DLC_ECU_EV68_FCS_133.BV.EV68_FCS_133.DOP.DOP_H2_Leaking_Sensor_5">
+              <SHORT-NAME>DOP_H2_Leaking_Sensor_5</SHORT-NAME>
+              <LONG-NAME>Int 8 bits value for bit length</LONG-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>LINEAR</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <COMPU-RATIONAL-COEFFS>
+                        <COMPU-NUMERATOR>
+                          <V>0</V>
+                          <V>200</V>
+                        </COMPU-NUMERATOR>
+                        <COMPU-DENOMINATOR>
+                          <V>1</V>
+                        </COMPU-DENOMINATOR>
+                      </COMPU-RATIONAL-COEFFS>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="false" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32">
+			  <UNIT-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.ppm"/>
+			  </PHYSICAL-TYPE>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.DLC_ECU_EV68_FCS_133.BV.EV68_FCS_133.DOP.DOP_H2_Leaking_Sensor_6">
+              <SHORT-NAME>DOP_H2_Leaking_Sensor_6</SHORT-NAME>
+              <LONG-NAME>Int 8 bits value for bit length</LONG-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>LINEAR</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <COMPU-RATIONAL-COEFFS>
+                        <COMPU-NUMERATOR>
+                          <V>0</V>
+                          <V>200</V>
+                        </COMPU-NUMERATOR>
+                        <COMPU-DENOMINATOR>
+                          <V>1</V>
+                        </COMPU-DENOMINATOR>
+                      </COMPU-RATIONAL-COEFFS>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="false" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32">
+			  <UNIT-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.ppm"/>
+			  </PHYSICAL-TYPE>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="DLC.DLC_ECU_EV68_FCS_133.BV.EV68_FCS_133.DOP.DOP_H2_Leaking_Sensor_7">
+              <SHORT-NAME>DOP_H2_Leaking_Sensor_7</SHORT-NAME>
+              <LONG-NAME>Int 8 bits value for bit length</LONG-NAME>
+              <COMPU-METHOD>
+                <CATEGORY>LINEAR</CATEGORY>
+                <COMPU-INTERNAL-TO-PHYS>
+                  <COMPU-SCALES>
+                    <COMPU-SCALE>
+                      <COMPU-RATIONAL-COEFFS>
+                        <COMPU-NUMERATOR>
+                          <V>0</V>
+                          <V>200</V>
+                        </COMPU-NUMERATOR>
+                        <COMPU-DENOMINATOR>
+                          <V>1</V>
+                        </COMPU-DENOMINATOR>
+                      </COMPU-RATIONAL-COEFFS>
+                    </COMPU-SCALE>
+                  </COMPU-SCALES>
+                </COMPU-INTERNAL-TO-PHYS>
+              </COMPU-METHOD>
+              <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" IS-HIGHLOW-BYTE-ORDER="false" xsi:type="STANDARD-LENGTH-TYPE">
+                <BIT-LENGTH>8</BIT-LENGTH>
+              </DIAG-CODED-TYPE>
+              <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32">
+			  <UNIT-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.ppm"/>
+			  </PHYSICAL-TYPE>
+            </DATA-OBJECT-PROP>
+          </DATA-OBJECT-PROPS>          
+          <UNIT-SPEC>
+            <UNITS>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.m_s_squared">
+                <SHORT-NAME>m_s_squared</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.M_S_SQUARED">acceleration : metre per second squared</LONG-NAME>
+                <DISPLAY-NAME>m/s²</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_s_squared"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.rad">
+                <SHORT-NAME>rad</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.RAD">plane angle : radian</LONG-NAME>
+                <DISPLAY-NAME>rad</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.rad"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.deg">
+                <SHORT-NAME>deg</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.DEG">plane angle : degree</LONG-NAME>
+                <DISPLAY-NAME>°</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>57.295776</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.rad"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.mRad">
+                <SHORT-NAME>mRad</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MRAD">plane angle : milliradian</LONG-NAME>
+                <DISPLAY-NAME>mRad</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.rad"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.rad_s_squared">
+                <SHORT-NAME>rad_s_squared</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.RAD_S_SQUARED">angular acceleration : radians per second squared</LONG-NAME>
+                <DISPLAY-NAME>rad/s^2</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.rad_s_squared"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.rpm_min_s">
+                <SHORT-NAME>rpm_min_s</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.RPM_MIN_S">angular momentum : revolution per minute per second</LONG-NAME>
+                <DISPLAY-NAME>r/min/s</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0.10471975511965977461542144610932</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.rad_s_squared"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.Nms">
+                <SHORT-NAME>Nms</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.NMS">angular momentum : newton metre second</LONG-NAME>
+                <DISPLAY-NAME>Nms</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Nms"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.rad_s">
+                <SHORT-NAME>rad_s</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.RAD_S">angular velocity : radian per second</LONG-NAME>
+                <DISPLAY-NAME>rad/s</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.rad_s"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.rpm_2">
+                <SHORT-NAME>rpm_2</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.RPM_2">angular velocity : rotation per minute</LONG-NAME>
+                <DISPLAY-NAME>rpm</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>9.549296</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.rad_s"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.per_min">
+                <SHORT-NAME>per_min</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.PER_MIN">angular velocity : per minute</LONG-NAME>
+                <DISPLAY-NAME>1/min</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>9.549296</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.rad_s"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.deg_s">
+                <SHORT-NAME>deg_s</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.DEG_S">angular velocity : degree per second</LONG-NAME>
+                <DISPLAY-NAME>°/s</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>57.295776</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.rad_s"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.r_s">
+                <SHORT-NAME>r_s</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.R_S">angular velocity : revolution per second</LONG-NAME>
+                <DISPLAY-NAME>r/s</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0.159154943091895</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.rad_s"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.m_squared">
+                <SHORT-NAME>m_squared</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.M_SQUARED">area : square metre</LONG-NAME>
+                <DISPLAY-NAME>m²</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_squared"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.ha">
+                <SHORT-NAME>ha</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.HA">area : hectare</LONG-NAME>
+                <DISPLAY-NAME>ha</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0.0010</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_squared"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.imp_m">
+                <SHORT-NAME>imp_m</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.IMP_M">calibration factor : impulses per metre</LONG-NAME>
+                <DISPLAY-NAME>imp/m</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.imp_m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.imp_km">
+                <SHORT-NAME>imp_km</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.IMP_KM">calibration factor : impulses per kilometre</LONG-NAME>
+                <DISPLAY-NAME>imp/km</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0.001</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.imp_m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.imp_mile">
+                <SHORT-NAME>imp_mile</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.IMP_MILE">calibration factor : impulses per mile</LONG-NAME>
+                <DISPLAY-NAME>imp/mile</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>6.213712E-4</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.imp_m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.F">
+                <SHORT-NAME>F</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.F">capacitance : farad</LONG-NAME>
+                <DISPLAY-NAME>F</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.F"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.pF">
+                <SHORT-NAME>pF</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.PF">capacitance : picofarad</LONG-NAME>
+                <DISPLAY-NAME>pF</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0E12</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.F"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.nF">
+                <SHORT-NAME>nF</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.NF">capacitance : nanofarad</LONG-NAME>
+                <DISPLAY-NAME>nF</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0E9</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.F"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.uF">
+                <SHORT-NAME>uF</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.UF">capacitance : microfarad</LONG-NAME>
+                <DISPLAY-NAME>µF</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.F"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.C">
+                <SHORT-NAME>C</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.C">electric charge : coulomb</LONG-NAME>
+                <DISPLAY-NAME>C</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.C"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.Ah">
+                <SHORT-NAME>Ah</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.AH">electric charge : ampere hour</LONG-NAME>
+                <DISPLAY-NAME>Ah</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>2.7777778E-4</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.C"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.mAh">
+                <SHORT-NAME>mAh</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MAH">electric charge : milliampere hour</LONG-NAME>
+                <DISPLAY-NAME>mAh</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>2.7777778E-1</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.C"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.A">
+                <SHORT-NAME>A</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.A">current : ampere</LONG-NAME>
+                <DISPLAY-NAME>A</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.A"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.uA">
+                <SHORT-NAME>uA</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.UA">current : microampere</LONG-NAME>
+                <DISPLAY-NAME>µA</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.A"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.mA">
+                <SHORT-NAME>mA</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MA">current : milliampere</LONG-NAME>
+                <DISPLAY-NAME>mA</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.A"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.per_m">
+                <SHORT-NAME>per_m</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.PER_M">curvature : per metre</LONG-NAME>
+                <DISPLAY-NAME>1/m</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.per_m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.per_km">
+                <SHORT-NAME>per_km</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.PER_KM">curvature : per kilometre</LONG-NAME>
+                <DISPLAY-NAME>1/km</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.per_m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.m_s_cubed">
+                <SHORT-NAME>m_s_cubed</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.M_S_CUBED">deceleration speed : metre per second cubed</LONG-NAME>
+                <DISPLAY-NAME>m/s^3</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_s_cubed"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.kg_m_cubed">
+                <SHORT-NAME>kg_m_cubed</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.KG_M_CUBED">density : kilogram per cubic metre</LONG-NAME>
+                <DISPLAY-NAME>kg/m³</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.kg_m_cubed"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.noUnits">
+                <SHORT-NAME>noUnits</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.NOUNITS">dimensionless : no units</LONG-NAME>
+                <DISPLAY-NAME/>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.noUnits"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.pu">
+                <SHORT-NAME>pu</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.PU">dimensionless : per unit</LONG-NAME>
+                <DISPLAY-NAME>pu</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.noUnits"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.pct">
+                <SHORT-NAME>pct</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.PCT">dimensionless : percent</LONG-NAME>
+                <DISPLAY-NAME>%</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>100.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.noUnits"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.hex">
+                <SHORT-NAME>hex</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.HEX">dimensionless : hexadecimal</LONG-NAME>
+                <DISPLAY-NAME>hex</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.noUnits"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.int">
+                <SHORT-NAME>int</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.INT">dimensionless : integer</LONG-NAME>
+                <DISPLAY-NAME/>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.noUnits"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.long">
+                <SHORT-NAME>long</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.LONG">dimensionless : long</LONG-NAME>
+                <DISPLAY-NAME/>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.noUnits"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.bin">
+                <SHORT-NAME>bin</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.BIN">dimensionless : binary</LONG-NAME>
+                <DISPLAY-NAME>bin</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.noUnits"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.dB">
+                <SHORT-NAME>dB</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.DB">dimensionless : decibel</LONG-NAME>
+                <DISPLAY-NAME>dB</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.noUnits"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.dBmicroV">
+                <SHORT-NAME>dBmicroV</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.DBMICROV">dimensionless : decibel per microvolt</LONG-NAME>
+                <DISPLAY-NAME>dBµV</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.noUnits"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.ppm">
+                <SHORT-NAME>ppm</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.PPM">dimensionless : parts per million</LONG-NAME>
+                <DISPLAY-NAME>ppm</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.noUnits"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.L_m">
+                <SHORT-NAME>L_m</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.L_M">economy : litre per metre</LONG-NAME>
+                <DISPLAY-NAME>L/m</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.L_m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.L_km">
+                <SHORT-NAME>L_km</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.L_KM">economy : litre per kilometre</LONG-NAME>
+                <DISPLAY-NAME>L/km</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.L_m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.L_mm">
+                <SHORT-NAME>L_mm</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.L_MM">economy : litre per millimetre</LONG-NAME>
+                <DISPLAY-NAME>L/mm</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0.0010</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.L_m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.galUS_mi">
+                <SHORT-NAME>galUS_mi</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.GALUS_MI">economy : gallon (US) per mile</LONG-NAME>
+                <DISPLAY-NAME>galUS/mi</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>425.1437</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.L_m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.L_100km">
+                <SHORT-NAME>L_100km</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.L_100KM">economy : litre per 100 kilometre</LONG-NAME>
+                <DISPLAY-NAME>L/100km</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>100000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.L_m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.mi_galUS">
+                <SHORT-NAME>mi_galUS</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MI_GALUS">economy : mile per gallon (US)</LONG-NAME>
+                <DISPLAY-NAME>mi/galUS</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.L_m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.m_l">
+                <SHORT-NAME>m_l</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.M_L">economy : metre per litre</LONG-NAME>
+                <DISPLAY-NAME>m/l</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.L_m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.km_l">
+                <SHORT-NAME>km_l</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.KM_L">economy : kilometre per litre</LONG-NAME>
+                <DISPLAY-NAME>km/l</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.L_m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.galUK_mi">
+                <SHORT-NAME>galUK_mi</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.GALUK_MI">economy : gallon (UK) per mile</LONG-NAME>
+                <DISPLAY-NAME>galUK/mi</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>354.00618993464746096251334</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.L_m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.mi_galUK">
+                <SHORT-NAME>mi_galUK</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MI_GALUK">economy : mile per gallon (UK)</LONG-NAME>
+                <DISPLAY-NAME>mi/galUK</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>354.00618993464746096251334</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.L_m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.L_h_3">
+                <SHORT-NAME>L_h_3</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.L_H_3">economy rate : litre per hour</LONG-NAME>
+                <DISPLAY-NAME>L/h</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.L_h"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.galUS_h_4">
+                <SHORT-NAME>galUS_h_4</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.GALUS_H_4">economy rate : gallon (US) per hour</LONG-NAME>
+                <DISPLAY-NAME>galUS/h</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0.26417205</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.L_h"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.ml_t">
+                <SHORT-NAME>ml_t</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.ML_T">economy rate : millilitre per day</LONG-NAME>
+                <DISPLAY-NAME>ml/t</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>41.666668</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.L_h"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.ml_h">
+                <SHORT-NAME>ml_h</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.ML_H">economy rate : millilitre per hour</LONG-NAME>
+                <DISPLAY-NAME>ml/h</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.L_h"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.galUK_h_5">
+                <SHORT-NAME>galUK_h_5</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.GALUK_H_5">economy rate : gallon (UK) per hour</LONG-NAME>
+                <DISPLAY-NAME>galUK/h</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0.219969248299088</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.L_h"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.J">
+                <SHORT-NAME>J</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.J">energy : joule</LONG-NAME>
+                <DISPLAY-NAME>J</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.J"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.kJ">
+                <SHORT-NAME>kJ</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.KJ">energy : kilojoule</LONG-NAME>
+                <DISPLAY-NAME>kJ</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0.0010</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.J"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.MJ">
+                <SHORT-NAME>MJ</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MJ">energy : megajoule</LONG-NAME>
+                <DISPLAY-NAME>MJ</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0E-6</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.J"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.V_m">
+                <SHORT-NAME>V_m</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.V_M">electric field strength : volt per metre</LONG-NAME>
+                <DISPLAY-NAME>V/m</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.J"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.M3PerSec">
+                <SHORT-NAME>M3PerSec</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.M3PERSEC">flow rate : cubic metre per second</LONG-NAME>
+                <DISPLAY-NAME>m³/s</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.M3PerSec"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.L_s">
+                <SHORT-NAME>L_s</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.L_S">flow rate : liter per second</LONG-NAME>
+                <DISPLAY-NAME>L/s</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.M3PerSec"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.mL_s">
+                <SHORT-NAME>mL_s</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.ML_S">flow rate : milliliter per second</LONG-NAME>
+                <DISPLAY-NAME>mL/s</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.M3PerSec"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.L_h">
+                <SHORT-NAME>L_h</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.L_H">flow rate : liter per hour</LONG-NAME>
+                <DISPLAY-NAME>L/h</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>3600000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.M3PerSec"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.l_min">
+                <SHORT-NAME>l_min</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.L_MIN">flow rate : liter per minute</LONG-NAME>
+                <DISPLAY-NAME>l/min</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.M3PerSec"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.galUS_h">
+                <SHORT-NAME>galUS_h</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.GALUS_H">flow rate : imperial gallon US per hour</LONG-NAME>
+                <DISPLAY-NAME>galUS/h</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>951019.3884893328</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.M3PerSec"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.galUK_h">
+                <SHORT-NAME>galUK_h</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.GALUK_H">flow rate : imperial gallon UK per hour</LONG-NAME>
+                <DISPLAY-NAME>galUK/h</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>791889.2938767168</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.M3PerSec"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.N">
+                <SHORT-NAME>N</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.N">force : newton</LONG-NAME>
+                <DISPLAY-NAME>N</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.N"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.kN">
+                <SHORT-NAME>kN</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.KN">force : kilonewton</LONG-NAME>
+                <DISPLAY-NAME>kN</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0.0010</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.N"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.Hz">
+                <SHORT-NAME>Hz</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.HZ">frequency : hertz</LONG-NAME>
+                <DISPLAY-NAME>Hz</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Hz"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.mHz">
+                <SHORT-NAME>mHz</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MHZ">frequency : millihertz</LONG-NAME>
+                <DISPLAY-NAME>mHz</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Hz"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.kHz">
+                <SHORT-NAME>kHz</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.KHZ">frequency : kilohertz</LONG-NAME>
+                <DISPLAY-NAME>kHz</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0.0010</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Hz"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.MHz">
+                <SHORT-NAME>MHz</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MHZ">frequency : megahertz</LONG-NAME>
+                <DISPLAY-NAME>MHz</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0E-6</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Hz"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.pctPerSec">
+                <SHORT-NAME>pctPerSec</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.PCTPERSEC">frequency : percent per second</LONG-NAME>
+                <DISPLAY-NAME>%/s</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>100.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Hz"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.rpm">
+                <SHORT-NAME>rpm</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.RPM">frequency : rotation per minute</LONG-NAME>
+                <DISPLAY-NAME>rpm</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>60.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Hz"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.H">
+                <SHORT-NAME>H</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.H">inductance : henry</LONG-NAME>
+                <DISPLAY-NAME>H</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.H"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.uH">
+                <SHORT-NAME>uH</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.UH">inductance : microhenry</LONG-NAME>
+                <DISPLAY-NAME>µH</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.H"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.mH">
+                <SHORT-NAME>mH</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MH">inductance : millihenry</LONG-NAME>
+                <DISPLAY-NAME>mH</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.H"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.m">
+                <SHORT-NAME>m</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.M">length : metre</LONG-NAME>
+                <DISPLAY-NAME>m</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.mm">
+                <SHORT-NAME>mm</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MM">length : millimetre</LONG-NAME>
+                <DISPLAY-NAME>mm</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.cm">
+                <SHORT-NAME>cm</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.CM">length : centimetre</LONG-NAME>
+                <DISPLAY-NAME>cm</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>100.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.km">
+                <SHORT-NAME>km</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.KM">length : kilometre</LONG-NAME>
+                <DISPLAY-NAME>km</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0.0010</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.mi">
+                <SHORT-NAME>mi</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MI">length : mile</LONG-NAME>
+                <DISPLAY-NAME>mi</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>6.213712E-4</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.ft">
+                <SHORT-NAME>ft</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.FT">length : foot</LONG-NAME>
+                <DISPLAY-NAME>ft</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>3.28084</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.in">
+                <SHORT-NAME>in</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.IN">length : inch</LONG-NAME>
+                <DISPLAY-NAME>in</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>39.37008</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.cd">
+                <SHORT-NAME>cd</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.CD">luminous intensity : candela</LONG-NAME>
+                <DISPLAY-NAME>cd</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.cd"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.lumen">
+                <SHORT-NAME>lumen</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.LUMEN">luminous flux : lumen</LONG-NAME>
+                <DISPLAY-NAME>lm</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.lumen"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.lux">
+                <SHORT-NAME>lux</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.LUX">illuminance : lux</LONG-NAME>
+                <DISPLAY-NAME>lx</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.lux"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.weber">
+                <SHORT-NAME>weber</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.WEBER">magnetic flux : weber</LONG-NAME>
+                <DISPLAY-NAME>Wb</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.weber"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.T">
+                <SHORT-NAME>T</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.T">magnetic flux density : tesla</LONG-NAME>
+                <DISPLAY-NAME>T</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.T"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.kg">
+                <SHORT-NAME>kg</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.KG">mass : kilogram</LONG-NAME>
+                <DISPLAY-NAME>kg</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.kg"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.g">
+                <SHORT-NAME>g</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.G">mass : gram</LONG-NAME>
+                <DISPLAY-NAME>g</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.kg"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.tonne">
+                <SHORT-NAME>tonne</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.TONNE">mass : tonne</LONG-NAME>
+                <DISPLAY-NAME>tonne</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0.0010</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.kg"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.ton">
+                <SHORT-NAME>ton</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.TON">mass : ton</LONG-NAME>
+                <DISPLAY-NAME>ton</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0.0011023113</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.kg"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.lb">
+                <SHORT-NAME>lb</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.LB">mass : pound</LONG-NAME>
+                <DISPLAY-NAME>lb</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>2.2046225</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.kg"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.oz">
+                <SHORT-NAME>oz</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.OZ">mass : ounce</LONG-NAME>
+                <DISPLAY-NAME>oz</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>35.27396</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.kg"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.kg_s">
+                <SHORT-NAME>kg_s</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.KG_S">mass flow : kilogram per second</LONG-NAME>
+                <DISPLAY-NAME>kg/s</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.kg_s"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.g_s">
+                <SHORT-NAME>g_s</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.G_S">mass flow : gram per second</LONG-NAME>
+                <DISPLAY-NAME>g/s</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.kg_s"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.kg_min">
+                <SHORT-NAME>kg_min</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.KG_MIN">mass flow : kilogram per minute</LONG-NAME>
+                <DISPLAY-NAME>kg/min</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>60.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.kg_s"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.lb_min">
+                <SHORT-NAME>lb_min</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.LB_MIN">mass flow : pound per minute</LONG-NAME>
+                <DISPLAY-NAME>lb/min</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>132.27736</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.kg_s"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.kg_h">
+                <SHORT-NAME>kg_h</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.KG_H">mass flow : kilogram per hour</LONG-NAME>
+                <DISPLAY-NAME>kg/h</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>3600.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.kg_s"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.Nms_squared">
+                <SHORT-NAME>Nms_squared</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.NMS_SQUARED">mass flow : newton metre second squared</LONG-NAME>
+                <DISPLAY-NAME>Nms²</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Nms_squared"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.W">
+                <SHORT-NAME>W</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.W">power : watt</LONG-NAME>
+                <DISPLAY-NAME>W</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.W"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.mW">
+                <SHORT-NAME>mW</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MW">power : milliwatt</LONG-NAME>
+                <DISPLAY-NAME>mW</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.W"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.kW">
+                <SHORT-NAME>kW</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.KW">power : kilowatt</LONG-NAME>
+                <DISPLAY-NAME>kW</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0.0010</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.W"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.Pa">
+                <SHORT-NAME>Pa</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.PA">pressure : pascal</LONG-NAME>
+                <DISPLAY-NAME>Pa</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Pa"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.mPa">
+                <SHORT-NAME>mPa</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MPA">pressure : millipascal</LONG-NAME>
+                <DISPLAY-NAME>mPa</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Pa"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.kPa">
+                <SHORT-NAME>kPa</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.KPA">pressure : kilopascal</LONG-NAME>
+                <DISPLAY-NAME>kPa</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0.0010</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Pa"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.MPa">
+                <SHORT-NAME>MPa</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MPA">pressure : megapascal</LONG-NAME>
+                <DISPLAY-NAME>MPa</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0E-6</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Pa"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.atm">
+                <SHORT-NAME>atm</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.ATM">pressure : atmosphere</LONG-NAME>
+                <DISPLAY-NAME>atm</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>9.869233E-6</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Pa"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.bar">
+                <SHORT-NAME>bar</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.BAR">pressure : bar</LONG-NAME>
+                <DISPLAY-NAME>bar</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0E-5</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Pa"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.psi">
+                <SHORT-NAME>psi</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.PSI">pressure : pound-force per square inch</LONG-NAME>
+                <DISPLAY-NAME>psi</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.4503773E-4</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Pa"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.inHg">
+                <SHORT-NAME>inHg</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.INHG">pressure : inch of mercury</LONG-NAME>
+                <DISPLAY-NAME>inHg</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>2.9613273E-4</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Pa"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.hPa">
+                <SHORT-NAME>hPa</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.HPA">pressure : hectopascal</LONG-NAME>
+                <DISPLAY-NAME>hPa</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0.01</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Pa"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.R">
+                <SHORT-NAME>R</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.R">resistance : ohm</LONG-NAME>
+                <DISPLAY-NAME>Ω</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.R"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.mR">
+                <SHORT-NAME>mR</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MR">resistance : milliohm</LONG-NAME>
+                <DISPLAY-NAME>mΩ</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.R"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.kR">
+                <SHORT-NAME>kR</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.KR">resistance : kilohm</LONG-NAME>
+                <DISPLAY-NAME>kΩ</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0.0010</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.R"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.MR">
+                <SHORT-NAME>MR</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MR">resistance : megaohm</LONG-NAME>
+                <DISPLAY-NAME>MΩ</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0.0000010</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.R"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.sr">
+                <SHORT-NAME>sr</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.SR">solid angle : steradian</LONG-NAME>
+                <DISPLAY-NAME>sr</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.sr"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.Error">
+                <SHORT-NAME>Error</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.ERROR">string error</LONG-NAME>
+                <DISPLAY-NAME>Error</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.STRING"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.STRING">
+                <SHORT-NAME>STRING</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.STRING">string</LONG-NAME>
+                <DISPLAY-NAME>STRING</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.STRING"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.mol">
+                <SHORT-NAME>mol</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MOL">amount of substance : mole</LONG-NAME>
+                <DISPLAY-NAME>mol</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.mol"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.degC">
+                <SHORT-NAME>degC</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.DEGC">temperature : degree celcius</LONG-NAME>
+                <DISPLAY-NAME>°C</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>-273.16</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.K"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.degF">
+                <SHORT-NAME>degF</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.DEGF">temperature : degree fahrenheit</LONG-NAME>
+                <DISPLAY-NAME>°F</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.8</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>-459.688</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.K"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.K">
+                <SHORT-NAME>K</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.K">temperature : kelvin</LONG-NAME>
+                <DISPLAY-NAME>K</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.K"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.ha_h">
+                <SHORT-NAME>ha_h</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.HA_H">threshing performance : hectare per hour</LONG-NAME>
+                <DISPLAY-NAME>ha/h</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.ha_h"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.s">
+                <SHORT-NAME>s</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.S">time : second</LONG-NAME>
+                <DISPLAY-NAME>s</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.s"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.ms">
+                <SHORT-NAME>ms</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MS">time : millisecond</LONG-NAME>
+                <DISPLAY-NAME>ms</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.s"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.min">
+                <SHORT-NAME>min</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MIN">time : minute</LONG-NAME>
+                <DISPLAY-NAME>min</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0.016666668</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.s"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.h">
+                <SHORT-NAME>h</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.H">time : hour</LONG-NAME>
+                <DISPLAY-NAME>h</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>2.7777778E-4</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.s"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.d">
+                <SHORT-NAME>d</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.D">time : day</LONG-NAME>
+                <DISPLAY-NAME>d</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.1574074E-5</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.s"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.Nm">
+                <SHORT-NAME>Nm</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.NM">torque : newton metre</LONG-NAME>
+                <DISPLAY-NAME>Nm</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Nm"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.Lbft">
+                <SHORT-NAME>Lbft</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.LBFT">torque : pound-force foot</LONG-NAME>
+                <DISPLAY-NAME>Lbft</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0.73756105</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Nm"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.Lbin">
+                <SHORT-NAME>Lbin</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.LBIN">torque : pound-force inch</LONG-NAME>
+                <DISPLAY-NAME>Lbin</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>8.850733</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Nm"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.m_s">
+                <SHORT-NAME>m_s</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.M_S">velocity : metre per second</LONG-NAME>
+                <DISPLAY-NAME>m/s</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_s"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.mph">
+                <SHORT-NAME>mph</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MPH">velocity : mile per hour</LONG-NAME>
+                <DISPLAY-NAME>mph</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>2.2369363</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_s"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.mm_s">
+                <SHORT-NAME>mm_s</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MM_S">velocity : millimetre per second</LONG-NAME>
+                <DISPLAY-NAME>mm/s</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_s"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.km_h">
+                <SHORT-NAME>km_h</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.KM_H">velocity : kilometre per hour</LONG-NAME>
+                <DISPLAY-NAME>km/h</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>3.6</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_s"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.kph">
+                <SHORT-NAME>kph</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.KPH">velocity : kilometre per hour</LONG-NAME>
+                <DISPLAY-NAME>kph</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>3.6</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_s"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.V">
+                <SHORT-NAME>V</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.V">voltage : volt</LONG-NAME>
+                <DISPLAY-NAME>V</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.V"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.mV">
+                <SHORT-NAME>mV</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MV">voltage : millivolt</LONG-NAME>
+                <DISPLAY-NAME>mV</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.V"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.kV">
+                <SHORT-NAME>kV</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.KV">voltage : kilovolt</LONG-NAME>
+                <DISPLAY-NAME>kV</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>0.0010</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.V"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.m_cubed">
+                <SHORT-NAME>m_cubed</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.M_CUBED">volume : cubic metre</LONG-NAME>
+                <DISPLAY-NAME>m³</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_cubed"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.L">
+                <SHORT-NAME>L</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.L">volume : litre</LONG-NAME>
+                <DISPLAY-NAME>L</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_cubed"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.mL">
+                <SHORT-NAME>mL</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.ML">volume : millilitre</LONG-NAME>
+                <DISPLAY-NAME>mL</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_cubed"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.cc">
+                <SHORT-NAME>cc</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.CC">volume : cubic centimetre</LONG-NAME>
+                <DISPLAY-NAME>cc</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_cubed"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.galUK">
+                <SHORT-NAME>galUK</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.GALUK">volume : gallon (UK)</LONG-NAME>
+                <DISPLAY-NAME>galUK</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>219.96925</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_cubed"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.galUS">
+                <SHORT-NAME>galUS</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.GALUS">volume : gallon (US)</LONG-NAME>
+                <DISPLAY-NAME>galUS</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>264.17206</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_cubed"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.mm_cubed">
+                <SHORT-NAME>mm_cubed</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.MM_CUBED">volume : cubic millimetre</LONG-NAME>
+                <DISPLAY-NAME>mm³</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1.0E9</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_cubed"/>
+              </UNIT>
+              <UNIT ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.UN.cm_cubed">
+                <SHORT-NAME>cm_cubed</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_UNIT.CM_CUBED">volume : cubic centimetre</LONG-NAME>
+                <DISPLAY-NAME>cm³</DISPLAY-NAME>
+                <FACTOR-SI-TO-UNIT>1000000.0</FACTOR-SI-TO-UNIT>
+                <OFFSET-SI-TO-UNIT>0.0</OFFSET-SI-TO-UNIT>
+                <PHYSICAL-DIMENSION-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_cubed"/>
+              </UNIT>
+            </UNITS>
+            <PHYSICAL-DIMENSIONS>
+              <!--Acceleration-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_s_squared">
+                <SHORT-NAME>m_s_squared</SHORT-NAME>
+                <LENGTH-EXP>1</LENGTH-EXP>
+                <TIME-EXP>-2</TIME-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Angle-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.rad">
+                <SHORT-NAME>rad</SHORT-NAME>
+              </PHYSICAL-DIMENSION>
+              <!--Angular Acceleration-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.rad_s_squared">
+                <SHORT-NAME>rad_s_squared</SHORT-NAME>
+                <TIME-EXP>-2</TIME-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Angular Velocity-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.rad_s">
+                <SHORT-NAME>rad_s</SHORT-NAME>
+                <TIME-EXP>-1</TIME-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--AngularMomentum-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Nms">
+                <SHORT-NAME>Nms</SHORT-NAME>
+                <LENGTH-EXP>2</LENGTH-EXP>
+                <MASS-EXP>1</MASS-EXP>
+                <TIME-EXP>-1</TIME-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Area-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_squared">
+                <SHORT-NAME>m_squared</SHORT-NAME>
+                <LENGTH-EXP>2</LENGTH-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Calibration Factor-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.imp_m">
+                <SHORT-NAME>imp_m</SHORT-NAME>
+                <LENGTH-EXP>-1</LENGTH-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Capacitance-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.F">
+                <SHORT-NAME>F</SHORT-NAME>
+                <LENGTH-EXP>-2</LENGTH-EXP>
+                <MASS-EXP>-1</MASS-EXP>
+                <TIME-EXP>4</TIME-EXP>
+                <CURRENT-EXP>2</CURRENT-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Charge-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.C">
+                <SHORT-NAME>C</SHORT-NAME>
+                <TIME-EXP>1</TIME-EXP>
+                <CURRENT-EXP>1</CURRENT-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Current-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.A">
+                <SHORT-NAME>A</SHORT-NAME>
+                <CURRENT-EXP>1</CURRENT-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Curvature-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.per_m">
+                <SHORT-NAME>per_m</SHORT-NAME>
+                <LENGTH-EXP>-1</LENGTH-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Deceleration Speed-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_s_cubed">
+                <SHORT-NAME>m_s_cubed</SHORT-NAME>
+                <LENGTH-EXP>1</LENGTH-EXP>
+                <TIME-EXP>-3</TIME-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Density-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.kg_m_cubed">
+                <SHORT-NAME>kg_m_cubed</SHORT-NAME>
+                <LENGTH-EXP>-3</LENGTH-EXP>
+                <MASS-EXP>1</MASS-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Dimensionless-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.noUnits">
+                <SHORT-NAME>noUnits</SHORT-NAME>
+              </PHYSICAL-DIMENSION>
+              <!--Economy-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.L_m">
+                <SHORT-NAME>L_m</SHORT-NAME>
+                <LENGTH-EXP>2</LENGTH-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--EconomyRate-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.L_h">
+                <SHORT-NAME>L_h</SHORT-NAME>
+                <LENGTH-EXP>3</LENGTH-EXP>
+                <TIME-EXP>-1</TIME-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Energy-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.J">
+                <SHORT-NAME>J</SHORT-NAME>
+                <LENGTH-EXP>2</LENGTH-EXP>
+                <MASS-EXP>1</MASS-EXP>
+                <TIME-EXP>-2</TIME-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--FieldStrength-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.V_m">
+                <SHORT-NAME>V_m</SHORT-NAME>
+                <LENGTH-EXP>1</LENGTH-EXP>
+                <MASS-EXP>1</MASS-EXP>
+                <TIME-EXP>-3</TIME-EXP>
+                <CURRENT-EXP>-1</CURRENT-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Flow-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.M3PerSec">
+                <SHORT-NAME>M3PerSec</SHORT-NAME>
+                <LENGTH-EXP>3</LENGTH-EXP>
+                <TIME-EXP>-1</TIME-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Force-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.N">
+                <SHORT-NAME>N</SHORT-NAME>
+                <LENGTH-EXP>1</LENGTH-EXP>
+                <MASS-EXP>1</MASS-EXP>
+                <TIME-EXP>-2</TIME-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Frequency-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Hz">
+                <SHORT-NAME>Hz</SHORT-NAME>
+                <TIME-EXP>-1</TIME-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Inductance-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.H">
+                <SHORT-NAME>H</SHORT-NAME>
+                <LENGTH-EXP>2</LENGTH-EXP>
+                <MASS-EXP>1</MASS-EXP>
+                <TIME-EXP>-2</TIME-EXP>
+                <CURRENT-EXP>-2</CURRENT-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Length-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m">
+                <SHORT-NAME>m</SHORT-NAME>
+                <LENGTH-EXP>1</LENGTH-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Luminosity-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.cd">
+                <SHORT-NAME>cd</SHORT-NAME>
+                <LUMINOUS-INTENSITY-EXP>1</LUMINOUS-INTENSITY-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--LuminousFlux-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.lumen">
+                <SHORT-NAME>lumen</SHORT-NAME>
+                <LUMINOUS-INTENSITY-EXP>1</LUMINOUS-INTENSITY-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--LuminousEmittance-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.lux">
+                <SHORT-NAME>lux</SHORT-NAME>
+                <LENGTH-EXP>-2</LENGTH-EXP>
+                <LUMINOUS-INTENSITY-EXP>1</LUMINOUS-INTENSITY-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--MagneticFlux-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.weber">
+                <SHORT-NAME>weber</SHORT-NAME>
+                <LENGTH-EXP>2</LENGTH-EXP>
+                <MASS-EXP>1</MASS-EXP>
+                <TIME-EXP>-2</TIME-EXP>
+                <CURRENT-EXP>-1</CURRENT-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--MagneticFluxDensity-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.T">
+                <SHORT-NAME>T</SHORT-NAME>
+                <MASS-EXP>1</MASS-EXP>
+                <TIME-EXP>-2</TIME-EXP>
+                <CURRENT-EXP>-1</CURRENT-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Mass-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.kg">
+                <SHORT-NAME>kg</SHORT-NAME>
+                <MASS-EXP>1</MASS-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Massflow-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.kg_s">
+                <SHORT-NAME>kg_s</SHORT-NAME>
+                <MASS-EXP>1</MASS-EXP>
+                <TIME-EXP>-1</TIME-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--MomentOfInertia-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Nms_squared">
+                <SHORT-NAME>Nms_squared</SHORT-NAME>
+                <LENGTH-EXP>2</LENGTH-EXP>
+                <MASS-EXP>1</MASS-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Power-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.W">
+                <SHORT-NAME>W</SHORT-NAME>
+                <LENGTH-EXP>2</LENGTH-EXP>
+                <MASS-EXP>1</MASS-EXP>
+                <TIME-EXP>-3</TIME-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Pressure-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Pa">
+                <SHORT-NAME>Pa</SHORT-NAME>
+                <LENGTH-EXP>-1</LENGTH-EXP>
+                <MASS-EXP>1</MASS-EXP>
+                <TIME-EXP>-2</TIME-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Resistance-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.R">
+                <SHORT-NAME>R</SHORT-NAME>
+                <LENGTH-EXP>2</LENGTH-EXP>
+                <MASS-EXP>1</MASS-EXP>
+                <TIME-EXP>-3</TIME-EXP>
+                <CURRENT-EXP>-2</CURRENT-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--SolidAngle-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.sr">
+                <SHORT-NAME>sr</SHORT-NAME>
+              </PHYSICAL-DIMENSION>
+              <!--Strings-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.STRING">
+                <SHORT-NAME>STRING</SHORT-NAME>
+              </PHYSICAL-DIMENSION>
+              <!--Substance-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.mol">
+                <SHORT-NAME>mol</SHORT-NAME>
+                <MOLAR-AMOUNT-EXP>1</MOLAR-AMOUNT-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Temperature-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.K">
+                <SHORT-NAME>K</SHORT-NAME>
+                <TEMPERATURE-EXP>1</TEMPERATURE-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--ThrashingPerformance-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.ha_h">
+                <SHORT-NAME>ha_h</SHORT-NAME>
+                <LENGTH-EXP>2</LENGTH-EXP>
+                <TIME-EXP>-1</TIME-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Time-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.s">
+                <SHORT-NAME>s</SHORT-NAME>
+                <TIME-EXP>1</TIME-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Torque-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.Nm">
+                <SHORT-NAME>Nm</SHORT-NAME>
+                <LENGTH-EXP>2</LENGTH-EXP>
+                <MASS-EXP>1</MASS-EXP>
+                <TIME-EXP>-2</TIME-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Velocity-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_s">
+                <SHORT-NAME>m_s</SHORT-NAME>
+                <LENGTH-EXP>1</LENGTH-EXP>
+                <TIME-EXP>-1</TIME-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Volume-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.m_cubed">
+                <SHORT-NAME>m_cubed</SHORT-NAME>
+                <LENGTH-EXP>3</LENGTH-EXP>
+              </PHYSICAL-DIMENSION>
+              <!--Voltage-->
+              <PHYSICAL-DIMENSION ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.ODX22.V">
+                <SHORT-NAME>V</SHORT-NAME>
+                <LENGTH-EXP>2</LENGTH-EXP>
+                <MASS-EXP>1</MASS-EXP>
+                <TIME-EXP>-3</TIME-EXP>
+                <CURRENT-EXP>-1</CURRENT-EXP>
+              </PHYSICAL-DIMENSION>
+            </PHYSICAL-DIMENSIONS>
+          </UNIT-SPEC>
+        </DIAG-DATA-DICTIONARY-SPEC>
+        <DIAG-COMMS>
+          <DIAG-SERVICE ID="DLC.DLC_ECU_EV68_FCS_133.BV.BV.DS.EV68_FCS_133_INFO" SEMANTIC="CURRENTDATA" TRANSMISSION-MODE="RECEIVE-ONLY">
+            <SHORT-NAME>EV68_FCS_133_INFO</SHORT-NAME>
+            <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_NAME.EV68_FCS_133INFORMATION">EV68_FCS_133 Information</LONG-NAME> 
+            <POS-RESPONSE-REFS>
+              <POS-RESPONSE-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.EV68_FCS_133.PR.EV68_FCS_133_INFO"/>
+            </POS-RESPONSE-REFS> 
+          </DIAG-SERVICE>
+        </DIAG-COMMS>
+        <REQUESTS/>
+        <POS-RESPONSES>
+          <POS-RESPONSE ID="DLC.DLC_ECU_EV68_FCS_133.BV.EV68_FCS_133.PR.EV68_FCS_133_INFO">
+            <SHORT-NAME>EV68_FCS_133_INFO</SHORT-NAME>
+            <LONG-NAME>EV68_FCS_133 INFORMATION</LONG-NAME>
+            <PARAMS>
+              <PARAM xsi:type="VALUE">
+                <SHORT-NAME>H2_Leaking_Sensor_1</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_PARAM.H2_Leaking_Sensor_1">H2 Leaking Sensor1</LONG-NAME>
+                <BYTE-POSITION>0</BYTE-POSITION>
+                <DOP-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.EV68_FCS_133.DOP.DOP_H2_Leaking_Sensor_1"/>
+              </PARAM>
+              <PARAM xsi:type="VALUE">
+                <SHORT-NAME>H2_Leaking_Sensor_2</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_PARAM.H2_Leaking_Sensor_2">H2 Leaking Sensor2</LONG-NAME>
+                <BYTE-POSITION>1</BYTE-POSITION>
+                <DOP-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.EV68_FCS_133.DOP.DOP_H2_Leaking_Sensor_2"/>
+              </PARAM>
+              <PARAM xsi:type="VALUE">
+                <SHORT-NAME>H2_Leaking_Sensor_3</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_PARAM.H2_Leaking_Sensor_3">H2 Leaking Sensor3</LONG-NAME>
+                <BYTE-POSITION>2</BYTE-POSITION>
+                <DOP-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.EV68_FCS_133.DOP.DOP_H2_Leaking_Sensor_3"/>
+              </PARAM>
+              <PARAM xsi:type="VALUE">
+                <SHORT-NAME>H2_Leaking_Sensor_4</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_PARAM.H2_Leaking_Sensor_4">H2 Leaking Sensor4</LONG-NAME>
+                <BYTE-POSITION>3</BYTE-POSITION>
+                <DOP-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.EV68_FCS_133.DOP.DOP_H2_Leaking_Sensor_4"/>
+              </PARAM>
+              <PARAM xsi:type="VALUE">
+                <SHORT-NAME>H2_Leaking_Sensor_5</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_PARAM.H2_Leaking_Sensor_5">H2 Leaking Sensor5</LONG-NAME>
+                <BYTE-POSITION>4</BYTE-POSITION>
+                <DOP-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.EV68_FCS_133.DOP.DOP_H2_Leaking_Sensor_5"/>
+              </PARAM>
+              <PARAM xsi:type="VALUE">
+                <SHORT-NAME>H2_Leaking_Sensor_6</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_PARAM.H2_Leaking_Sensor_6">H2 Leaking Sensor6</LONG-NAME>
+                <BYTE-POSITION>5</BYTE-POSITION>
+                <DOP-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.EV68_FCS_133.DOP.DOP_H2_Leaking_Sensor_6"/>
+              </PARAM>
+              <PARAM xsi:type="VALUE">
+                <SHORT-NAME>H2_Leaking_Sensor_7</SHORT-NAME>
+                <LONG-NAME TI="BOSCH_EV79_EV68_FCS_133.DS_PARAM.H2_Leaking_Sensor_7">H2 Leaking Sensor7</LONG-NAME>
+                <BYTE-POSITION>6</BYTE-POSITION>
+                <DOP-REF ID-REF="DLC.DLC_ECU_EV68_FCS_133.BV.EV68_FCS_133.DOP.DOP_H2_Leaking_Sensor_7"/>
+              </PARAM>
+            </PARAMS>
+          </POS-RESPONSE>
+        </POS-RESPONSES>
+        <COMPARAM-REFS>
+          <COMPARAM-REF ID-REF="ISO_11898_2_DWCAN.CP_Baudrate" DOCREF="ISO_11898_2_DWCAN" DOCTYPE="COMPARAM-SUBSET">
+            <SIMPLE-VALUE>500000</SIMPLE-VALUE>
+          </COMPARAM-REF>
+          <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentAddrMode" DOCREF="ISO_15765_3" DOCTYPE="COMPARAM-SUBSET">
+            <SIMPLE-VALUE>Functional</SIMPLE-VALUE>
+          </COMPARAM-REF>
+          <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentHandling" DOCREF="ISO_15765_3" DOCTYPE="COMPARAM-SUBSET">
+            <SIMPLE-VALUE>Disabled</SIMPLE-VALUE>
+          </COMPARAM-REF>
+          <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentMessage" DOCREF="ISO_15765_3" DOCTYPE="COMPARAM-SUBSET">
+            <SIMPLE-VALUE>3E80</SIMPLE-VALUE>
+          </COMPARAM-REF>
+          <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentReqRsp" DOCREF="ISO_15765_3" DOCTYPE="COMPARAM-SUBSET">
+            <SIMPLE-VALUE>No response</SIMPLE-VALUE>
+          </COMPARAM-REF>
+          <COMPARAM-REF ID-REF="ISO_15765_3.CP_TesterPresentTime" DOCREF="ISO_15765_3" DOCTYPE="COMPARAM-SUBSET">
+            <SIMPLE-VALUE>4000000</SIMPLE-VALUE>
+          </COMPARAM-REF>
+          <COMPARAM-REF ID-REF="ISO_15765_2.CP_StMinOverride" DOCREF="ISO_15765_2" DOCTYPE="COMPARAM-SUBSET">
+            <SIMPLE-VALUE>65535</SIMPLE-VALUE>
+          </COMPARAM-REF>
+          <COMPARAM-REF ID-REF="ISO_15765_2.CP_Cs" DOCREF="ISO_15765_2" DOCTYPE="COMPARAM-SUBSET">
+            <SIMPLE-VALUE>10000</SIMPLE-VALUE>
+          </COMPARAM-REF>
+          <COMPARAM-REF ID-REF="ISO_15765_2.CP_Cr" DOCREF="ISO_15765_2" DOCTYPE="COMPARAM-SUBSET">
+            <SIMPLE-VALUE>1000000</SIMPLE-VALUE>
+          </COMPARAM-REF>
+          <COMPARAM-REF ID-REF="ISO_15765_2.CP_CanFillerByte" DOCREF="ISO_15765_2" DOCTYPE="COMPARAM-SUBSET">
+            <SIMPLE-VALUE>0</SIMPLE-VALUE>
+          </COMPARAM-REF>
+          <COMPARAM-REF ID-REF="ISO_15765_2.CP_Bs" DOCREF="ISO_15765_2" DOCTYPE="COMPARAM-SUBSET">
+            <SIMPLE-VALUE>1000000</SIMPLE-VALUE>
+          </COMPARAM-REF>
+          <COMPARAM-REF ID-REF="ISO_15765_2.CP_StMin" DOCREF="ISO_15765_2" DOCTYPE="COMPARAM-SUBSET">
+            <SIMPLE-VALUE>0</SIMPLE-VALUE>
+          </COMPARAM-REF>
+          <COMPARAM-REF ID-REF="ISO_15765_3.CP_P2Max" DOCREF="ISO_15765_3" DOCTYPE="COMPARAM-SUBSET">
+            <SIMPLE-VALUE>100000</SIMPLE-VALUE>
+          </COMPARAM-REF>
+          <COMPARAM-REF ID-REF="ISO_15765_3.CP_RCByteOffset" DOCREF="ISO_15765_3" DOCTYPE="COMPARAM-SUBSET">
+            <SIMPLE-VALUE>Last byte</SIMPLE-VALUE>
+          </COMPARAM-REF>
+          <COMPARAM-REF ID-REF="ISO_15765_2.CP_UniqueRespIdTable" DOCREF="ISO_15765_2" DOCTYPE="COMPARAM-SUBSET">
+            <COMPLEX-VALUE>			
+              <SIMPLE-VALUE>normal segmented 11-bit transmit with FC</SIMPLE-VALUE>
+              <SIMPLE-VALUE>307</SIMPLE-VALUE>
+              <SIMPLE-VALUE>0</SIMPLE-VALUE>
+              <SIMPLE-VALUE>normal segmented 11-bit receive with FC</SIMPLE-VALUE>
+              <SIMPLE-VALUE>1552</SIMPLE-VALUE>
+              <SIMPLE-VALUE>0</SIMPLE-VALUE>
+              <SIMPLE-VALUE>normal unsegmented 11-bit receive</SIMPLE-VALUE>
+              <SIMPLE-VALUE>307</SIMPLE-VALUE>
+              <SIMPLE-VALUE>0</SIMPLE-VALUE>
+              <SIMPLE-VALUE>EV68_FCS_133</SIMPLE-VALUE>
+            </COMPLEX-VALUE>
+          </COMPARAM-REF>
+        </COMPARAM-REFS>
+        <PARENT-REFS>
+          <PARENT-REF ID-REF="DLC.FG_UDS_CAN.FG.FG" DOCREF="FG_UDS_CAN" DOCTYPE="CONTAINER" xsi:type="FUNCTIONAL-GROUP-REF"/>
+        </PARENT-REFS>
+      </BASE-VARIANT>
+    </BASE-VARIANTS>
+  </DIAG-LAYER-CONTAINER>
+</ODX>
